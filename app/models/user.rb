@@ -9,10 +9,13 @@ class User < ApplicationRecord
 
     #associations go here
 
-    def self.find_by_credentials(username, password)
+  def self.find_by_credentials(username, password)
     @user = User.find_by(username: username)
-    return nil unless @user
-    @user.is_password?(password) ? @user : nil
+    if @user && @user.is_password?(password)
+      return @user
+    else
+      nil
+    end
   end
 
   def password=(password)
