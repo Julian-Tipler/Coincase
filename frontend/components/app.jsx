@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginFormContainer from './session/login_form_container'
 import SignUpFormContainer from './session/signup_form_container'
+import WelcomeContainer from './welcome/welcome_container'
 import {
     Route,
     Redirect,
@@ -12,9 +13,10 @@ import {
 const App = () => (
     <div>
         <header>
-            <h1>Welcome #user</h1>  
+            <h1>coincase</h1>  
         </header>
         <Switch>
+            <Route exact path="/" component = {WelcomeContainer}/>
             <Route exact path="/login" component = {LoginFormContainer}/>
             <Route exact path="/signup" component = {SignUpFormContainer}/>
             <Redirect to='/'/>
