@@ -1,7 +1,7 @@
 import React from 'react';
 import LoginFormContainer from './session/login_form_container'
 import SignUpFormContainer from './session/signup_form_container'
-import WelcomeContainer from './welcome/welcome_container'
+import WelcomeContainer from './welcome/welcome'
 import HeaderContainer from './header/headercontainer'
 import {
     Route,
@@ -10,14 +10,16 @@ import {
     Link,
 } from 'react-router-dom';
 
+//const theme= blue
 
 const App = () => (
     <div>
         <header>
-            <HeaderContainer/>
+            <Route path="/" component ={HeaderContainer} />
+            <Route exact path="/" component={WelcomeContainer} />
         </header>
         <Switch>
-            <Route exact path="/" component = {WelcomeContainer}/>
+            
             <Route exact path="/login" component = {LoginFormContainer}/>
             <Route exact path="/signup" component = {SignUpFormContainer}/>
             <Redirect to='/'/>

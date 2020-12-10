@@ -1,12 +1,14 @@
-import { connect } from 'react-redux';
-import WelcomeContainer from './welcome_container'
+import React from 'react';
+import {
+    Link,
+} from 'react-router-dom';
 
-const msp = (state) => ({
+class Welcome extends React.Component {
+    render() {
+        return(
+            <h1>WELCOME!</h1>
+        )
+    }
+}
 
-})
-
-const mdp = dispatch => ({
-
-})
-
-export default connect(msp,mdp)(WelcomeContainer)
+export default Welcome

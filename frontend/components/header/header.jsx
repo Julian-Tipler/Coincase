@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link,
+} from 'react-router-dom';
 
 class Header extends React.Component {
     render() {
@@ -9,8 +12,8 @@ class Header extends React.Component {
                     <div>Products</div>
                     <div>Help</div>
                     <div>Prices</div>
-                    <div>Sign In</div>
-                    <div>Sign Up</div>
+                    <Link to='/login'>Sign In</Link>
+                    <Link to='/signup'>Sign Up</Link>
                 </div>
             </div>
         )
