@@ -14,7 +14,7 @@ import {
 const App = () => (
     <div>
         <header>
-            <HeaderContainer/>  
+            <HeaderContainer/>
         </header>
         <Switch>
             <Route exact path="/" component = {WelcomeContainer}/>

@@ -29,7 +29,7 @@ class SessionForm extends React.Component {
     handleDemo(e) {
         e.preventDefault
         this.setState({
-            email: 'user123',
+            email: 'user@gmail.com',
             password: 'password',
             firstName: '',
             lastName: ''
@@ -54,7 +54,7 @@ class SessionForm extends React.Component {
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                placeholder='email'
+                                placeholder='Email'
                                 className='login-inputs'
                             />
                             <input type="password"
