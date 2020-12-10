@@ -2,6 +2,7 @@ import React from 'react';
 import LoginFormContainer from './session/login_form_container'
 import SignUpFormContainer from './session/signup_form_container'
 import WelcomeContainer from './welcome/welcome_container'
+import HeaderContainer from './header/headercontainer'
 import {
     Route,
     Redirect,
@@ -13,7 +14,7 @@ import {
 const App = () => (
     <div>
         <header>
-            <h1>coincase</h1>  
+            <HeaderContainer/>  
         </header>
         <Switch>
             <Route exact path="/" component = {WelcomeContainer}/>
