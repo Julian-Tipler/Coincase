@@ -7,7 +7,7 @@ class Header extends React.Component {
     render() {
         return(
             <div className='header'>
-                <div className='left-side-items'>coincase</div>
+                <Link to='/' className='left-side-items'>coincase</Link>
                 <div className='right-side-items'>
                     <div>Products</div>
                     <div>Help</div>

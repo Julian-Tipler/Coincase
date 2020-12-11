@@ -52,7 +52,7 @@ class SessionForm extends React.Component {
             <div>
                 <div className='form-title'>Sign in to Coinbase</div>
                 <div className='login-page'>
-                    <div>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
+                    <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
                         <div className="login-form">
                             <input type="text"
@@ -95,8 +95,8 @@ class SessionForm extends React.Component {
             <div>
                 <div className='sign-up-page'>
                 <div>Create your account</div>
-                <div>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
+                        <div>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                         <div className="sign-up-form">
                             <input type="text"
                                 value={this.state.firstName}

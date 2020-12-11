@@ -3,6 +3,9 @@
     align-items: center;
     justify-content: space-between;
 }
+.signed-in-header {
+    background-color: white;
+}
 
 .right-side-items{
     display: flex;
