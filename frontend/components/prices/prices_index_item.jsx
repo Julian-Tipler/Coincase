@@ -5,31 +5,26 @@ import {
     Switch,
     Link,
     withRouter,
-    useHistory
 } from 'react-router-dom';
 
-class PricesIndexItem extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = { redirect:false }
-        this.showCoin = this.showCoin.bind(this)
+function PricesIndexItem(props) {
+    function goto(step){
+        props.history.push(`/show/${props.id}`)
     }
-
-    render() {
-        return(   
-            <tr className='index-row'>
-                <td>{this.props.index}</td>
-                <td><img src={this.props.image} className='coin-icon'/>{this.props.name}</td>
-                <td>{this.props.current_price}</td>
-                <td>{this.props.price_change_24h}</td>
-                <td>{this.props.market_cap}</td>
-                <td><button>Trade</button></td>
-            </tr>
-        )
-    }
+    return(   
+        <tr onClick={() => goto(2)}className='index-row'>
+            <td>{props.index}</td>
+            <td><img src={props.image} className='coin-icon' />{props.name}   {props.symbol}</td>
+            <td>{props.current_price}</td>
+            <td>{props.price_change_24h}</td>
+            <td>{props.market_cap}</td>
+            <td><button>Trade</button></td>
+        </tr>
+    )
+    
 }
 
-export default PricesIndexItem
+export default withRouter(PricesIndexItem)
 
             // <div>
             //     <div>#</div>

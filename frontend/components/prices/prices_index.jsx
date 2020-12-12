@@ -5,6 +5,7 @@ import PricesIndexItem from './prices_index_item'
 
 class PricesIndex extends React.Component {
     render() {
+        console.log(this.props.coins)
         return(
             <table>
                 <tbody>
@@ -19,8 +20,10 @@ class PricesIndex extends React.Component {
                 {this.props.coins.map((coin, i) => (
                     <PricesIndexItem
                     index={i}
+                    id={coin.id}
                     image={coin.image}
                     name={coin.name}
+                    symbol={coin.symbol}
                     current_price={coin.current_price}
                     price_change_24h={coin.price_change_24h}
                     market_cap={coin.market_cap}

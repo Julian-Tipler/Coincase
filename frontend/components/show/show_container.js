@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Show from './show'
 
-const msp = (state) => ({
-
+const msp = (state,ownProps) => ({
+    coinSymbol: ownProps.match.params.id
 })
 
 const mdp = dispatch => ({
