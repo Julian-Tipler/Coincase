@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import UserShow from './userShow'
+import Portfolio from './portfolio'
 
 const msp = (state) => ({
 
@@ -9,4 +9,4 @@ const mdp = dispatch => ({
 
 })
 
-export default connect(msp,mdp)(UserShow)
+export default connect(msp, mdp)(Portfolio)

@@ -9,15 +9,13 @@ class SignedInHeader extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className='signed-in-header'>
-                <Link to='/' className='left-side-items'>coincase</Link>
-                <div className = 'center-items'> 
-                    <div>Home</div>
-                    <div>Portfolio</div>
-                    <div>Prices</div>
-                    <div>Earn Rewards</div>
+                <Link to='/users' className='left-side-items'>Coincase Logo</Link>
+                <div className='center-items'>
+                    <Link to='/users'>Home</Link>
+                    <Link to='/portfolio'>Portfolio</Link>
+                    <Link to='/prices'>Prices</Link>
                 </div>
                 <div className='right-side-items'>
                     <button>Trade</button>

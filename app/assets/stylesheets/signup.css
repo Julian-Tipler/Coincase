@@ -1,4 +1,4 @@
-.login-form-title {
+.signup-form-title {
     font-size: 28px;
     color: white;
     margin:auto;
@@ -12,54 +12,52 @@
     position: absolute;
 }
 
-.login-page {
+.sign-up-page {
     background-color: white;
     width: 30%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);    margin-top:38px;
-    height: 200px;
-    width: 360px;
+    height: 400px;
+    width: 400px;
     border-radius: 3px;
     /* border: 5px solid red; */
 }
 
-.login-form {
+.sign-up-form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
     /* flex-wrap: wrap; */
     
 }
 
-.login-inputs {
+.first-last-names {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin-right: 65px;
+}
+
+.sign-up-inputs {
     width: 100%;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
     margin-top: 15px;
-    width: 310px;
-    height: 30px;
+    width: 375px;
+    height: 55px;
     background-color:#006fcc14;
     border-color: honeydew;
     border-radius: 2px;
     border: 1px solid rgba(255,255,255,1);
-    
 }
 
-.login-buttons {
+.signup-button {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
     height: 30px;
     font-size: 12px;
-    
-}
-
-.login-button {
     color: white;
-    background-color: blue
+    background-color: blue;
 }
 
 .switch-form {

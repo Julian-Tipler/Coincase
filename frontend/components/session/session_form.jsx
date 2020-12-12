@@ -50,7 +50,7 @@ class SessionForm extends React.Component {
             submit = "SIGN IN"
             page = 
             <div>
-                <div className='form-title'>Sign in to Coinbase</div>
+                <div className='login-form-title'>Sign in to Coinbase</div>
                 <div className='login-page'>
                     <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
@@ -70,11 +70,11 @@ class SessionForm extends React.Component {
                         </div>
                         <div className='login-buttons'>
                             <button type="button"
-                                className="demo button"
+                                className="login-button"
                                 onClick={this.handleDemo}>
                                 DEMO
                             </button>
-                            <button type="submit" >{submit}</button>
+                            <button className='login-button' type="submit" >{submit}</button>
                         </div>
                     </form>
                 </div>
@@ -88,48 +88,56 @@ class SessionForm extends React.Component {
 
         else {
             path = "/login"
-            text = "Sign in to you Coinbase account"
+            text = "Already have an account? "
             button = "log in"
             submit = "Create account"
             page = 
             <div>
+                <div className='signup-form-title'>Create your account</div>
                 <div className='sign-up-page'>
-                <div>Create your account</div>
+                    <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
-                        <div>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                         <div className="sign-up-form">
-                            <input type="text"
-                                value={this.state.firstName}
-                                onChange={this.update('firstName')}
-                                placeholder='first name'
-                                className='sign-up-input'
-                            />
-                            <input type="text"
-                                value={this.state.lastName}
-                                onChange={this.update('lastName')}
-                                placeholder='last name'
-                                className='sign-up-input'
-                            />
+                            <div className='first-last-names'>
+                                <input type="text"
+                                    value={this.state.firstName}
+                                    onChange={this.update('firstName')}
+                                    placeholder='first name'
+                                    className="sign-up-inputs"
+                                />
+                                <input type="text"
+                                    value={this.state.lastName}
+                                    onChange={this.update('lastName')}
+                                    placeholder='last name'
+                                    className="sign-up-inputs"
+                                />
+                            </div>
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 placeholder='email'
-                                className='sign-up-input'
+                                className='sign-up-inputs'
                             />
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
                                 placeholder='password'
-                                className='sign-up-input'
+                                className='sign-up-inputs'
                             />
-                            <button type="submit" >{submit}</button>
+                            <input type="radio"
+                                value='I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.'
+                                onChange={this.update('password')}
+                                placeholder='password'
+                                className='sign-up-inputs'
+                            />
+                            <button className='signup-button' type="submit" >{submit}</button>
                         </div>
                     </form>
-                <div>
-                    {text}
-                    <Link to={`${path}`}>{button}</Link>
                 </div>
-            </div>
+                    <div className='switch-form'>
+                        {text}
+                        <Link to={`${path}`}>{button}</Link>
+                    </div>
             </div>
         }
 
