@@ -3,21 +3,35 @@ import React from 'react';
 class BuySellBox extends React.Component {
     constructor(props) {  
       super(props)
-      this.state = {tab:'buy'}
+      console.log(this.props)
+      this.state = {
+        id:this.props.targetCoin.id, 
+        // price:this.props.targetCoin.market_data.current_price.usd,
+        quantity: 0,
+        order_type: 'buy'}
       this.setState = this.setState.bind(this)
+      this.handleSubmit = this.handleSubmit.bind(this)
     }
-    //need some tertiary statements
+
+    handleSubmit(e) {
+        e.preventDefault()
+        console.log(this.props)
+        this.props.createTransaction()
+        //what goes in createTransaction?
+    }
     whichTab() {
-        switch (this.state.tab) {
+        switch (this.state.order_type) {
             case 'buy': return (
                 <div>
-                    <input type="text" placeholder='$0'/>
-                    <div>You can buy up to $25,000</div>
-                    <div>One time purchase</div>
-                    <input className='coin-selector'></input>
-                    <input className='bank-selector'></input>
-                    <button>Buy {`${this.props.id}`}</button>
-                    <div>{`${this.props.id}`} balance</div>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" placeholder='$0'/>
+                        <div>You can buy up to $25,000</div>
+                        <div>One time purchase</div>
+                        <div className='coin-selector'></div>
+                        <div className='bank-selector'></div>
+                        <button type='submit'>Buy {`${this.props.id}`}</button>
+                        <div>{`${this.props.id}`} balance</div>
+                    </form>
                 </div>
             )
             case 'sell': return (
@@ -25,18 +39,18 @@ class BuySellBox extends React.Component {
                     <input type="text" placeholder='$0' />
                     <div>You can buy up to $25,000</div>
                     <div>Sell all</div>
-                    <input className='coin-selector'></input>
-                    <input className='bank-selector'></input>
+                    <div className='coin-selector'></div>
+                    <div className='bank-selector'></div>
                     <button>Sell {`${this.props.id}`}</button>
                     <div>{`${this.props.id}`} balance</div>
                 </div>            )
             case 'convert': return (
                 <div>
                     <input type="text" placeholder='$0' />
-                    <div>You can buy up to $25,000</div>
+                    <div>We do not support conversion at this time</div>
                     <div>Convert All</div>
-                    <input className='from-coin'></input>
-                    <input className='to-coin'></input>
+                    <div className='from-coin'></div>
+                    <div className='to-coin'></div>
                     <button>Convert {`${this.props.id}`}</button>
                     <div>{`${this.props.id}`} balance</div>
                 </div>            )

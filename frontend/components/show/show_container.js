@@ -3,8 +3,8 @@ import { fetchCoin } from '../../actions/gecko_api_actions';
 import Show from './show'
 
 const msp = (state,ownProps) => ({
-    coinId: ownProps.match.params.id,
-    coin: state.coins
+    id: ownProps.match.params.id,
+    targetCoin: state.entities.targetCoin
 })
 
 const mdp = dispatch => ({

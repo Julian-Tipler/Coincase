@@ -12,6 +12,9 @@ class Prices extends React.Component {
                 <div>
                     <PricesIndex coins={this.props.coins} />
                 </div>
+                <div>
+                    <div>Search all assets</div>
+                </div>
                 
             </div>
         )

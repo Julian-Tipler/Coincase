@@ -16,30 +16,35 @@ import {
     Link,
 } from 'react-router-dom';
 
-//const theme= blue
+class App extends React.Component {
 
-const App = () => (
-    <div>
-        <header className='nav-bar'>
-        <Switch>
-            <Route exact path="/" component ={HeaderContainer} />
-            <AuthRoute exact path={["/login","/signup"]} component={HeaderContainer} />
-            <ProtectedRoute exact path={["/users", "/portfolio", "/prices"]} component={SignedInHeaderContainer} />
-        </Switch>
-        </header>
-        <div className='body'>
-        <Switch>
-            <Route exact path="/" component= {WelcomeContainer} />
-            <AuthRoute exact path="/login" component = {LoginFormContainer}/>
-            <AuthRoute exact path="/signup" component = {SignUpFormContainer}/>
-            <ProtectedRoute exact path="/users" component={HomeContainer} />
-            <ProtectedRoute exact path="/portfolio" component={PortfolioContainer}/>
-            <ProtectedRoute exact path="/prices" component={PricesContainer}/>
-            <ProtectedRoute exact path="/show/:id" component = {ShowContainer}/>
-            <Redirect to='/'/>
-        </Switch>
-        </div>
-    </div>
-)
+    render() {
+        return(
+            <div className={true ? 'background-white' : 'background-blue'} >
+                <header className='nav-bar'>
+                    <Switch>
+                        <Route exact path="/" component={HeaderContainer} />
+                        <AuthRoute exact path={["/login", "/signup"]} component={HeaderContainer} />
+                        <ProtectedRoute exact path={["/users", "/portfolio", "/prices"]} component={SignedInHeaderContainer} />
+                        <ProtectedRoute path={"/show"} component={SignedInHeaderContainer} />
+                    </Switch>
+                </header>
+                <div className='body'>
+                    <Switch>
+                        <Route exact path="/" component={WelcomeContainer} />
+                        <AuthRoute exact path="/login" component={LoginFormContainer} />
+                        <AuthRoute exact path="/signup" component={SignUpFormContainer} />
+                        <ProtectedRoute exact path="/users" component={HomeContainer} />
+                        <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />
+                        <ProtectedRoute exact path="/prices" component={PricesContainer} />
+                        <ProtectedRoute exact path="/show/:id" component={ShowContainer} />
+                        <Redirect to='/' />
+                    </Switch>
+                </div>
+            </div>
+        )
+    }
+}
+
 
 export default App;

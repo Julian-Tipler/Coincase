@@ -7,17 +7,20 @@ class Show extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchCoin(this.props.coinId)
+        this.props.fetchCoin(this.props.id)
     }
 
     render() {
         // console.log(this.props)
-        const {coinId} = this.props
+        
+        const {id} = this.props
         return(
             <div>
-            <div>{coinId}</div>
+            <div>{id}</div>
             <div>GRAPH</div>
-            <div><BuySellBoxContainer coinId={coinId}/></div>
+            <div><BuySellBoxContainer 
+            id={id}
+            /></div>
             </div>
         )
     }

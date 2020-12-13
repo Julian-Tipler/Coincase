@@ -2,12 +2,14 @@ class User < ApplicationRecord
     validates :email, :password_digest, :session_token, presence: true
     validates :email, uniqueness: true
     validates :password, length: { minimum: 8}, allow_nil: true
+    validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
+
 
     after_initialize :ensure_session_token
 
     attr_reader :password
 
-    #associations go here
+    has_many :transactions
 
   def self.find_by_credentials(email, password)
     @user = User.find_by(email: email)

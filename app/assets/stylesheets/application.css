@@ -39,9 +39,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-/* html {
-	background-color: #1652f0;
-} */
 body {
     line-height: 1;
    
@@ -60,4 +57,11 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+.background-white {
+	background-color: white;
+}
+
+.background-blue {
+	background-color:  #1652f0 ;
 }

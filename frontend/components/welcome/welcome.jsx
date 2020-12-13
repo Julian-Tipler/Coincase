@@ -11,7 +11,7 @@ class Welcome extends React.Component {
     render() {
         console.log(this.props)
         return(
-            <div class='welcome-full-page'>
+            <div className='welcome-full-page'>
                 <h1>WELCOME!</h1>
                 <div>
                     <PricesIndex coins={this.props.coins}/>
