@@ -3,21 +3,21 @@ import React from 'react';
 class BuySellBox extends React.Component {
     constructor(props) {  
       super(props)
-      console.log(this.props)
       this.state = {
-        id:this.props.targetCoin.id, 
+        // user_id: this.props.currentUser,
+        // coin_id: this.props.targetCoin.id, 
         // price:this.props.targetCoin.market_data.current_price.usd,
-        quantity: 0,
-        order_type: 'buy'}
+        // quantity: 1,
+        // order_type: 'buy'
+    }
       this.setState = this.setState.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleSubmit(e) {
         e.preventDefault()
-        console.log(this.props)
-        this.props.createTransaction()
-        //what goes in createTransaction?
+        const transaction = Object.assign({}, this.state);
+        this.props.createTransaction(transaction)
     }
     whichTab() {
         switch (this.state.order_type) {
@@ -30,7 +30,7 @@ class BuySellBox extends React.Component {
                         <div className='coin-selector'></div>
                         <div className='bank-selector'></div>
                         <button type='submit'>Buy {`${this.props.id}`}</button>
-                        <div>{`${this.props.id}`} balance</div>
+                        <div>{`${this.props.id}`} balance:</div>
                     </form>
                 </div>
             )
@@ -63,6 +63,7 @@ class BuySellBox extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return(
             <div>
                 <div className = 'buy-sell-box-header'>       
@@ -73,6 +74,9 @@ class BuySellBox extends React.Component {
 
                 <div className ='buy-sell-box-body'>
                     {this.whichTab()}
+                </div>
+                <div>
+                    {this.props.targetCoin.id} is the target coin
                 </div>
             </div>
         )

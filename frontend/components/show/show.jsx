@@ -7,11 +7,12 @@ class Show extends React.Component {
     }
 
     componentDidMount() {
+        // console.log('show-did-mount')
         this.props.fetchCoin(this.props.id)
     }
 
     render() {
-        // console.log(this.props)
+        // console.log('show-render')
         
         const {id} = this.props
         return(
