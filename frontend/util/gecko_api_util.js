@@ -4,3 +4,8 @@ export const fetchTopCoins = () => (
     })
 );
 
+export const fetchCoin = (id) => (
+    $.ajax({
+        url: `https://api.coingecko.com/api/v3/coins/${id}`
+    })
+)

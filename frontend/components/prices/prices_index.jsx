@@ -5,7 +5,6 @@ import PricesIndexItem from './prices_index_item'
 
 class PricesIndex extends React.Component {
     render() {
-        console.log(this.props.coins)
         return(
             <table>
                 <tbody>

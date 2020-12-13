@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from './header/header_container'
 import SignedInHeaderContainer from './header/signed_in_header_container'
-import WelcomeContainer from './welcome/welcome'
+import WelcomeContainer from './welcome/welcome_container'
 import LoginFormContainer from './session/login_form_container'
 import SignUpFormContainer from './session/signup_form_container'
 import HomeContainer from './home/home_container'
@@ -20,15 +20,16 @@ import {
 
 const App = () => (
     <div>
-        <header>
+        <header className='nav-bar'>
         <Switch>
             <Route exact path="/" component ={HeaderContainer} />
             <AuthRoute exact path={["/login","/signup"]} component={HeaderContainer} />
             <ProtectedRoute exact path={["/users", "/portfolio", "/prices"]} component={SignedInHeaderContainer} />
         </Switch>
         </header>
+        <div className='body'>
         <Switch>
-            <Route exact path="/" component={WelcomeContainer} />
+            <Route exact path="/" component= {WelcomeContainer} />
             <AuthRoute exact path="/login" component = {LoginFormContainer}/>
             <AuthRoute exact path="/signup" component = {SignUpFormContainer}/>
             <ProtectedRoute exact path="/users" component={HomeContainer} />
@@ -37,6 +38,7 @@ const App = () => (
             <ProtectedRoute exact path="/show/:id" component = {ShowContainer}/>
             <Redirect to='/'/>
         </Switch>
+        </div>
     </div>
 )
 

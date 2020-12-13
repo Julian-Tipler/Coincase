@@ -1,4 +1,5 @@
 import React from 'react';
+import BuySellBoxContainer from '../buy_sell_box/buy_sell_box_container';
 
 class Show extends React.Component {
     constructor(props) {  
@@ -6,13 +7,18 @@ class Show extends React.Component {
     }
 
     componentDidMount() {
-
+        this.props.fetchCoin(this.props.coinId)
     }
-    
+
     render() {
-        const {coinSymbol} = this.props
+        // console.log(this.props)
+        const {coinId} = this.props
         return(
-            <div>{coinSymbol}</div>
+            <div>
+            <div>{coinId}</div>
+            <div>GRAPH</div>
+            <div><BuySellBoxContainer coinId={coinId}/></div>
+            </div>
         )
     }
 }

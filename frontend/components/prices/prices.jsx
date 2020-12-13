@@ -7,9 +7,12 @@ class Prices extends React.Component {
     }
     render() {
         return(
-            <div>
-                <div>Coins Index</div>
-                <PricesIndex coins={this.props.coins}/>
+            <div className='prices-full-page'>
+                <h1>Coins Index</h1>
+                <div>
+                    <PricesIndex coins={this.props.coins} />
+                </div>
+                
             </div>
         )
     }
