@@ -13,6 +13,10 @@ import {
 
 class CoinGraph extends React.Component{
 
+    componentDidMount() {
+        
+    }
+
     xAxis() {
         // console.log(this.props)
         const prices = this.props.coinToGraph.prices

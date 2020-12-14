@@ -5,31 +5,40 @@ class BuySellBox extends React.Component {
       super(props)
       this.state = {
         user_id: this.props.currentUser,
-        coin_id:"", 
+        coin_id: this.props.id, 
         price: 0,
-        quantity: 1,
+        quantity: 0,
         order_type: 'buy'
     }
-      this.setState = this.setState.bind(this)
+    //   this.setState = this.setState.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     componentDidMount() {
-        console.log(this.props)
-        this.setState({
-            coin_id:this.props.targetCoin.id,
-            price: this.props.targetCoin.market_data.current_price.usd})
+        this.props.fetchCoinInfo(this.props.id)
     }
+
+    componentDidUpdate(prevProps) {
+        if (this.state.price === 0) {
+            this.setState({
+                price: this.props.coinInfo.market_data.current_price.usd
+            })        
+        }
+    }
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value });
     }
-
+    
     handleSubmit(e) {
         e.preventDefault()
         const transaction = Object.assign({}, this.state);
         this.props.createTransaction(transaction)
     }
-
+    
+    onClickTabItem(order_type) {
+        this.setState({order_type:order_type})
+    }
 
     whichTab() {
         switch (this.state.order_type) {
@@ -38,9 +47,9 @@ class BuySellBox extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <div>
                             <input type="text" 
-                            placeholder='$0'
+                            placeholder='0'
                             onChange={this.update('quantity')}/>
-                            <div>{`${this.props.targetCoin.id}`}</div>
+                            <div>{`${this.props.id}`}</div>
                         </div>
                         <div>You can buy up to $25,000</div>
                         <div>One time purchase</div>
@@ -53,14 +62,21 @@ class BuySellBox extends React.Component {
             )
             case 'sell': return (
                 <div>
-                    <input type="text" placeholder='$0' />
-                    <div>You can buy up to $25,000</div>
-                    <div>Sell all</div>
-                    <div className='coin-selector'></div>
-                    <div className='bank-selector'></div>
-                    <button>Sell {`${this.props.id}`}</button>
-                    <div>{`${this.props.id}`} balance</div>
-                </div>            )
+                    <form onSubmit={this.handleSubmit}>
+                        <div>
+                            <input type="text" 
+                            placeholder='0'
+                            onChange={this.update('quantity')}/>
+                            <div>{`${this.props.id}`}</div>
+                        </div>
+                        <div>You can sell up to $25,000</div>
+                        <div>One time sell</div>
+                        <div className='coin-selector'></div>
+                        <div className='bank-selector'></div>
+                        <button type='submit'>Sell {`${this.props.id}`}</button>
+                        <div>{`${this.props.id}`} balance:</div>
+                    </form>
+                </div>        )
             case 'convert': return (
                 <div>
                     <input type="text" placeholder='$0' />
@@ -75,9 +91,6 @@ class BuySellBox extends React.Component {
             } 
     }
 
-    onClickTabItem(order_type) {
-        this.setState({order_type:order_type})
-    }
 
     render() {
         // console.log(this.props)
@@ -93,7 +106,7 @@ class BuySellBox extends React.Component {
                     {this.whichTab()}
                 </div>
                 <div>
-                    {this.props.targetCoin.id} is the target coin
+                    {this.props.id} is the target coin
                 </div>
             </div>
         )
