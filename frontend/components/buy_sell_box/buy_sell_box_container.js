@@ -3,10 +3,11 @@ import {createTransaction} from '../../actions/transaction_actions'
 import { fetchCoin } from '../../actions/gecko_api_actions';
 import BuySellBox from './buy_sell_box';
 
-const msp = (state) => {
-    // console.log(state)
+const msp = (state,ownProps) => {
+    console.log(ownProps)
     return({
-        currentUser: state.session.id
+        currentUser: state.session.id,
+        targetCoin: state.entities.targetCoin
     })
 }
 

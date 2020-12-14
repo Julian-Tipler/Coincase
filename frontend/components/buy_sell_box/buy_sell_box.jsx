@@ -4,8 +4,8 @@ class BuySellBox extends React.Component {
     constructor(props) {  
       super(props)
       this.state = {
-        user_id: null,
-        coin_id: "", 
+        user_id: this.props.currentUser,
+        coin_id:"", 
         price: 0,
         quantity: 1,
         order_type: 'buy'
@@ -14,23 +14,34 @@ class BuySellBox extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    // componentDidMount() {
-    //     this.setState({user_id:this.props.currentUser,
-    //         coin_id:this.props.targetCoin.id,
-    //         price: this.props.targetCoin.market_data.current_price.usd})
-    // }
+    componentDidMount() {
+        console.log(this.props)
+        this.setState({
+            coin_id:this.props.targetCoin.id,
+            price: this.props.targetCoin.market_data.current_price.usd})
+    }
+    update(field) {
+        return e => this.setState({ [field]: e.currentTarget.value });
+    }
 
     handleSubmit(e) {
         e.preventDefault()
         const transaction = Object.assign({}, this.state);
         this.props.createTransaction(transaction)
     }
+
+
     whichTab() {
         switch (this.state.order_type) {
             case 'buy': return (
                 <div>
                     <form onSubmit={this.handleSubmit}>
-                        <input type="text" placeholder='$0'/>
+                        <div>
+                            <input type="text" 
+                            placeholder='$0'
+                            onChange={this.update('quantity')}/>
+                            <div>{`${this.props.targetCoin.id}`}</div>
+                        </div>
                         <div>You can buy up to $25,000</div>
                         <div>One time purchase</div>
                         <div className='coin-selector'></div>

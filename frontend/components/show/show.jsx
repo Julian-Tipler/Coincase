@@ -23,8 +23,7 @@ class Show extends React.Component {
                 <div>{id}</div>
                 <div>
                     <CoinGraph
-                    id={id}
-                    targetCoin={targetCoin}
+                    coinToGraph={targetCoin}
                     />
                 </div>
                 <div><BuySellBoxContainer 

@@ -124,12 +124,10 @@ class SessionForm extends React.Component {
                                 placeholder='password'
                                 className='sign-up-inputs'
                             />
-                            <input type="radio"
-                                value='I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.'
-                                onChange={this.update('password')}
-                                placeholder='password'
-                                className='sign-up-inputs'
-                            />
+                            <div id='terms-and-conditions'>
+                                <input type="checkbox" name="checkbox" value="check" id="agree" /> 
+                                <div>I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.</div>
+                            </div>
                             <button className='signup-button' type="submit" >{submit}</button>
                         </div>
                     </form>

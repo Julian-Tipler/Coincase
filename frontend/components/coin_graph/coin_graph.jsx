@@ -15,7 +15,7 @@ class CoinGraph extends React.Component{
 
     xAxis() {
         // console.log(this.props)
-        const prices = this.props.targetCoin.prices
+        const prices = this.props.coinToGraph.prices
         // console.log(prices)
         var times=[]
         if (!!prices) {
@@ -30,7 +30,7 @@ class CoinGraph extends React.Component{
 
     yAxis() {
         // console.log(this.props)
-        const prices = this.props.targetCoin.prices
+        const prices = this.props.coinToGraph.prices
         // console.log(prices)
         var values = []
         if (!!prices) {
@@ -80,7 +80,24 @@ class CoinGraph extends React.Component{
                 xAxes: [{
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 6
+                        maxTicksLimit: 6,
+                        maxRotation: 0,
+                        minRotation: 0
+                    },
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false
+                    }
+                }],
+                yAxes: [{
+                    ticks: {
+                        display: false
+                    },
+                    gridLines: {
+                        display: true,
+                        drawBorder: true,
+                        drawOnChartArea: false
                     }
                 }]
             }
@@ -97,6 +114,20 @@ class CoinGraph extends React.Component{
        return (
         <div>
             <Line data={this.graphData()} options={this.graphOptions()}/>
+            <div>
+                <div>
+                    <div>Market Cap</div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>Volume(24 hours) </div>
+                    <div></div>
+                </div>
+                <div>
+                    <div>Circulating supply</div>
+                    <div></div>
+                </div>
+            </div>
         </div>
        )
    }
