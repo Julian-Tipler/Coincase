@@ -4,8 +4,15 @@ export const fetchTopCoins = () => (
     })
 );
 
-export const fetchCoin = (id) => (
+// export const fetchCoin = (id) => (
+//     $.ajax({
+//         url: `https://api.coingecko.com/api/v3/coins/${id}`
+//     })
+// )
+
+export const fetchDailyData = (id) => (
     $.ajax({
-        url: `https://api.coingecko.com/api/v3/coins/${id}`
+        url: `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1&interval=hourly`
     })
 )
+

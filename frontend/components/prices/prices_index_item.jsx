@@ -8,11 +8,11 @@ import {
 } from 'react-router-dom';
 
 function PricesIndexItem(props) {
-    function goto(step){
+    function goto(){
         props.history.push(`/show/${props.id}`)
     }
     return(   
-        <tr onClick={() => goto(2)}className='index-row'>
+        <tr onClick={() => goto()}className='index-row'>
             <td>{props.index}</td>
             <td><img src={props.image} className='coin-icon' />{props.name}   {props.symbol}</td>
             <td>{props.current_price}</td>

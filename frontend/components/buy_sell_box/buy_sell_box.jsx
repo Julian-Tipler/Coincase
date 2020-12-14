@@ -4,15 +4,21 @@ class BuySellBox extends React.Component {
     constructor(props) {  
       super(props)
       this.state = {
-        // user_id: this.props.currentUser,
-        // coin_id: this.props.targetCoin.id, 
-        // price:this.props.targetCoin.market_data.current_price.usd,
-        // quantity: 1,
-        // order_type: 'buy'
+        user_id: null,
+        coin_id: "", 
+        price: 0,
+        quantity: 1,
+        order_type: 'buy'
     }
       this.setState = this.setState.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
     }
+
+    // componentDidMount() {
+    //     this.setState({user_id:this.props.currentUser,
+    //         coin_id:this.props.targetCoin.id,
+    //         price: this.props.targetCoin.market_data.current_price.usd})
+    // }
 
     handleSubmit(e) {
         e.preventDefault()
@@ -58,12 +64,12 @@ class BuySellBox extends React.Component {
             } 
     }
 
-    onClickTabItem(tab) {
-        this.setState({tab:tab})
+    onClickTabItem(order_type) {
+        this.setState({order_type:order_type})
     }
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div>
                 <div className = 'buy-sell-box-header'>       

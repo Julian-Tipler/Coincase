@@ -19,7 +19,12 @@ export const fetchTopCoins = () => (dispatch) => (
         .then((coins) => dispatch(receiveTopCoins(coins)))
 )
 
-export const fetchCoin = (id) => (dispatch) => (
-    APIUtil.fetchCoin(id)
+// export const fetchCoin = (id) => (dispatch) => (
+//     APIUtil.fetchCoin(id)
+//         .then((coin) => dispatch(receiveCoin(coin)))
+// )
+
+export const fetchDailyData = (id) => (dispatch) => (
+    APIUtil.fetchDailyData(id)
         .then((coin) => dispatch(receiveCoin(coin)))
 )

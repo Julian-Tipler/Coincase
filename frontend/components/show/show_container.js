@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchCoin } from '../../actions/gecko_api_actions';
+import { fetchDailyData } from '../../actions/gecko_api_actions'
 import Show from './show'
 
 const msp = (state,ownProps) => ({
@@ -8,7 +9,8 @@ const msp = (state,ownProps) => ({
 })
 
 const mdp = dispatch => ({
-    fetchCoin: (id)=> dispatch(fetchCoin(id))
+    fetchCoin: (id)=> dispatch(fetchCoin(id)),
+    fetchDailyData: (id)=> dispatch(fetchDailyData(id))
 })
 
 export default connect(msp,mdp)(Show)

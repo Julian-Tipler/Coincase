@@ -2,7 +2,7 @@ import React from 'react';
 import PricesIndexItem from './prices_index_item'
 
 
-
+//Powered by CoinGecko API
 class PricesIndex extends React.Component {
     render() {
         return(
