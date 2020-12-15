@@ -10,6 +10,10 @@ class Api::UsersController < ApplicationController
         end
     end
     
+    def show
+        #shows user porfolio worth through transaction association
+    end
+    
     private
     def user_params
         params.require(:user).permit(:email, :password)

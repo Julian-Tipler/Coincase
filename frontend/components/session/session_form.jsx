@@ -26,8 +26,19 @@ class SessionForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        const user = Object.assign({}, this.state);
-        this.props.action(user);
+        if (this.props.formType === 'sign up'){
+            if (document.getElementById('terms-and-conditions-checkbox').checked) {
+                const user = Object.assign({}, this.state);
+                this.props.action(user);
+            }
+            else {
+                alert("To proceed you must accept the terms and conditions.")
+            }
+        }
+        else {
+            const user = Object.assign({}, this.state);
+            this.props.action(user);
+        }
     }
 
     handleDemo(e) {
@@ -125,7 +136,7 @@ class SessionForm extends React.Component {
                                 className='sign-up-inputs'
                             />
                             <div id='terms-and-conditions'>
-                                <input type="checkbox" name="checkbox" value="check" id="agree" /> 
+                                <input id='terms-and-conditions-checkbox'type="checkbox" name="checkbox" value="check" /> 
                                 <div>I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.</div>
                             </div>
                             <button className='signup-button' type="submit" >{submit}</button>

@@ -4,11 +4,12 @@ import { fetchCoinInfo } from '../../actions/gecko_api_actions';
 import BuySellBox from './buy_sell_box';
 
 const msp = (state,ownProps) => {
-    console.log(state)
+    console.log(Object.values(state.entities.transactions))
     return({
         currentUser: state.session.id,
         id: ownProps.id,
-        coinInfo: state.entities.coinInfo
+        coinInfo: state.entities.coinInfo,
+        transactionResponse: Object.values(state.entities.transactions)
     })
 }
 

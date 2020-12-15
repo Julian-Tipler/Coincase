@@ -1,10 +1,15 @@
 class Api::TransactionsController < ApplicationController
     def create
         @transaction = Transaction.new(transaction_params)
-        if @transaction.save
-            render json:['successful transaction']
+        user = current_user
+        if @transaction.price * @transaction.quantity > user.buying_power
+            render json: ['out of money!!!']
         else
-            render json: @transaction.errors.full_messages, status: 422
+            if @transaction.save
+                render json: ['Transaction Successful!']
+            else
+                render json: @transaction.errors.full_messages, status: 422
+            end
         end
     end
     

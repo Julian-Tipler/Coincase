@@ -77,17 +77,17 @@ class BuySellBox extends React.Component {
                         <div>{`${this.props.id}`} balance:</div>
                     </form>
                 </div>        )
-            case 'convert': return (
-                <div>
-                    <input type="text" placeholder='$0' />
-                    <div>We do not support conversion at this time</div>
-                    <div>Convert All</div>
-                    <div className='from-coin'></div>
-                    <div className='to-coin'></div>
-                    <button>Convert {`${this.props.id}`}</button>
-                    <div>{`${this.props.id}`} balance</div>
-                </div>            )
-            default: <div>error2</div>
+            // case 'convert': return (
+            //     <div>
+            //         <input type="text" placeholder='$0' />
+            //         <div>We do not support conversion at this time</div>
+            //         <div>Convert All</div>
+            //         <div className='from-coin'></div>
+            //         <div className='to-coin'></div>
+            //         <button>Convert {`${this.props.id}`}</button>
+            //         <div>{`${this.props.id}`} balance</div>
+            //     </div>            )
+            // default: <div>error2</div>
             } 
     }
 
@@ -99,14 +99,14 @@ class BuySellBox extends React.Component {
                 <div className = 'buy-sell-box-header'>       
                     <button onClick={()=> this.onClickTabItem('buy')}>Buy</button>
                     <button onClick={()=> this.onClickTabItem('sell')}>Sell</button>
-                    <button onClick={()=> this.onClickTabItem('convert')}>Convert</button>
+                    {/* <button onClick={()=> this.onClickTabItem('convert')}>Convert</button> */}
                 </div>
 
                 <div className ='buy-sell-box-body'>
                     {this.whichTab()}
                 </div>
                 <div>
-                    {this.props.id} is the target coin
+                    {this.props.transactionResponse.map((response, i) => <div key={`response ${i}`}>{response}</div>)}
                 </div>
             </div>
         )

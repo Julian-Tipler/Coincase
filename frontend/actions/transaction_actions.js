@@ -2,13 +2,13 @@ import * as APIUtil from '../util/transaction_api_util'
 
 export const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
 
-const receiveTransaction = transaction => ({
+const receiveTransaction = transactionResponse => ({
     type: RECEIVE_TRANSACTION,
-    transaction,
+    transactionResponse,
 });
 
 export const createTransaction = transaction => dispatch => (
-    APIUtil.createTransaction(transaction).then(transaction => (
-        dispatch(receiveTransaction(transaction))
+    APIUtil.createTransaction(transaction).then(transactionResponse => (
+        dispatch(receiveTransaction(transactionResponse))
     ))
 );

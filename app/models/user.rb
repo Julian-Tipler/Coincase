@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    validates :email, :password_digest, :session_token, presence: true
+    validates :email, :password_digest, :session_token,  presence: true
     validates :email, uniqueness: true
     validates :password, length: { minimum: 8}, allow_nil: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP } 
@@ -38,4 +38,15 @@ class User < ApplicationRecord
     self.save!
     self.session_token
   end
+
+  def buying_power 
+    usd_owned = 25000
+    transactions.each do |transaction|
+      transaction_amount = transaction.price * transaction.quantity
+      transaction.order_type == 'buy' ? usd_owned -= transaction_amount : usd_owned += transaction_amount
+    end
+    usd_owned.round(2)
+  end
+  
+
 end
