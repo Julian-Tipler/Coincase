@@ -4,12 +4,12 @@ import CoinGraph from '../coin_graph/coin_graph'
 class Home extends React.Component {
     render() {
         return(
-            <div>
+            <div className='portfolio-content'>
                 <div className='portfolio-graph'>Portfolio Graph</div>
                 <div className='watch-list'>
                     <div>Watchlist</div>
                     <div>
-                        <div className='portfolio-graph'>
+                        <div className='watch-list-boxes'>
                             <div className='watch-list-top-row'></div>
                             {/* <div><CoinGraph /> graph1</div>
                             <div><CoinGraph /> graphs2</div>
@@ -21,9 +21,9 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div>
-                    <div>Your Portfolio</div>
-                    <div>Recent Transactions</div>
+                <div className='your-portfolio-and-recent-transactions'>
+                    <div className='your-portfolio'>Your Portfolio</div>
+                    <div className='recent-transactions'>Recent Transactions</div>
                 </div>
            
                 

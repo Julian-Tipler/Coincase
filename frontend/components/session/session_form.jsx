@@ -57,7 +57,7 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'login') {
             path = "/signup"
             text = "Don't have an acount? "
-            button = "sign up"
+            button = "Don't have an account?"
             submit = "SIGN IN"
             page = 
             <div className='login-full-page'>
@@ -75,7 +75,7 @@ class SessionForm extends React.Component {
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                placeholder='Choose password'
+                                placeholder='Password'
                                 className='login-inputs'
                             />
                         </div>
@@ -90,7 +90,6 @@ class SessionForm extends React.Component {
                     </form>
                 </div>
                     <div className='switch-form'>
-                        {text}
                         <Link to={`${path}`}>{button}</Link>
                     </div>
             </div>

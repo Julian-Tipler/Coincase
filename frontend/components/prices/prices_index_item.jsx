@@ -17,12 +17,11 @@ function PricesIndexItem(props) {
     }
     const marketCapFormated = (arg) => {
 
-        return Math.abs(Number(arg)) >= 1.0e+9
-        ? (Math.abs(Number(arg)) / 1.0e+9).toFixed(2) + 'B'
-        : Math.abs(Number(arg)) >= 1.0e+6
-
-        ? (Math.abs(Number(arg)) / 1.0e+6).toFixed(2) + 'M'
-        : Math.abs(Number(arg)) >= 1.0e+3
+        return Math.abs(Number(arg)) >= 1.0e+9 ? 
+        (Math.abs(Number(arg)) / 1.0e+9).toFixed(2) + 'B': 
+        Math.abs(Number(arg)) >= 1.0e+6? 
+        (Math.abs(Number(arg)) / 1.0e+6).toFixed(2) + 'M': 
+        Math.abs(Number(arg)) >= 1.0e+3
     }
     const currentPriceFormated = (arg) => {
         return(

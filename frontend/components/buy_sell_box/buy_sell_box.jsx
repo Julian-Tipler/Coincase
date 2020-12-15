@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './modal'
 
 class BuySellBox extends React.Component {
     constructor(props) {  
@@ -16,10 +17,12 @@ class BuySellBox extends React.Component {
 
     componentDidMount() {
         this.props.fetchCoinInfo(this.props.id)
+        // this.props.clearErrors()
     }
 
     componentDidUpdate(prevProps) {
-        if (this.state.price === 0) {
+        console.log(prevProps)
+        if (prevProps.coinInfo !== this.props.coinInfo) {
             this.setState({
                 price: this.props.coinInfo.market_data.current_price.usd
             })        
@@ -93,7 +96,6 @@ class BuySellBox extends React.Component {
 
 
     render() {
-        // console.log(this.props)
         return(
             <div>
                 <div className = 'buy-sell-box-header'>       
@@ -105,8 +107,13 @@ class BuySellBox extends React.Component {
                 <div className ='buy-sell-box-body'>
                     {this.whichTab()}
                 </div>
+                <div>Your balance usd:</div>
                 <div>
                     {this.props.transactionResponse.map((response, i) => <div key={`response ${i}`}>{response}</div>)}
+                    {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>errors:{error}</div>)}
+                </div>
+                <div>
+                    <Modal show={true}/>
                 </div>
             </div>
         )

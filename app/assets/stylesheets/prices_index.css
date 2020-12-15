@@ -1,13 +1,14 @@
+.prices-content {
+    margin-left: 237px;
+    background-color: grey
+}
+
 .coin-icon {
     width: 20px;
 }
 
 .index-row {
     cursor: pointer
-}
-
-.prices-full-page {
-    background-color:white;
 }
 
 .green {

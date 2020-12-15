@@ -12,15 +12,28 @@ import {
 
 
 class CoinGraph extends React.Component{
+    constructor(props) {  
+      super(props)
+      this.state = {
+          coinHistoricalData: {}
+      }
+    }
 
     componentDidMount() {
-        
+        this.props.fetchCoinHistoricalData(this.props.id)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.coinHistoricalData !== this.props.coinHistoricalData) {
+            this.setState({
+                coinHistoricalData: this.props.fetchCoinHistoricalData
+            })
+        }
     }
 
     xAxis() {
         // console.log(this.props)
-        const prices = this.props.coinToGraph.prices
-        // console.log(prices)
+        const prices = this.props.coinHistoricalData.prices
         var times=[]
         if (!!prices) {
             prices.forEach(el=> {
@@ -34,7 +47,7 @@ class CoinGraph extends React.Component{
 
     yAxis() {
         // console.log(this.props)
-        const prices = this.props.coinToGraph.prices
+        const prices = this.props.coinHistoricalData.prices
         // console.log(prices)
         var values = []
         if (!!prices) {
@@ -72,6 +85,7 @@ class CoinGraph extends React.Component{
             ],
             
         };
+        // console.log(data)
         return data
     }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import BuySellBoxContainer from '../buy_sell_box/buy_sell_box_container';
-import CoinGraph from '../coin_graph/coin_graph'
+import CoinGraphContainer from '../coin_graph/coin_graph_container'
 
 class Show extends React.Component {
     constructor(props) {  
@@ -9,16 +9,15 @@ class Show extends React.Component {
 
 
     render() {
-        // console.log('show-render')
         
         const {id} = this.props
         return(
-            <div>
+            <div className='show-content'>
                 <div>{id}</div>
                 <div>
-                    {/* <CoinGraph
-                    id={id} */}
-                    />
+                    <CoinGraphContainer
+                    id={id}/>
+                    
                 </div>
                 <div>
                     <BuySellBoxContainer 
