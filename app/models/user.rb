@@ -47,6 +47,19 @@ class User < ApplicationRecord
     end
     usd_owned.round(2)
   end
+
+  def portfolio
+    coins = transactions.distinct.pluck(:coin_id)
+    hash = Hash[coins.collect{|coin|[coin,0]}]
+    transactions.each do |transaction|
+      if transaction.order_type == 'buy'
+        hash[transaction.coin_id] += transaction.quantity
+      else
+        hash[transaction.coin_id] -= transaction.quantity
+      end
+    end
+    hash
+  end
   
 
 end

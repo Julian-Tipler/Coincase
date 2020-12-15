@@ -3,7 +3,7 @@ class Api::TransactionsController < ApplicationController
         @transaction = Transaction.new(transaction_params)
         user = current_user
         if @transaction.price * @transaction.quantity > user.buying_power
-            render json: ['out of money!!!']
+            render json: ['You do not have sufficient funds to make this purchase'], status: 422
         else
             if @transaction.save
                 render json: ['Transaction Successful!']

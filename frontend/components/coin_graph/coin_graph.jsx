@@ -132,7 +132,7 @@ class CoinGraph extends React.Component{
        return (
         <div>
             <Line data={this.graphData()} options={this.graphOptions()}/>
-            <div>
+            {/* <div>
                 <div>
                     <div>Market Cap</div>
                     <div></div>
@@ -145,7 +145,8 @@ class CoinGraph extends React.Component{
                     <div>Circulating supply</div>
                     <div></div>
                 </div>
-            </div>
+            </div> */}
+            <div></div>
         </div>
        )
    }

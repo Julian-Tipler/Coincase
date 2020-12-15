@@ -21,7 +21,7 @@ class BuySellBox extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(prevProps)
+        // console.log(prevProps)
         if (prevProps.coinInfo !== this.props.coinInfo) {
             this.setState({
                 price: this.props.coinInfo.market_data.current_price.usd
@@ -59,7 +59,7 @@ class BuySellBox extends React.Component {
                         <div className='coin-selector'></div>
                         <div className='bank-selector'></div>
                         <button type='submit'>Buy {`${this.props.id}`}</button>
-                        <div>{`${this.props.id}`} balance:</div>
+                        
                     </form>
                 </div>
             )
@@ -77,7 +77,6 @@ class BuySellBox extends React.Component {
                         <div className='coin-selector'></div>
                         <div className='bank-selector'></div>
                         <button type='submit'>Sell {`${this.props.id}`}</button>
-                        <div>{`${this.props.id}`} balance:</div>
                     </form>
                 </div>        )
             // case 'convert': return (
@@ -107,13 +106,13 @@ class BuySellBox extends React.Component {
                 <div className ='buy-sell-box-body'>
                     {this.whichTab()}
                 </div>
+                <div>Total cost of transaction: {(this.state.price*this.state.quantity).toFixed(2)}</div>
+                <div>{`${this.props.id}`} price:</div>
+                <div>${this.state.price}</div>
                 <div>Your balance usd:</div>
                 <div>
-                    {this.props.transactionResponse.map((response, i) => <div key={`response ${i}`}>{response}</div>)}
-                    {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>errors:{error}</div>)}
-                </div>
-                <div>
-                    <Modal show={true}/>
+                    {/* {this.props.transactionResponse.map((response, i) => <div key={`response ${i}`}>{response}</div>)} */}
+                    {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>error: {error}</div>)}
                 </div>
             </div>
         )

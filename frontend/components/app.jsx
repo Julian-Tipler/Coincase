@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './buy_sell_box/modal'
 import HeaderContainer from './header/header_container'
 import SignedInHeaderContainer from './header/signed_in_header_container'
 import WelcomeContainer from './welcome/welcome_container'
@@ -21,6 +22,7 @@ class App extends React.Component {
     render() {
         return(
             <div className={true ? 'background-white' : 'background-blue'} >
+                <Modal />
                 <header className='nav-bar'>
                     <Switch>
                         <Route exact path="/" component={HeaderContainer} />

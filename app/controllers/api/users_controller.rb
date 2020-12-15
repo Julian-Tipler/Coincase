@@ -11,7 +11,7 @@ class Api::UsersController < ApplicationController
     end
     
     def show
-        #shows user porfolio worth through transaction association
+        @portfolio = User.find_by(id: current_user.id).portfolio
     end
     
     private

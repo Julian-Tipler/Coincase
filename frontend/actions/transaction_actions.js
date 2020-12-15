@@ -1,4 +1,6 @@
 import * as APIUtil from '../util/transaction_api_util'
+import { openModal}  from './modal_actions'
+
 
 export const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
 export const RECEIVE_TRANSACTION_ERRORS = 'RECEIVE_TRANSACTION_ERRORS'
@@ -20,6 +22,9 @@ export const clearErrors = () => ({
 
 export const createTransaction = transaction => dispatch => (
     APIUtil.createTransaction(transaction)
-    .then(transactionResponse => dispatch(receiveTransaction(transactionResponse)), 
+    .then(transactionResponse => {
+        dispatch(receiveTransaction(transactionResponse))
+        dispatch(openModal('successfulTransaction'))
+    }, 
     err => (dispatch(receiveTransactionErrors(err.responseJSON))))
 );
