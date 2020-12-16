@@ -25,7 +25,6 @@ function Modal({modal, coinInfo, closeModal}) {
 }
 
 const mapStateToProps = state => {
-    console.log(state)
     return {
         modal: state.ui.modal,
         coinInfo: state.entities.coinInfo

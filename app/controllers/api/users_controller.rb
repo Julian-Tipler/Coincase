@@ -10,8 +10,14 @@ class Api::UsersController < ApplicationController
         end
     end
     
+    def index
+        @portfolio = current_user.portfolio
+        render json: @portfolio
+    end
+    
     def show
-        @portfolio = User.find_by(id: current_user.id).portfolio
+        @user = current_user
+        render 'api/users/show'
     end
     
     private

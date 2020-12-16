@@ -60,6 +60,9 @@ class User < ApplicationRecord
     end
     hash
   end
+
+  def recentTransactions
+  end
   
 
 end

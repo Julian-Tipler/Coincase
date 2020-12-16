@@ -8,11 +8,11 @@ import transactionsReducer from './transactions_reducer'
     
 
 const entitiesReducer = combineReducers({
-    users: usersReducer,
     coins: coins_reducer,
     coinInfo: coinInfoReducer,
     coinHistoricalData: coinHistoricalDataReducer,
-    transactions: transactionsReducer
+    transactions: transactionsReducer,
+    users: usersReducer,
 });
 
 export default entitiesReducer;

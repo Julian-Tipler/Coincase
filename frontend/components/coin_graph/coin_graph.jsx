@@ -26,7 +26,7 @@ class CoinGraph extends React.Component{
     componentDidUpdate(prevProps) {
         if (prevProps.coinHistoricalData !== this.props.coinHistoricalData) {
             this.setState({
-                coinHistoricalData: this.props.fetchCoinHistoricalData
+                coinHistoricalData: this.props.coinHistoricalData
             })
         }
     }

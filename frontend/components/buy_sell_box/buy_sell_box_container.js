@@ -9,7 +9,7 @@ const msp = (state,ownProps) => {
         currentUser: state.session.id,
         id: ownProps.id,
         coinInfo: state.entities.coinInfo,
-        transactionResponse: Object.values(state.entities.transactions),
+        // transactionResponse: Object.values(state.entities.transactions),
         errors: state.errors
     })
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 
 function SuccessfulTransaction() {
-    console.log('success')
     return(
         <div>
             <div className='transaction-success-box'>
