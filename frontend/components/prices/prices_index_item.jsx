@@ -29,22 +29,22 @@ function PricesIndexItem(props) {
         )
     }
     const priceChange24hFormated = (arg) => (
-        arg>0 ? "+" + arg : arg
+        arg>0 ? "+" + arg.toFixed(2) : arg.toFixed(2)
     )
 
 
     return(   
         <tr onClick={() => goto()} className='coin-table-row'>
-            <td>{props.index}</td>
+            <td className='top-column'>{props.index}</td>
             <td className='name-id-abbreviation'>
-                <img src={props.image} className='coin-icon' />
+                <div><img src={props.image} className='coin-icon' /></div>
                 <div>{props.name} </div>  
                 <div>{props.symbol}</div>
             </td>
-            <td>{currentPriceFormated(props.current_price)}</td>
+            <td >{currentPriceFormated(props.current_price)}</td>
             <td className={`${color}`}>{priceChange24hFormated(props.price_change_24h)}%</td>
-            <td>{marketCapFormated(props.market_cap)}</td>
-            <td><button>Trade</button></td>
+            <td >{marketCapFormated(props.market_cap)}</td>
+            <td ><button className='trade-button'>Trade</button></td>
         </tr>
     )
     

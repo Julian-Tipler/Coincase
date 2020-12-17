@@ -17,6 +17,7 @@ class BuySellBox extends React.Component {
 
     componentDidMount() {
         this.props.fetchCoinInfo(this.props.id)
+        this.props.fetchUserDetails(this.props.currentUser)
         // this.props.clearErrors()
     }
 
@@ -79,17 +80,6 @@ class BuySellBox extends React.Component {
                         <button type='submit'>Sell {`${this.props.id}`}</button>
                     </form>
                 </div>        )
-            // case 'convert': return (
-            //     <div>
-            //         <input type="text" placeholder='$0' />
-            //         <div>We do not support conversion at this time</div>
-            //         <div>Convert All</div>
-            //         <div className='from-coin'></div>
-            //         <div className='to-coin'></div>
-            //         <button>Convert {`${this.props.id}`}</button>
-            //         <div>{`${this.props.id}`} balance</div>
-            //     </div>            )
-            // default: <div>error2</div>
             } 
     }
 
@@ -110,6 +100,7 @@ class BuySellBox extends React.Component {
                 <div>{`${this.props.id}`} price:</div>
                 <div>${this.state.price}</div>
                 <div>Your balance usd:</div>
+                <div>{`${this.props.userBuyingPower}`}</div>
                 <div>
                     {/* {this.props.transactionResponse.map((response, i) => <div key={`response ${i}`}>{response}</div>)} */}
                     {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>error: {error}</div>)}

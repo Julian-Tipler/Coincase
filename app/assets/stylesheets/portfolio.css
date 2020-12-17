@@ -3,10 +3,20 @@
     width: 100%;
     background-color: rgb(246,249,252);
     margin-left: 237px;
+    padding-top: 20px;
+    padding-bottom: 150px
+}
+
+.portfolio-balance-title{
+  font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    padding-bottom: 20px;   
 }
 
 .portfolio-chart-box {
-    border: 1px solid gray;
+    background-color: white;
+    border: 1px solid rgb(241,243,245);
     border-radius: 5px;
     left: 40px;
     margin: 20px 20px 20px 20px;
@@ -16,19 +26,37 @@
 }
 
 .portfolio-index-box {
-    border: 1px solid gray;
+    background-color: white;
+    border: 1px solid rgb(241,243,245);
     border-radius: 5px;
     left: 40px;
     margin: 20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
-    width: 50%
+    width: 50%;
 }
 
 .recent-transactions-box{
-    border: 1px solid gray;
+    background-color: white;
+    border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
     left: 40px;
     margin: 20px 20px 20px 20px;
     padding: 20px 20px 20px 20px;
-    width: 50%
+    width: 50%;
+}
+
+.portfolio-index-box-title {
+    font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.portfolio-index-item {
+    display: flex
+
+}
+
+.portfolio-index-item-name{
+    
 }

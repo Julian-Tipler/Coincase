@@ -10,12 +10,12 @@ class PricesIndex extends React.Component {
                 <table className='coin-table'>
                     <tbody>
                     <tr className='coin-title-row' >
-                        <td>#</td>
-                        <td>Name</td>
-                        <td>Price</td>
-                        <td>Change</td>
-                        <td>Market Cap</td>
-                        <td>Trade</td>
+                        <td >#</td>
+                        <td >Name</td>
+                        <td >Price</td>
+                        <td >Change</td>
+                        <td >Market Cap</td>
+                        <td >Trade</td>
                     </tr>
                     {this.props.coins.map((coin, i) => (
                         <PricesIndexItem

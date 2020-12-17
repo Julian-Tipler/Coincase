@@ -2,10 +2,10 @@ import React from 'react';
 
 const PortfolioIndexItem = props => {
     return(
-        <div className='index-item'>
-            <div>{props.id}:</div>
-            <div>{props.quantity}</div>
-        </div>
+        <tr className='portfolio-index-item'>
+            <td className='portfolio-index-item-name'>{props.id}:</td>
+            <td className='portfolio-index-item-quantity'>{props.quantity}</td>
+        </tr>
     )
 }
 

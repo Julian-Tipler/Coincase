@@ -6,14 +6,15 @@ class Show extends React.Component {
     constructor(props) {  
       super(props)
     }
-
+    
+//componentdidmount to get the image
 
     render() {
         
         const {id} = this.props
         return(
             <div className='show-content'>
-                <div>{id}</div>
+                <div className='show-title'>{id}</div>
                 <div className='coin-graph-box'>
                     <CoinGraphContainer
                     id={id}/>
@@ -24,7 +25,6 @@ class Show extends React.Component {
                     id={id}
                     />
                 </div>
-                
             </div>
         )
         //should I pass coinInfo through props or through map state to props ORRR have a fetch happen inside of the graph component

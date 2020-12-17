@@ -1,5 +1,5 @@
 .signed-in-sidebar {
-height: 100%; /* Full-height: remove this if you want "auto" height */
+  height: 100%; /* Full-height: remove this if you want "auto" height */
   min-width: 237px;
   max-width: 237px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
@@ -7,6 +7,7 @@ height: 100%; /* Full-height: remove this if you want "auto" height */
   top: 0; /* Stay at the top */
   left: 0;
   background-color:white; /* Black */
+  border: 1px solid rgb(241,243,245) ;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
@@ -98,7 +99,9 @@ height: 100%; /* Full-height: remove this if you want "auto" height */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color:rgb(246, 247, 248); /* Black */
+  background-color:rgb(231, 237, 242); /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
+  border: 1px solid rgb(241,243,245) ;
+
 }
 

@@ -3,3 +3,9 @@ export const fetchPortfolio = () => (
         url: '/api/users',
     })
 );
+
+export const fetchUserDetails = (id) => (
+    $.ajax({
+        url: `/api/users/${id}`
+    })
+)

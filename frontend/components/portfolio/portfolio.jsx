@@ -44,15 +44,15 @@ class Portfolio extends React.Component {
             <div className='portfolio-content'>
                 <div className='portfolio-chart-box'>
                     <div className='portfolio-balance'>
-                        <div>Portfolio balance:</div>
+                        <div className='portfolio-balance-title'>Portfolio balance:</div>
                         <div>${this.state.portfolioWorth}</div>
                     </div>
-                    <div className='portfolio-graph'>
+                    {/* <div className='portfolio-graph'>
                         -portfolio graph goes here-
-                    </div>
+                    </div> */}
                 </div>
                 <div className='portfolio-index-box'>
-                    <div>
+                    <div className='portfolio-index-box-title'>
                         Your assets:
                     </div>
                     <div>
