@@ -42,7 +42,7 @@ class Portfolio extends React.Component {
     render() {
         return(
             <div className='portfolio-content'>
-                <div className='portfolio-chart'>
+                <div className='portfolio-chart-box'>
                     <div className='portfolio-balance'>
                         <div>Portfolio balance:</div>
                         <div>${this.state.portfolioWorth}</div>
@@ -51,7 +51,7 @@ class Portfolio extends React.Component {
                         -portfolio graph goes here-
                     </div>
                 </div>
-                <div className='portfolio-index'>
+                <div className='portfolio-index-box'>
                     <div>
                         Your assets:
                     </div>
@@ -59,7 +59,7 @@ class Portfolio extends React.Component {
                         <PortfolioIndex portfolio={this.state.portfolio}/>
                     </div>
                 </div>
-                <div className='recent-transactions'>
+                <div className='recent-transactions-box'>
                     <div>
                         Recent Transactions
                     </div>

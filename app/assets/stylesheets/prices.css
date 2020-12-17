@@ -1,22 +1,37 @@
 .prices-content {
     height: 100%;
     width: 100%;
-    background-color: rgb(243, 244, 255);
+    background-color: rgb(246,249,252);
     margin-left: 237px
 }
 
-.price-index-table {
+.price-index-table-box {
     border: 1px solid gray;
-    border-radius: 5px;
-    left: 40px
+    border-radius: 1px;
+    left: 40px;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    width: 70%;
 }
+
+.coin-table {
+    width: 100%;
+}
+
+.coin-table-row {
+    cursor: pointer;
+}
+
+.name-id-abbreviation {
+    display: flex;
+    justify-content: space-between;
+    width: 200px
+}
+
+
 
 .coin-icon {
     width: 20px;
-}
-
-.index-row {
-    cursor: pointer
 }
 
 .green {

@@ -9,7 +9,7 @@ class Prices extends React.Component {
         return(
             <div className='prices-content'>
                 <h1>Coins Index</h1>
-                <div className='price-index-table'>
+                <div className='price-index-table-box'>
                     <PricesIndex coins={this.props.coins} />
                 </div>
                 <div>

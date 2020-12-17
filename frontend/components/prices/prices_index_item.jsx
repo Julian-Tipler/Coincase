@@ -34,9 +34,13 @@ function PricesIndexItem(props) {
 
 
     return(   
-        <tr onClick={() => goto()}className='index-row'>
+        <tr onClick={() => goto()} className='coin-table-row'>
             <td>{props.index}</td>
-            <td><img src={props.image} className='coin-icon' />{props.name}   {props.symbol}</td>
+            <td className='name-id-abbreviation'>
+                <img src={props.image} className='coin-icon' />
+                <div>{props.name} </div>  
+                <div>{props.symbol}</div>
+            </td>
             <td>{currentPriceFormated(props.current_price)}</td>
             <td className={`${color}`}>{priceChange24hFormated(props.price_change_24h)}%</td>
             <td>{marketCapFormated(props.market_cap)}</td>
