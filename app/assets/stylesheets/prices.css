@@ -1,0 +1,28 @@
+.prices-content {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(243, 244, 255);
+    margin-left: 237px
+}
+
+.price-index-table {
+    border: 1px solid gray;
+    border-radius: 5px;
+    left: 40px
+}
+
+.coin-icon {
+    width: 20px;
+}
+
+.index-row {
+    cursor: pointer
+}
+
+.green {
+    color: green
+}
+
+.red {
+    color: red
+}

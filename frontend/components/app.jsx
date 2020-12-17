@@ -27,7 +27,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/" component={HeaderContainer} />
                         <AuthRoute exact path={["/login", "/signup"]} component={HeaderContainer} />
-                        <ProtectedRoute exact path={["/users", "/portfolio", "/prices"]} component={SignedInHeaderContainer} />
+                        <ProtectedRoute exact path={["/home", "/portfolio", "/prices"]} component={SignedInHeaderContainer} />
                         <ProtectedRoute path={"/show"} component={SignedInHeaderContainer} />
                     </Switch>
                 </header>
@@ -36,7 +36,7 @@ class App extends React.Component {
                         <Route exact path="/" component={WelcomeContainer} />
                         <AuthRoute exact path="/login" component={LoginFormContainer} />
                         <AuthRoute exact path="/signup" component={SignUpFormContainer} />
-                        <ProtectedRoute exact path="/users" component={HomeContainer} />
+                        <ProtectedRoute exact path="/home" component={HomeContainer} />
                         <ProtectedRoute exact path="/portfolio" component={PortfolioContainer} />
                         <ProtectedRoute exact path="/prices" component={PricesContainer} />
                         <ProtectedRoute exact path="/show/:id" component={ShowContainer} />

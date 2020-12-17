@@ -34,7 +34,7 @@ class Portfolio extends React.Component {
                 worth += this.props.userCoinPrices[id].market_data.current_price.usd
             })
         }
-            return worth
+            return worth.toFixed(2)
     }
 
 
@@ -53,7 +53,7 @@ class Portfolio extends React.Component {
                 </div>
                 <div className='portfolio-index'>
                     <div>
-                        Your portfolio
+                        Your assets:
                     </div>
                     <div>
                         <PortfolioIndex portfolio={this.state.portfolio}/>

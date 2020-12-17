@@ -14,17 +14,33 @@ class SignedInHeader extends React.Component {
     render() {
         return (
             <div>
-                <div className='signed-in-header'>
-                    <Link to='/users' className='signed-in-logo'>Coincase Logo</Link>
+                <div className='signed-in-sidebar'>
+                    <div className='signed-in-logo'>
+                        <Link to='/home'id='logo-small'>coincase</Link>
+                    </div>
                     <div className='signed-in-links'>
-                        <div id='signed-in-header-home'><FontAwesomeIcon icon={faHome}/><Link to='/users'>Home</Link></div>
-                        <div id='signed-in-header-portfolio'><FontAwesomeIcon icon={faChartPie} /><Link to='/portfolio'>Portfolio</Link></div>
-                        <div id='signed-in-header-prices'><FontAwesomeIcon icon={faChartLine} /><Link to='/prices'>Prices</Link></div>
+                        <Link id='signed-in-header-home' to='/home'>
+                            <FontAwesomeIcon icon={faHome}/>
+                            <div>Home</div>
+                        </Link>
+                        <Link id='signed-in-header-portfolio' to='/portfolio'>
+                            <FontAwesomeIcon icon={faChartPie} />
+                            <div>Portfolio</div>
+                        </Link>
+                        <Link id='signed-in-header-prices' to='/prices'>
+                            <FontAwesomeIcon icon={faChartLine} />
+                            <div>Prices</div>
+                        </Link>
                     </div>
                 </div>
                 <div className='signed-in-top-bar'>
-                    <button>Trade</button>
-                    <button onClick={()=> this.props.logout()}>Logout</button>
+                    <div>
+
+                    </div>
+                    <div id='trade-logout-buttons'>
+                        <button>Trade</button>
+                        <button onClick={()=> this.props.logout()}>Logout</button>
+                    </div>
                 </div>
             </div>
         )

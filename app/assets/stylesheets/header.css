@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.signed-in-header {
-    background-color: white;
+    min-height:65px;
+    max-height:65px;
 }
 
 .right-side-items{

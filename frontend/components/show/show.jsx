@@ -14,12 +14,12 @@ class Show extends React.Component {
         return(
             <div className='show-content'>
                 <div>{id}</div>
-                <div>
+                <div className='coin-graph-box'>
                     <CoinGraphContainer
                     id={id}/>
                     
                 </div>
-                <div>
+                <div className='buy-sell-box'>
                     <BuySellBoxContainer 
                     id={id}
                     />

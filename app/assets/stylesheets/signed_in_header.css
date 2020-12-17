@@ -1,31 +1,104 @@
-.signed-in-header {
+.signed-in-sidebar {
 height: 100%; /* Full-height: remove this if you want "auto" height */
-  min-width: 200px;
-  max-width: 200px; /* Set the width of the sidebar */
+  min-width: 237px;
+  max-width: 237px; /* Set the width of the sidebar */
   position: fixed; /* Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
-  background-color: #111; /* Black */
+  background-color:white; /* Black */
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 }
 
-.signed-in-top-bar {
-    position: fixed;
-    z-index: 1;
-    margin-left: 200px
+#logo-small {
+  text-decoration: none;
+  font-size: 24px;
+  color: rgb(16, 66, 233);
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 16px
 }
 
-.signed-in-header>*{
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 10px;
-  color: #818181;
-  display: block;
-}
 
 .signed-in-links {
-    display: flex;
-    flex-direction: column
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+  text-decoration: none;
+  margin-left: 16px;
+  height: 200px
 }
+
+
+.signed-in-links>*{
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  border-radius: 5px;
+  height: 40px;
+  width: 150px;
+  align-items: center;
+  padding: 10px
+}
+
+
+
+#signed-in-header-home {
+  display: flex;
+  text-decoration: none;
+}
+#signed-in-header-home>div {
+  margin-left: 20px;
+}
+#signed-in-header-home:hover {
+  background: rgb(237, 237, 237);
+  cursor: pointer
+}
+
+
+#signed-in-header-portfolio {
+  display: flex;
+  text-decoration: none;
+}
+#signed-in-header-portfolio>div {
+  margin-left: 20px
+}
+#signed-in-header-portfolio:hover {
+  background:  rgb(237, 237, 237);
+  cursor: pointer;
+}
+
+
+#signed-in-header-prices {
+  display: flex;
+  text-decoration: none}
+#signed-in-header-prices>div {
+  margin-left: 20px
+}
+#signed-in-header-prices:hover {
+  background:  rgb(237, 237, 237);
+  cursor: pointer;
+}
+
+
+
+.signed-in-top-bar {
+  position: fixed;
+  z-index: 1;
+  width:100%;
+  margin-left: 237px;
+  min-height: 65px;
+  max-height: 65px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color:rgb(246, 247, 248); /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
