@@ -2,13 +2,28 @@ class Api::TransactionsController < ApplicationController
     def create
         @transaction = Transaction.new(transaction_params)
         user = current_user
-        if @transaction.price * @transaction.quantity > user.buying_power
-            render json: ['You do not have sufficient funds to make this purchase'], status: 422
-        else
-            if @transaction.save
-                render 'api/users/show'
+        if (@transaction.order_type ==='buy')
+            if @transaction.price * @transaction.quantity > user.buying_power
+                render json: ['You do not have sufficient funds to make this purchase'], status: 422
             else
-                render json: @transaction.errors.full_messages, status: 422
+                if @transaction.save
+                    @user = current_user
+                    render 'api/users/show'
+                else
+                    render json: @transaction.errors.full_messages, status: 422
+                end
+            end
+        else
+            puts(transaction_params)
+            if @transaction.quantity > user.portfolio[transaction_params[:coin_id]]
+                render json: ['You do not have sufficient coins to make this sale'], status: 422
+            else
+                if @transaction.save
+                    @user = current_user
+                    render 'api/users/show'
+                else
+                    render json: @transaction.errors.full_messages, status: 422
+                end
             end
         end
     end

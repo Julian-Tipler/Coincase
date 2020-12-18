@@ -59,14 +59,14 @@ class Portfolio extends React.Component {
                         <PortfolioIndex portfolio={this.state.portfolio}/>
                     </div>
                 </div>
-                <div className='recent-transactions-box'>
+                {/* <div className='recent-transactions-box'>
                     <div>
                         Recent Transactions
                     </div>
                     <div>
                         -recent transactions go here-
                     </div>
-                </div>
+                </div> */}
             </div>
         )
     }

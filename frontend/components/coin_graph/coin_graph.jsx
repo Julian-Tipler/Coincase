@@ -34,7 +34,6 @@ class CoinGraph extends React.Component{
     }
 
     xAxis() {
-        // console.log(this.props)
         const prices = this.state.coinHistoricalData.prices
         var times=[]
         if (!!prices) {
@@ -43,19 +42,15 @@ class CoinGraph extends React.Component{
                 times.push(d.toLocaleTimeString())
             })
         }
-        // console.log(times)
         return times
     }
 
     yAxis() {
-        // console.log(this.props)
         const prices = this.state.coinHistoricalData.prices
-        // console.log(prices)
         var values = []
         if (!!prices) {
             prices.forEach(el => values.push(el[1].toFixed(2)))
         }
-        // console.log(values)
         return values
     }
     
@@ -87,7 +82,6 @@ class CoinGraph extends React.Component{
             ],
             
         };
-        // console.log(data)
         return data
     }
 
@@ -129,7 +123,6 @@ class CoinGraph extends React.Component{
 
 
    render() {
-    // console.log(this.state.coinHistoricalData)
        return (
         <div>
             <Line data={this.graphData()} options={this.graphOptions()}/>

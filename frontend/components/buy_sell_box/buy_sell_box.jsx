@@ -11,7 +11,6 @@ class BuySellBox extends React.Component {
         quantity: 0,
         order_type: 'buy'
     }
-    //   this.setState = this.setState.bind(this)
       this.handleSubmit = this.handleSubmit.bind(this)
     }
 
@@ -22,7 +21,6 @@ class BuySellBox extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        // console.log(prevProps)
         if (prevProps.coinInfo !== this.props.coinInfo) {
             this.setState({
                 price: this.props.coinInfo.market_data.current_price.usd

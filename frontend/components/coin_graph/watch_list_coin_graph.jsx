@@ -60,7 +60,7 @@ class WatchListCoinGraph extends React.Component {
                     pointBorderColor: 'rgba(44, 130, 201, 1)',
                     pointBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointBorderWidth: 1,
-                    pointHoverRadius: 5,
+                    pointHoverRadius: 100,
                     pointHoverBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderWidth: 1,
@@ -112,8 +112,6 @@ class WatchListCoinGraph extends React.Component {
 
 
     render() {
-        // console.log(this.props.topSixCoinsHistoricalData)
-        // console.log(Object.keys(this.props.topSixCoinsHistoricalData).length === 0)
         if (this.props.topSixCoinsHistoricalData.length < this.props.index+1) {
             return <div>graph loading...</div>
         }

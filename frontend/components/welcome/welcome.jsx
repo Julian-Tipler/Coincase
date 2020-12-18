@@ -9,7 +9,6 @@ class Welcome extends React.Component {
         this.props.fetchTopCoins()
     }
     render() {
-        // console.log(this.props)
         return(
             <div className='welcome-full-page'>
                 <h1>WELCOME!</h1>

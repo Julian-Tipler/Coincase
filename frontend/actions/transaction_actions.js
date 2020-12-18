@@ -1,5 +1,6 @@
 import * as APIUtil from '../util/transaction_api_util'
 import { openModal}  from './modal_actions'
+import { receiveUserDetails } from './user_actions'
 
 
 export const RECEIVE_TRANSACTION = 'RECEIVE_TRANSACTION'
@@ -24,6 +25,7 @@ export const createTransaction = transaction => dispatch => (
     APIUtil.createTransaction(transaction)
     .then(transactionResponse => {
         dispatch(receiveTransaction(transactionResponse))
+        dispatch(receiveUserDetails(transactionResponse))
         dispatch(openModal('successfulTransaction'))
     }, 
     err => (dispatch(receiveTransactionErrors(err.responseJSON))))

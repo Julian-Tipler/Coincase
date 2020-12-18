@@ -18,7 +18,7 @@ const receiveUserCoinPrice = userCoinPrice => ({
     userCoinPrice
 })
 
-const receiveUserDetails = userDetails => ({
+export const receiveUserDetails = userDetails => ({
     type: RECEIVE_USER_DETAILS,
     userDetails
 })
