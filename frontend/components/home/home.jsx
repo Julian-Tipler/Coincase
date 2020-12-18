@@ -5,10 +5,10 @@ import WatchListContainer from '../portfolio/watchlist_container'
 class Home extends React.Component {
     render() {
         return(
-            <div className='portfolio-content'>
-                <div className='portfolio-graph'>Portfolio Graph</div>
-                <div className='watch-list'>
-                    <div>Watchlist</div>
+            <div className='home-content'>
+                {/* <div className='portfolio-graph'>Portfolio Graph</div> */}
+                <div className='watch-list-box'>
+                    <div className='watch-list-title'>Watchlist</div>
                     <WatchListContainer/>
                 </div>
                 <div className='your-portfolio-and-recent-transactions'>

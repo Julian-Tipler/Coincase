@@ -32,7 +32,11 @@ export const fetchCoinInfo = (id) => (dispatch) => (
         .then((coin) => dispatch(receiveCoinInfo(coin)))
 )
 
-export const fetchCoinHistoricalData = (id) => (dispatch) => (
+export const fetchCoinHistoricalData = (id) => (dispatch) => {
+    return(
     APIUtil.fetchCoinHistoricalData(id)
         .then((coin) => dispatch(receiveCoinHistoricalData(coin)))
-)
+    )
+}
+
+//removeCoinInfo needed. Unless it replaces each time?

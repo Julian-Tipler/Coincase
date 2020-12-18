@@ -1,5 +1,6 @@
 import React from 'react';
 import CoinGraphContainer from '../coin_graph/coin_graph_container'
+import WatchListCoinGraph from '../coin_graph/watch_list_coin_graph'
 
 class WatchList extends React.Component {
     constructor(props) {  
@@ -16,12 +17,20 @@ class WatchList extends React.Component {
     }
 
     render() {
-        console.log(this.topSix())
+        if (Object.keys(this.props.topCoins).length === 0) {
+            return <div>watchlist loading...</div>
+        }
         return(
-            <div>
-                {this.topSix().map(coin => (
-                    <div>
-                        {/* <CoinGraphContainer id={coin.id}/> */}
+            <div className='top-six-graphs'>
+                {this.topSix().map((coin, i) => (
+                    <div className='top-six-graph'>
+                        <WatchListCoinGraph 
+                        id={coin.id}
+                        index={i}
+                        fetchCoinHistoricalData = {this.props.fetchCoinHistoricalData}
+                        topSixCoinsHistoricalData={this.props.topSixCoinsHistoricalData}
+                        key={i}
+                        />
                     </div>      
                 ))}
             </div>

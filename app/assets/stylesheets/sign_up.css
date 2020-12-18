@@ -1,10 +1,10 @@
 .signup-form-title {
     font-size: 28px;
-    color: white;
-    margin:auto;
+    color:  rgb(16, 66, 233);    margin:auto;
+    font-weight: 600;
     width: 50%;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 50px;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
 }
 
@@ -16,7 +16,7 @@
     background-color: white;
     width: 30%;
     margin: auto;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);    margin-top:38px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.12);    margin-top:38px;
     height: 400px;
     width: 400px;
     border-radius: 3px;
@@ -33,30 +33,40 @@
 .first-last-names {
     display: flex;
     align-items: center;
-    width: 70%;
-    margin-right: 65px;
+    width: 100%;
+}
+
+.first-last-names>*{
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .sign-up-inputs {
     width: 100%;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
     margin-top: 15px;
     width: 375px;
     height: 55px;
     background-color:#006fcc14;
     border-color: honeydew;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid rgba(255,255,255,1);
 }
 
 .signup-button {
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-    height: 30px;
+    height: 40px;
+    width: 100px;
     font-size: 12px;
     color: white;
     background-color: blue;
+    align-items: center;
+    border: 1px solid gray;
+
 }
 
 .switch-form {
@@ -72,4 +82,7 @@
 #terms-and-conditions {
     display: flex;
     align-items: center;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-left: 15px;
 }

@@ -6,12 +6,15 @@ class Api::TransactionsController < ApplicationController
             render json: ['You do not have sufficient funds to make this purchase'], status: 422
         else
             if @transaction.save
-                render json: ['Transaction Successful!']
+                render 'api/users/show'
             else
                 render json: @transaction.errors.full_messages, status: 422
             end
         end
     end
+
+    #1. change buy sell logic
+    #2. instead of 'transaction successful' return the user show json which will then update the user's worth
     
     private
     def transaction_params

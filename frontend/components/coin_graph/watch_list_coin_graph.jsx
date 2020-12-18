@@ -11,54 +11,38 @@ import {
 } from 'react-router-dom';
 
 
-class CoinGraph extends React.Component{
-    constructor(props) {  
-      super(props)
-      this.state = {
-          coinHistoricalData: {},
-          counter : 0
-      }
+class WatchListCoinGraph extends React.Component {
+    constructor(props) {
+        super(props)
     }
 
     componentDidMount() {
         this.props.fetchCoinHistoricalData(this.props.id)
     }
 
-    componentDidUpdate(prevProps) {
-        if (prevProps.coinHistoricalData !== this.props.coinHistoricalData && this.state.counter < 1) {
-            this.setState({
-                coinHistoricalData: this.props.coinHistoricalData
-            })
-            this.state.counter =1
-        }
-    }
+    //componentDidUnmount
 
     xAxis() {
-        // console.log(this.props)
-        const prices = this.state.coinHistoricalData.prices
-        var times=[]
+        const prices = this.props.topSixCoinsHistoricalData[this.props.index].prices
+        var times = []
         if (!!prices) {
-            prices.forEach(el=> {
+            prices.forEach(el => {
                 const d = new Date(el[0])
                 times.push(d.toLocaleTimeString())
             })
         }
-        // console.log(times)
         return times
     }
 
     yAxis() {
-        // console.log(this.props)
-        const prices = this.state.coinHistoricalData.prices
-        // console.log(prices)
+        const prices = this.props.topSixCoinsHistoricalData[this.props.index].prices
         var values = []
         if (!!prices) {
             prices.forEach(el => values.push(el[1].toFixed(2)))
         }
-        // console.log(values)
         return values
     }
-    
+
     graphData() {
         const data = {
             labels: this.xAxis(),
@@ -79,15 +63,14 @@ class CoinGraph extends React.Component{
                     pointHoverRadius: 5,
                     pointHoverBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderColor: 'rgba(44, 130, 201, 1)',
-                    pointHoverBorderWidth:1,
+                    pointHoverBorderWidth: 1,
                     pointRadius: 1,
                     pointHitRadius: 10,
                     data: this.yAxis(),
                 },
             ],
-            
+
         };
-        // console.log(data)
         return data
     }
 
@@ -100,7 +83,7 @@ class CoinGraph extends React.Component{
                 xAxes: [{
                     ticks: {
                         autoSkip: true,
-                        maxTicksLimit: 6,
+                        maxTicksLimit: 3,
                         maxRotation: 0,
                         minRotation: 0
                     },
@@ -121,37 +104,28 @@ class CoinGraph extends React.Component{
                     }
                 }]
             }
-            }
-        
+        }
+
 
         return options
     }
 
 
-   render() {
-    // console.log(this.state.coinHistoricalData)
-       return (
-        <div>
-            <Line data={this.graphData()} options={this.graphOptions()}/>
-            {/* <div>
-                <div>
-                    <div>Market Cap</div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>Volume(24 hours) </div>
-                    <div></div>
-                </div>
-                <div>
-                    <div>Circulating supply</div>
-                    <div></div>
-                </div>
-            </div> */}
-            <div></div>
-        </div>
-       )
-   }
+    render() {
+        // console.log(this.props.topSixCoinsHistoricalData)
+        // console.log(Object.keys(this.props.topSixCoinsHistoricalData).length === 0)
+        if (this.props.topSixCoinsHistoricalData.length < this.props.index+1) {
+            return <div>graph loading...</div>
+        }
+        return (
+            <div>
+                <div className='coin-title'>{this.props.id}</div>
+                <Line data={this.graphData()} options={this.graphOptions()} />
+                <div></div>
+            </div>
+        )
+    }
 }
 
 
-export default withRouter(CoinGraph)
+export default withRouter(WatchListCoinGraph)
