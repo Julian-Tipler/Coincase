@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 
 function PricesIndexItem(props) {
+    console.log(props)
     function goto(){
         props.history.push(`/show/${props.id}`)
     }
@@ -31,7 +32,7 @@ function PricesIndexItem(props) {
     const priceChange24hFormated = (arg) => (
         arg>0 ? "+" + arg.toFixed(2) : arg.toFixed(2)
     )
-
+    if (!props.id || !props.price_change_24h) return <tr><td>Loading...</td></tr>
 
     return(   
         <tr onClick={() => goto()} className='coin-table-row'>

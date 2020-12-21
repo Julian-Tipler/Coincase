@@ -4,7 +4,7 @@ function SuccessfulTransaction() {
     return(
         <div>
             <div className='transaction-success-box'>
-                <div>Your purchase was successful!</div>
+                <div>Your transaction was successful!</div>
             </div>
         </div>
     )

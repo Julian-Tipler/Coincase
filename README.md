@@ -1,4 +1,4 @@
-# Coincase
+<!-- # Coincase
 
 Coincase is a clone of the cryptocurrency trading site Coinbase. Coincase allows users to track, buy and sell cryptocurrencies
 ***LINK***
@@ -55,4 +55,4 @@ Transactions are the key feature of coincase. The rails powered backend compiles
     hash
   end
 ,,,
-
+ -->
