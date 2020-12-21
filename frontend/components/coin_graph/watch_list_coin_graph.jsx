@@ -60,7 +60,7 @@ class WatchListCoinGraph extends React.Component {
                     pointBorderColor: 'rgba(44, 130, 201, 1)',
                     pointBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointBorderWidth: 1,
-                    pointHoverRadius: 100,
+                    pointHoverRadius: 1,
                     pointHoverBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderWidth: 1,
