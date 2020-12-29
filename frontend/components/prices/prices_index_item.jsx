@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 function PricesIndexItem(props) {
-    console.log(props)
     function goto(){
         props.history.push(`/show/${props.id}`)
     }
