@@ -10,6 +10,7 @@ class Api::UsersController < ApplicationController
         end
     end
     
+    #change this vvv
     def index
         @portfolio = current_user.portfolio
         render json: @portfolio
