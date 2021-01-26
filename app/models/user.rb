@@ -39,6 +39,8 @@ class User < ApplicationRecord
     self.session_token
   end
 
+  #user methods
+
   def buying_power 
     usd_owned = 25000
     transactions.each do |transaction|

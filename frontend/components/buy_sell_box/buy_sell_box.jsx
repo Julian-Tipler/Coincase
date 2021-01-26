@@ -77,7 +77,8 @@ class BuySellBox extends React.Component {
                         <div className='bank-selector'></div>
                         <button type='submit'>Sell {`${this.props.id}`}</button>
                     </form>
-                </div>        )
+                </div>        
+            )
             } 
     }
 
@@ -99,7 +100,7 @@ class BuySellBox extends React.Component {
                 <div>${this.state.price}</div>
                 <div>Your balance usd:</div>
                 <div>{`${this.props.userBuyingPower}`}</div>
-                <div>
+                <div className='transaction-errors'>
                     {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>error: {error}</div>)}
                 </div>
             </div>
