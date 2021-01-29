@@ -17,7 +17,7 @@
                     ...
                 }
             },
-            coinShow: {
+            coinInfo: {
                 id: "etherium",
                 symbol: "eth",
                 name: "Etherium"
