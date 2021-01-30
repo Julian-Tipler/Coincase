@@ -5,34 +5,48 @@ import WatchListCoinGraph from '../coin_graph/watch_list_coin_graph'
 class WatchList extends React.Component {
     constructor(props) {  
         super(props)
-        this.topSix = this.topSix.bind(this)
+        this.state = {
+            topSix: []
+        }
     }
 
     componentDidMount(){
-        this.props.fetchTopCoins()
+        this.props.fetchRemoveCoins()
+        this.props.fetchTopSixCoinsHistoricalData()
+        .then(() => {
+            console.log(this.props.topSixCoinsHistoricalData)
+            setTimeout(()=>
+                this.setState({topSix:this.props.topSixCoinsHistoricalData}),500
+            )
+        })
     }
 
-    topSix() {
-        return Object.values(this.props.topCoins).slice(0, 6)
+    componentWillUnmount(){
+        this.props.fetchRemoveCoins()
     }
 
     render() {
-        if (Object.keys(this.props.topCoins).length === 0) {
-            return <div>watchlist loading...</div>
-        }
+        // if (this.props.topSixCoinsHistoricalData.length <= 6) {
+        //     return <div>watchlist loading.....</div>
+        // }
+        console.log(this.state.topSix)
+
         return(
             <div className='top-six-graphs'>
-                {this.topSix().map((coin, i) => (
+                <div>error...</div>
+                {this.state.topSix.map((coin, idx) => {
+                    console.log('ping')
+                    return(
                     <div className='top-six-graph'>
                         <WatchListCoinGraph 
-                        id={coin.id}
-                        index={i}
-                        fetchCoinHistoricalData = {this.props.fetchCoinHistoricalData}
-                        topSixCoinsHistoricalData={this.props.topSixCoinsHistoricalData}
-                        key={i}
+                        id={Object.keys(coin)}
+                        coin={coin}
+                        index={idx}
+                        key={idx}
                         />
-                    </div>      
-                ))}
+                    </div> 
+                    )
+                })}
             </div>
         )
     }

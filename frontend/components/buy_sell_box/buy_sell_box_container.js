@@ -9,7 +9,7 @@ const msp = (state,ownProps) => {
     return({
         currentUser: state.session.id,
         id: ownProps.id,
-        coinInfo: state.entities.coinInfo,
+        coinInfo: state.entities.coins.coinInfo,
         errors: state.errors,
         userBuyingPower: state.entities.users.userDetails.buyingPower
     })

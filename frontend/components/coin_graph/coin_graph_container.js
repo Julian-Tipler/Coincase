@@ -5,7 +5,7 @@ import { fetchCoinHistoricalData } from '../../actions/gecko_api_actions';
 const msp = (state, ownProps) => {
     return ({
         // id: ownProps.id,
-        coinHistoricalData: state.entities.coinHistoricalData
+        coinHistoricalData: state.entities.coins.coinHistoricalData
     })
 }
 
