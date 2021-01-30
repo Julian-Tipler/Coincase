@@ -15,11 +15,9 @@ class WatchListCoinGraph extends React.Component {
     constructor(props) {
         super(props)
     }
-
-    //componentDidUnmount
-
+    
     xAxis() {
-        const prices = this.props.topSixCoinsHistoricalData[this.props.index].prices
+        const prices = this.props.coin.prices
         var times = []
         if (!!prices) {
             prices.forEach(el => {
@@ -31,7 +29,7 @@ class WatchListCoinGraph extends React.Component {
     }
 
     yAxis() {
-        const prices = this.props.topSixCoinsHistoricalData[this.props.index].prices
+        const prices = this.props.coin.prices
         var values = []
         if (!!prices) {
             prices.forEach(el => values.push(el[1].toFixed(2)))
@@ -108,12 +106,11 @@ class WatchListCoinGraph extends React.Component {
 
 
     render() {
-        if (this.props.topSixCoinsHistoricalData.length < this.props.index+1) {
-            return <div>graph loading...</div>
-        }
+        // if (this.props.topSixCoinsHistoricalData.length < this.props.index+1) {
+        //     return <div>graph loading...</div>
+        // }
         return (
             <div>
-                <div>{'hellooo'}</div>
                 <div className='coin-title'>{this.props.id}</div>
                 <Line data={this.graphData()} options={this.graphOptions()} />
                 <div></div>

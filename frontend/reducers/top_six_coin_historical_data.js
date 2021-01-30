@@ -9,7 +9,7 @@ const topSixCoinsHistoricalDataReducer = (oldState = {0:null,1:null,2:null,3:nul
         //     newState.push(action.coin)
         //     return newState
         case RECEIVE_TOP_SIX_HISTORICAL_DATA:
-            newState[action.idx] = action.coin;
+            newState[action.idx] = [action.id,action.coin];
             return newState;
         default:
             return oldState;

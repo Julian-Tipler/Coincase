@@ -34,10 +34,11 @@ class WatchList extends React.Component {
             <div className='top-six-graphs'>
                 {Object.values(this.props.topSixCoinsHistoricalData).map((coin, i) => (
                     <div className='top-six-graph' key={i}>
-                        {/* <WatchListCoinGraph 
-                        id={coin.id}
+                        <WatchListCoinGraph 
+                        coin={coin[1]}
+                        id={coin[0]}
                         index={i}
-                        /> */}
+                        />
                     </div>      
                 ))}
             </div>

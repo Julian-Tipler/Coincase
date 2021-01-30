@@ -21,9 +21,10 @@ const receiveCoinHistoricalData = (coin) => ({
     coin
 })
 
-const receiveTopSixHistoricalData = (coin,idx) => ({
+const receiveTopSixHistoricalData = (coin,id,idx) => ({
     type: RECEIVE_TOP_SIX_HISTORICAL_DATA,
     coin,
+    id,
     idx
 })
 
@@ -48,7 +49,7 @@ export const fetchCoinHistoricalData = (id) => (dispatch) => {
 export const fetchTopSixHistoricalData = (id, idx) => dispatch => {
     return(
     APIUtil.fetchCoinHistoricalData(id)
-        .then((coin) => dispatch(receiveTopSixHistoricalData(coin,idx)))
+        .then((coin) => dispatch(receiveTopSixHistoricalData(coin,id,idx)))
     )
 }
 
