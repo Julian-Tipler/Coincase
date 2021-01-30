@@ -1,6 +1,7 @@
 import React from 'react';
 import CoinGraphContainer from '../coin_graph/coin_graph_container'
 import WatchListCoinGraph from '../coin_graph/watch_list_coin_graph'
+import * as APIUtil from '../../util/gecko_api_util'
 
 class WatchList extends React.Component {
     constructor(props) {  
@@ -9,7 +10,15 @@ class WatchList extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchTopCoins()
+        APIUtil.fetchTopCoins()
+        .then(coins=> {
+            this.props.fetchTopSixHistoricalData(coins[0].id,0)
+            this.props.fetchTopSixHistoricalData(coins[1].id,1)
+            this.props.fetchTopSixHistoricalData(coins[2].id,2)
+            this.props.fetchTopSixHistoricalData(coins[3].id,3)
+            this.props.fetchTopSixHistoricalData(coins[4].id,4)
+            this.props.fetchTopSixHistoricalData(coins[5].id,5)
+        })
     }
 
     topSix() {
@@ -17,20 +26,18 @@ class WatchList extends React.Component {
     }
 
     render() {
-        if (Object.keys(this.props.topCoins).length === 0) {
+        if (Object.values(this.props.topSixCoinsHistoricalData).some(el=> el===null)) {
             return <div>watchlist loading...</div>
         }
+        console.log(this.props.topSixCoinsHistoricalData)
         return(
             <div className='top-six-graphs'>
-                {this.topSix().map((coin, i) => (
-                    <div className='top-six-graph'>
-                        <WatchListCoinGraph 
+                {Object.values(this.props.topSixCoinsHistoricalData).map((coin, i) => (
+                    <div className='top-six-graph' key={i}>
+                        {/* <WatchListCoinGraph 
                         id={coin.id}
                         index={i}
-                        fetchCoinHistoricalData = {this.props.fetchCoinHistoricalData}
-                        topSixCoinsHistoricalData={this.props.topSixCoinsHistoricalData}
-                        key={i}
-                        />
+                        /> */}
                     </div>      
                 ))}
             </div>

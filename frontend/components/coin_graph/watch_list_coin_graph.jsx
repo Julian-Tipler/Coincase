@@ -16,10 +16,6 @@ class WatchListCoinGraph extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.fetchCoinHistoricalData(this.props.id)
-    }
-
     //componentDidUnmount
 
     xAxis() {
@@ -117,6 +113,7 @@ class WatchListCoinGraph extends React.Component {
         }
         return (
             <div>
+                <div>{'hellooo'}</div>
                 <div className='coin-title'>{this.props.id}</div>
                 <Line data={this.graphData()} options={this.graphOptions()} />
                 <div></div>

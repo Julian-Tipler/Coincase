@@ -3,7 +3,7 @@ import * as APIUtil from '../util/gecko_api_util'
 export const RECEIVE_TOP_COINS = 'RECEIVE_TOP_COINS'
 export const RECEIVE_COIN_INFO = 'RECEIVE_COIN_INFO'
 export const RECEIVE_COIN_HISTORICAL_DATA = 'RECEIVE_COIN_HISTORICAL_DATA'
-
+export const RECEIVE_TOP_SIX_HISTORICAL_DATA = 'RECEIVE_TOP_SIX_HISTORICAL_DATA'
 
 
 const receiveTopCoins = (coins) => ({
@@ -21,6 +21,12 @@ const receiveCoinHistoricalData = (coin) => ({
     coin
 })
 
+const receiveTopSixHistoricalData = (coin,idx) => ({
+    type: RECEIVE_TOP_SIX_HISTORICAL_DATA,
+    coin,
+    idx
+})
+
 
 export const fetchTopCoins = () => (dispatch) => (
     APIUtil.fetchTopCoins()
@@ -36,6 +42,13 @@ export const fetchCoinHistoricalData = (id) => (dispatch) => {
     return(
     APIUtil.fetchCoinHistoricalData(id)
         .then((coin) => dispatch(receiveCoinHistoricalData(coin)))
+    )
+}
+
+export const fetchTopSixHistoricalData = (id, idx) => dispatch => {
+    return(
+    APIUtil.fetchCoinHistoricalData(id)
+        .then((coin) => dispatch(receiveTopSixHistoricalData(coin,idx)))
     )
 }
 
