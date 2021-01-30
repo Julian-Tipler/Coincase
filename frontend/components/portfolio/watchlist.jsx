@@ -1,6 +1,7 @@
 import React from 'react';
 import CoinGraphContainer from '../coin_graph/coin_graph_container'
 import WatchListCoinGraph from '../coin_graph/watch_list_coin_graph'
+import * as APIUtil from '../../util/gecko_api_util'
 
 class WatchList extends React.Component {
     constructor(props) {  
@@ -11,13 +12,15 @@ class WatchList extends React.Component {
     }
 
     componentDidMount(){
-        this.props.fetchRemoveCoins()
-        this.props.fetchTopSixCoinsHistoricalData()
-        .then(() => {
-            console.log(this.props.topSixCoinsHistoricalData)
-            setTimeout(()=>
-                this.setState({topSix:this.props.topSixCoinsHistoricalData}),500
-            )
+        APIUtil.fetchTopCoins()
+        .then(coins=> {
+            this.props.fetchTopSixHistoricalData(coins[0].id,0)
+            this.props.fetchTopSixHistoricalData(coins[1].id,1)
+            this.props.fetchTopSixHistoricalData(coins[2].id,2)
+            this.props.fetchTopSixHistoricalData(coins[3].id,3)
+            this.props.fetchTopSixHistoricalData(coins[4].id,4)
+            this.props.fetchTopSixHistoricalData(coins[5].id,5)
+
         })
     }
 
@@ -26,23 +29,19 @@ class WatchList extends React.Component {
     }
 
     render() {
-        // if (this.props.topSixCoinsHistoricalData.length <= 6) {
-        //     return <div>watchlist loading.....</div>
-        // }
-        console.log(this.state.topSix)
-
+        if (Object.values(this.props.topSixCoinsHistoricalData).some(el=> el===null)) {
+            return <div>watchlist loading...</div>
+        }
+        console.log(this.props.topSixCoinsHistoricalData)
         return(
             <div className='top-six-graphs'>
-                <div>error...</div>
-                {this.state.topSix.map((coin, idx) => {
-                    console.log('ping')
-                    return(
-                    <div className='top-six-graph'>
+                {Object.values(this.props.topSixCoinsHistoricalData).map((coin, i) => (
+                    <div className='top-six-graph' key={i}>
                         <WatchListCoinGraph 
-                        id={Object.keys(coin)}
-                        coin={coin}
-                        index={idx}
-                        key={idx}
+                        coin={coin[1]}
+                        id={coin[0]}
+                        index={i}
+
                         />
                     </div> 
                     )

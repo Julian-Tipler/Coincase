@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import WatchList from './watchlist'
-import { fetchCoinsIndex, fetchTopSixCoinsHistoricalData, fetchRemoveCoins, fetchCoinHistoricalData } from '../../actions/gecko_api_actions'
+import { fetchTopCoins } from '../../actions/gecko_api_actions'
+import { fetchCoinHistoricalData, fetchTopSixHistoricalData } from '../../actions/gecko_api_actions';
+
 
 const msp = (state) => {
     // console.log(state.entities.coins.topSixCoinsHistoricalData)
@@ -12,10 +14,10 @@ const msp = (state) => {
 }
 
 const mdp = dispatch => ({
-    fetchCoinsIndex: () => dispatch(fetchCoinsIndex()),
-    fetchTopSixCoinsHistoricalData: () => dispatch(fetchTopSixCoinsHistoricalData()),
-    fetchRemoveCoins: () => dispatch(fetchRemoveCoins()),
-    fetchCoinHistoricalData: (coin)=> dispatch(fetchCoinHistoricalData(coin))
+    fetchTopCoins: () => dispatch(fetchTopCoins()),
+    fetchCoinHistoricalData: (id) => dispatch(fetchCoinHistoricalData(id)),
+    fetchTopSixHistoricalData: (id, idx) => dispatch(fetchTopSixHistoricalData(id,idx))
+
 })
 
 export default connect(msp,mdp)(WatchList)
