@@ -29,7 +29,7 @@ function Modal({modal, coinInfo, closeModal}) {
 const mapStateToProps = state => {
     return {
         modal: state.ui.modal,
-        coinInfo: state.entities.coinInfo
+        coinInfo: state.entities.coins.coinInfo
     };
 };
 

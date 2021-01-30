@@ -6,7 +6,7 @@ export const RECEIVE_COIN_HISTORICAL_DATA = 'RECEIVE_COIN_HISTORICAL_DATA'
 export const RECEIVE_TOP_SIX_HISTORICAL_DATA = 'RECEIVE_TOP_SIX_HISTORICAL_DATA'
 
 
-const receiveTopCoins = (coins) => ({
+const receiveCoinsIndex = (coins) => ({
     type: RECEIVE_TOP_COINS,
     coins
 })
@@ -29,9 +29,10 @@ const receiveTopSixHistoricalData = (coin,id,idx) => ({
 })
 
 
-export const fetchTopCoins = () => (dispatch) => (
-    APIUtil.fetchTopCoins()
-        .then((coins) => dispatch(receiveTopCoins(coins)))
+
+export const fetchCoinsIndex = () => (dispatch) => (
+    APIUtil.fetchCoinsIndex()
+        .then((coins) => dispatch(receiveCoinsIndex(coins)))
 )
 
 export const fetchCoinInfo = (id) => (dispatch) => (
@@ -52,5 +53,6 @@ export const fetchTopSixHistoricalData = (id, idx) => dispatch => {
         .then((coin) => dispatch(receiveTopSixHistoricalData(coin,id,idx)))
     )
 }
+
 
 //removeCoinInfo needed. Unless it replaces each time?

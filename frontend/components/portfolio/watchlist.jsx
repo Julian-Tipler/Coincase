@@ -6,7 +6,9 @@ import * as APIUtil from '../../util/gecko_api_util'
 class WatchList extends React.Component {
     constructor(props) {  
         super(props)
-        this.topSix = this.topSix.bind(this)
+        this.state = {
+            topSix: []
+        }
     }
 
     componentDidMount(){
@@ -18,11 +20,12 @@ class WatchList extends React.Component {
             this.props.fetchTopSixHistoricalData(coins[3].id,3)
             this.props.fetchTopSixHistoricalData(coins[4].id,4)
             this.props.fetchTopSixHistoricalData(coins[5].id,5)
+
         })
     }
 
-    topSix() {
-        return Object.values(this.props.topCoins).slice(0, 6)
+    componentWillUnmount(){
+        this.props.fetchRemoveCoins()
     }
 
     render() {
@@ -38,9 +41,11 @@ class WatchList extends React.Component {
                         coin={coin[1]}
                         id={coin[0]}
                         index={i}
+
                         />
-                    </div>      
-                ))}
+                    </div> 
+                    )
+                })}
             </div>
         )
     }

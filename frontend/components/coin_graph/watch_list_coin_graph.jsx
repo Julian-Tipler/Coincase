@@ -17,6 +17,7 @@ class WatchListCoinGraph extends React.Component {
         super(props)
     }
 
+
     xAxis() {
         const prices = this.props.coin.prices
         var times = []
@@ -107,11 +108,11 @@ class WatchListCoinGraph extends React.Component {
 
 
     render() {
+
         return (
             <div>
                 <div className='coin-title'>{this.props.id}</div>
                 <Line data={this.graphData()} options={this.graphOptions()} />
-                <div></div>
             </div>
         )
     }
