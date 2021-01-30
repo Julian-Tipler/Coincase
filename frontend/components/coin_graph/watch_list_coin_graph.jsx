@@ -10,12 +10,13 @@ import {
     withRouter,
 } from 'react-router-dom';
 
-
+const colors = ['rgb(247,153,40,1)','rgb(98,126,234,1)','rgb(177,179,180)','rgb(0,0,0,1)','rgb(141,195,81)','rgb(34,34,34)']
+//
 class WatchListCoinGraph extends React.Component {
     constructor(props) {
         super(props)
     }
-    
+
     xAxis() {
         const prices = this.props.coin.prices
         var times = []
@@ -46,13 +47,13 @@ class WatchListCoinGraph extends React.Component {
                     fill: false,
                     lineTension: 0.01,
                     backgroundColor: 'rgba(75,192,192,0.4)',
-                    borderColor: 'rgba(44, 130, 201, 1)',
+                    borderColor: `${colors[this.props.index]}`,
                     borderCapStyle: 'butt',
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
-                    pointBorderColor: 'rgba(44, 130, 201, 1)',
-                    pointBackgroundColor: 'rgba(44, 130, 201, 1)',
+                    pointBorderColor: `${colors[this.props.index]}`,
+                    pointBackgroundColor: `${colors[this.props.index]}`,
                     pointBorderWidth: 1,
                     pointHoverRadius: 1,
                     pointHoverBackgroundColor: 'rgba(44, 130, 201, 1)',
@@ -106,9 +107,6 @@ class WatchListCoinGraph extends React.Component {
 
 
     render() {
-        // if (this.props.topSixCoinsHistoricalData.length < this.props.index+1) {
-        //     return <div>graph loading...</div>
-        // }
         return (
             <div>
                 <div className='coin-title'>{this.props.id}</div>
