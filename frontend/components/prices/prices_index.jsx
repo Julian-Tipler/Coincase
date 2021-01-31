@@ -4,6 +4,7 @@ import PricesIndexItem from './prices_index_item'
 
 //Powered by CoinGecko API
 class PricesIndex extends React.Component {
+    
     render() {
         if (this.props.coins.length <= 0) {
             return <div>Loading...</div>
