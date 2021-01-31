@@ -133,6 +133,10 @@
   font-size: 15px;
 }
 
+.right-side-buttons>*:hover {
+  cursor:pointer;
+}
+
 .buy-button {
     color: white;
     background-color: rgb(11,70,228);
@@ -153,3 +157,4 @@
     border: 1px solid gray;
     border-radius: 5px
 }
+
