@@ -35,7 +35,7 @@
     width: 50%;
 }
 
-.recent-transactions-box{
+.recent-transactions-box {
     background-color: white;
     border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
@@ -44,6 +44,12 @@
     padding: 20px 20px 20px 20px;
     width: 50%;
 }
+
+.recent-transactions-box-portfolio {
+    
+}
+
+
 
 .portfolio-index-box-title {
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -54,7 +60,6 @@
 
 .portfolio-index-item {
     display: flex
-
 }
 
 .portfolio-index-item-name{
@@ -66,4 +71,28 @@
 
 .transactions-index-item {
 
+}
+
+.do-more-with-crypto-box {
+    background-color: white;
+    border: 1px solid rgb(241,243,245) ;
+    border-radius: 5px;
+    left: 40px;
+    margin: 20px 20px 20px 20px;
+    padding: 20px 20px 20px 20px;
+    width: 50%;
+} 
+
+.portfolio-do-more-with-crypto-item1 {
+    
+}
+
+.portfolio-do-more-with-crypto-item2 {
+    
+}
+
+.portfolio-div-link {
+    display:inline-block;
+    width:100%;
+    height:100%;
 }
