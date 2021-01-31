@@ -6,7 +6,7 @@ import { fetchTransactions } from '../../actions/transaction_actions'
 const msp = (state) => ({
     portfolio: state.entities.users.portfolio,
     userCoinPrices: state.entities.users.userCoinPrices,
-    transactions: state.entities.users
+    transactionsIndex: state.entities.transactionsIndex
 })
 
 const mdp = dispatch => ({

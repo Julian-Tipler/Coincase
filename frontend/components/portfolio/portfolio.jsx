@@ -40,6 +40,9 @@ class Portfolio extends React.Component {
     }
 
     render() {
+        if (Object.values(this.props.transactionsIndex).length <=0) {
+            return <div>loading...</div>
+        }
         return(
             <div className='portfolio-content'>
                 <div className='portfolio-chart-box'>
@@ -64,7 +67,7 @@ class Portfolio extends React.Component {
                         Recent Transactions
                     </div>
                     <div>
-                        <TransactionsIndex/>
+                        <TransactionsIndex transactions={this.props.transactionsIndex}/>
                     </div>
                 </div>
             </div>

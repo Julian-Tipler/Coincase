@@ -29,7 +29,7 @@ class Api::TransactionsController < ApplicationController
     end
     
     def index
-        @transactions = Transaction.where(user_id:current_user)
+        @transactions = Transaction.where(user_id:current_user).order("created_at DESC").limit(10)
         puts(@transactions)
         if @transactions
             render 'api/transactions/index'
