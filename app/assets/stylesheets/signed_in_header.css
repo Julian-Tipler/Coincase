@@ -44,9 +44,12 @@
   height: 200px
 }
 
+.link-blue {
+  color:blue;
+}
+
 .signed-in-links>*{
   text-decoration: none;
-  color: black;
   font-size: 14px;
   font-weight: 600;
   font-family: Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

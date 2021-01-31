@@ -9,9 +9,38 @@ import { faHome, faChartPie, faChartLine } from '@fortawesome/free-solid-svg-ico
 class SignedInHeader extends React.Component {
     constructor(props) {
         super(props)
+
+        this.homeColors = this.homeColors.bind(this)
+        this.portfolioColors = this.portfolioColors.bind(this)
+        this.pricesColors = this.pricesColors.bind(this)
     }
 
-    
+    homeColors() {
+        switch(this.props.queryString) {
+            case 'Home':
+                return 'link-blue'
+            default:
+                return 'link-default'
+        }
+    }
+
+    portfolioColors() {
+        switch(this.props.queryString) {
+            case 'Portfolio':
+                return 'link-blue'
+            default:
+                return 'link-default'
+        }
+    }
+
+    pricesColors() {
+        switch(this.props.queryString) {
+            case 'Prices':
+                return 'link-blue'
+            default:
+                return 'link-default'
+        }
+    }
 
     render() {
         return (
@@ -21,19 +50,19 @@ class SignedInHeader extends React.Component {
                         <Link to='/home'id='logo-small'>coincase</Link>
                     </div>
                     <div className='signed-in-links'>
-                        <Link id='signed-in-header-home' to='/home'>
+                        <Link id='signed-in-header-home' class={this.homeColors()}to='/home'>
                             <div className='icon-circle'>
                                 <FontAwesomeIcon icon={faHome} />
                             </div>
                             <div>Home</div>
                         </Link>
-                        <Link id='signed-in-header-portfolio' to='/portfolio'>
+                        <Link id='signed-in-header-portfolio' class={this.portfolioColors()} to='/portfolio'>
                             <div className='icon-circle'>
                                 <FontAwesomeIcon icon={faChartPie} />
                             </div>
                             <div>Portfolio</div>
                         </Link>
-                        <Link id='signed-in-header-prices' to='/prices'>
+                        <Link id='signed-in-header-prices' class={this.pricesColors()} to='/prices'>
                             <div className='icon-circle'>
                             <FontAwesomeIcon icon={faChartLine} />
                             </div>
