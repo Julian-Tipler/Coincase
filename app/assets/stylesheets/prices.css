@@ -33,6 +33,10 @@
     border-radius: 5px
 }
 
+.trade-button:hover {
+    cursor: pointer;
+}
+
 .coin-icon {
     width: 40px;
     

@@ -33,12 +33,21 @@ class SignedInHeader extends React.Component {
                         </Link>
                     </div>
                 </div>
+
                 <div className='signed-in-top-bar'>
-                    <div>
+                    <div id='page-title'>
+                        {this.props.queryString}
                     </div>
-                    <div id='trade-logout-buttons'>
-                        {/* <button>Trade</button> */}
-                        <button className='logout-button'onClick={()=> this.props.logout()}>Logout</button>
+                    <div>
+                        <span>
+                            Buy
+                        </span>
+                        <span>
+                            Sell
+                        </span>
+                        <span id='trade-logout-buttons'>
+                            <button className='logout-button'onClick={()=> this.props.logout()}>Logout</button>
+                        </span>
                     </div>
                 </div>
             </div>

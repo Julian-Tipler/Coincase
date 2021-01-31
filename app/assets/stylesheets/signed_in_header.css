@@ -22,7 +22,6 @@
   margin-left: 16px
 }
 
-
 .signed-in-links {
   display: flex;
   flex-direction: column;
@@ -32,7 +31,6 @@
   margin-left: 16px;
   height: 200px
 }
-
 
 .signed-in-links>*{
   text-decoration: none;
@@ -47,8 +45,6 @@
   padding: 10px
 }
 
-
-
 #signed-in-header-home {
   display: flex;
   text-decoration: none;
@@ -60,7 +56,6 @@
   background: rgb(237, 237, 237);
   cursor: pointer
 }
-
 
 #signed-in-header-portfolio {
   display: flex;
@@ -74,7 +69,6 @@
   cursor: pointer;
 }
 
-
 #signed-in-header-prices {
   display: flex;
   text-decoration: none}
@@ -86,23 +80,20 @@
   cursor: pointer;
 }
 
-
-
 .signed-in-top-bar {
   position: fixed;
   z-index: 1;
   width:100%;
   margin-left: 238px;
   min-height: 65px;
-  max-height: 65px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  max-height: 65px; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0;
   left: 0;
-  background-color:rgb(250,251,252); /* Black */
-  overflow-x: hidden; /* Disable horizontal scroll */
+  background-color:rgb(250,251,252); 
+  overflow-x: hidden; 
   border: 1px solid rgb(241,243,245) ;
-
 }
 
 .logout-button {
