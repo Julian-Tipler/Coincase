@@ -1,15 +1,20 @@
 import React from 'react';
 
-class ComponentName extends React.Component {
+class TransactionsIndex extends React.Component {
     render() {
         return(
-            <div>
+            <div className='transactions-index'>
                 {this.props.transactions.map((transaction,idx) => {
-                    return <div key={idx}>{transaction.price}</div>
+                    return (
+                        <span key={idx} className='transactions-index-item'>
+                            <div>{transaction.order_type === 'buy'? 'Bought': 'Sold'} {transaction.coin_id}</div>
+                            <div>{transaction.order_type === 'buy'? '+': '-'} {transaction.quantity} {transaction.updated_at}</div>
+                        </span>
+                    )
                 })}
             </div>
         )
     }
 }
 
-export default ComponentName
+export default TransactionsIndex

@@ -1,6 +1,7 @@
 import React from 'react';
 import PortfolioIndex from './portfolio_index'
 import TransactionsIndex from './transactions_index'
+import DoMoreWithCrypto from './do_more_with_crypto'
 
 class Portfolio extends React.Component {
     constructor(props) {  
