@@ -27,9 +27,16 @@ class Api::TransactionsController < ApplicationController
             end
         end
     end
-
-    #1. change buy sell logic
-    #2. instead of 'transaction successful' return the user show json which will then update the user's worth
+    
+    def index
+        @transactions = Transaction.where(user_id:current_user)
+        puts(@transactions)
+        if @transactions
+            render 'api/transactions/index'
+        else
+            render json: ['whoops!'], status: 422
+        end
+    end
     
     private
     def transaction_params

@@ -1,5 +1,6 @@
 import React from 'react';
 import PortfolioIndex from './portfolio_index'
+import TransactionsIndex from './transactions_index'
 
 class Portfolio extends React.Component {
     constructor(props) {  
@@ -12,6 +13,7 @@ class Portfolio extends React.Component {
     }
     componentDidMount() {
         this.props.fetchPortfolio()
+        this.props.fetchTransactions()
     }
 
     componentDidUpdate(prevProps) {
@@ -37,8 +39,6 @@ class Portfolio extends React.Component {
             return worth.toFixed(2)
     }
 
-
-
     render() {
         return(
             <div className='portfolio-content'>
@@ -59,14 +59,14 @@ class Portfolio extends React.Component {
                         <PortfolioIndex portfolio={this.state.portfolio}/>
                     </div>
                 </div>
-                {/* <div className='recent-transactions-box'>
+                <div className='recent-transactions-box'>
                     <div>
                         Recent Transactions
                     </div>
                     <div>
-                        -recent transactions go here-
+                        <TransactionsIndex/>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }

@@ -30,3 +30,8 @@ export const createTransaction = transaction => dispatch => (
     }, 
     err => (dispatch(receiveTransactionErrors(err.responseJSON))))
 );
+
+export const fetchTransactions = () => dispatch => (
+    APIUtil.fetchTransactions()
+    .then(transactions=> console.log(transactions))
+)
