@@ -1,8 +1,13 @@
 import React from 'react';
 import CoinGraph from '../coin_graph/coin_graph'
 import WatchListContainer from '../portfolio/watchlist_container'
+import TransactionsIndex from '../portfolio/transactions_index'
 
 class Home extends React.Component {
+    componentDidMount() {
+        this.props.fetchPortfolio()
+        this.props.fetchTransactions()
+    }
     render() {
         return(
             <div className='home-content'>
@@ -11,9 +16,16 @@ class Home extends React.Component {
                     <div className='watch-list-title'>Watchlist</div>
                     <WatchListContainer/>
                 </div>
-                <div className='your-portfolio-and-recent-transactions'>
-                    <div className='your-portfolio'>Your Portfolio</div>
-                    <div className='recent-transactions'>Recent Transactions</div>
+                <div className='portfolio-index-box portfolio-index-box-home'>
+
+                </div>
+                <div className='recent-transactions-box recent-transactions-box-home'>
+                    <div>
+                        Recent Transactions
+                    </div>
+                    <div>
+                        <TransactionsIndex transactions={this.props.transactionsIndex}/>
+                    </div>
                 </div>
            
                 

@@ -1,5 +1,7 @@
 import React from 'react';
 import PortfolioIndex from './portfolio_index'
+import TransactionsIndex from './transactions_index'
+import DoMoreWithCrypto from './do_more_with_crypto'
 
 class Portfolio extends React.Component {
     constructor(props) {  
@@ -12,6 +14,7 @@ class Portfolio extends React.Component {
     }
     componentDidMount() {
         this.props.fetchPortfolio()
+        this.props.fetchTransactions()
     }
 
     componentDidUpdate(prevProps) {
@@ -37,9 +40,10 @@ class Portfolio extends React.Component {
             return worth.toFixed(2)
     }
 
-
-
     render() {
+        if (Object.values(this.props.transactionsIndex).length <=0) {
+            return <div>loading...</div>
+        }
         return(
             <div className='portfolio-content'>
                 <div className='portfolio-chart-box'>
@@ -51,7 +55,7 @@ class Portfolio extends React.Component {
                         -portfolio graph goes here-
                     </div> */}
                 </div>
-                <div className='portfolio-index-box'>
+                <div className='portfolio-index-box portfolio-index-box-portfolio'>
                     <div className='portfolio-index-box-title'>
                         Your assets:
                     </div>
@@ -59,14 +63,17 @@ class Portfolio extends React.Component {
                         <PortfolioIndex portfolio={this.state.portfolio}/>
                     </div>
                 </div>
-                {/* <div className='recent-transactions-box'>
+                <div className='recent-transactions-box recent-transactions-box-portfolio'>
                     <div>
                         Recent Transactions
                     </div>
                     <div>
-                        -recent transactions go here-
+                        <TransactionsIndex transactions={this.props.transactionsIndex}/>
                     </div>
-                </div> */}
+                </div>
+                <div className='do-more-with-crypto-box'>
+                    <DoMoreWithCrypto/>
+                </div>
             </div>
         )
     }
