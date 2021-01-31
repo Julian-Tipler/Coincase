@@ -58,12 +58,6 @@
     font-size: 12px;
 }
 
-.signed-in-top-bar{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
 .login-button {
     color: white;
     background-color: blue;

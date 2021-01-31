@@ -11,6 +11,8 @@ class SignedInHeader extends React.Component {
         super(props)
     }
 
+    
+
     render() {
         return (
             <div>
@@ -20,35 +22,36 @@ class SignedInHeader extends React.Component {
                     </div>
                     <div className='signed-in-links'>
                         <Link id='signed-in-header-home' to='/home'>
-                            <FontAwesomeIcon icon={faHome}/>
+                            <div className='icon-circle'>
+                                <FontAwesomeIcon icon={faHome} />
+                            </div>
                             <div>Home</div>
                         </Link>
                         <Link id='signed-in-header-portfolio' to='/portfolio'>
-                            <FontAwesomeIcon icon={faChartPie} />
+                            <div className='icon-circle'>
+                                <FontAwesomeIcon icon={faChartPie} />
+                            </div>
                             <div>Portfolio</div>
                         </Link>
                         <Link id='signed-in-header-prices' to='/prices'>
+                            <div className='icon-circle'>
                             <FontAwesomeIcon icon={faChartLine} />
+                            </div>
                             <div>Prices</div>
                         </Link>
                     </div>
                 </div>
 
                 <div className='signed-in-top-bar'>
-                    <div id='page-title'>
+                    <span className='page-title'>
                         {this.props.queryString}
-                    </div>
-                    <div>
-                        <span>
-                            Buy
-                        </span>
-                        <span>
-                            Sell
-                        </span>
-                        <span id='trade-logout-buttons'>
-                            <button className='logout-button'onClick={()=> this.props.logout()}>Logout</button>
-                        </span>
-                    </div>
+                    </span>
+                    <span className='right-side-buttons'>
+                        <button className='buy-button'>Buy</button>
+                        <button className='sell-button'>Sell</button>
+                        <button id='logout-button'onClick={()=> this.props.logout()}>Logout</button>
+                    </span>
+
                 </div>
             </div>
         )
