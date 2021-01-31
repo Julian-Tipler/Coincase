@@ -29,7 +29,6 @@ class WatchList extends React.Component {
         if (Object.values(this.props.topSixCoinsHistoricalData).some(el=> el===null)) {
             return <div>watchlist loading...</div>
         }
-        console.log(this.props.topSixCoinsHistoricalData)
         return(
             <div className='top-six-graphs'>
                 {Object.values(this.props.topSixCoinsHistoricalData).map((coin, i) => (
