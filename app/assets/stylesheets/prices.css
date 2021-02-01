@@ -89,6 +89,10 @@
     color: lightgray
 }
 
+.blue-coin-index-symbol {
+    color: rgb(21,82,240)
+}
+
 .name-id-abbreviation:hover {
     cursor: pointer
 }
