@@ -38,22 +38,20 @@ class PricesIndex extends React.Component {
             newCoins = coins.sort((a, b) => alphabet.indexOf(b.id.charAt(0)) - alphabet.indexOf(a.id.charAt(0)))
             this.setState({
                 coins: newCoins,
-                isReversed: true,
                 isAlphabetical: false,
-                isSortedPrice: true,
-                isSortedChange: true,
-                isSortedMarketCap: true
+                isSortedPrice: false,
+                isSortedChange: false,
+                isSortedMarketCap: false
 
             })
         } else {
             newCoins = coins.sort((a, b) => alphabet.indexOf(a.id.charAt(0)) - alphabet.indexOf(b.id.charAt(0)))
             this.setState({
                 coins: newCoins,
-                isReversed: true,
                 isAlphabetical: true,
-                isSortedPrice: true,
-                isSortedChange: true,
-                isSortedMarketCap: true
+                isSortedPrice: false,
+                isSortedChange: false,
+                isSortedMarketCap: false
 
             })
         }
@@ -67,22 +65,20 @@ class PricesIndex extends React.Component {
             newCoins = coins.sort((a, b) => a.current_price - b.current_price)
             this.setState({
                 coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
+                isAlphabetical: false,
                 isSortedPrice: false,
-                isSortedChange: true,
-                isSortedMarketCap: true
+                isSortedChange: false,
+                isSortedMarketCap: false
 
             })
         } else {
             newCoins = coins.sort((a, b) => b.current_price - a.current_price)
             this.setState({
                 coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
+                isAlphabetical: false,
                 isSortedPrice: true,
-                isSortedChange: true,
-                isSortedMarketCap: true
+                isSortedChange: false,
+                isSortedMarketCap: false
 
             })
         }
@@ -95,22 +91,20 @@ class PricesIndex extends React.Component {
             newCoins = coins.sort((a, b) => a.price_change_percentage_24h - b.price_change_percentage_24h)
             this.setState({
                 coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
-                isSortedPrice: true,
+                isAlphabetical: false,
+                isSortedPrice: false,
                 isSortedChange: false,
-                isSortedMarketCap: true
+                isSortedMarketCap: false
 
             })
         } else {
             newCoins = coins.sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h)
             this.setState({
                 coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
-                isSortedPrice: true,
+                isAlphabetical: false,
+                isSortedPrice: false,
                 isSortedChange: true,
-                isSortedMarketCap: true
+                isSortedMarketCap: false
 
             })
         }
@@ -120,23 +114,21 @@ class PricesIndex extends React.Component {
         const coins = this.props.coins.slice()
         let newCoins
         if (this.state.isSortedMarketCap) {
-            newCoins = coins.sort((a, b) => b.market_cap - a.market_cap)
-            this.setState({
-                coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
-                isSortedPrice: true,
-                isSortedChange: true,
-                isSortedMarketCap: false
-            })
-        } else {
             newCoins = coins.sort((a, b) => a.market_cap - b.market_cap)
             this.setState({
                 coins: newCoins,
-                isReversed: true,
-                isAlphabetical: true,
-                isSortedPrice: true,
-                isSortedChange: true,
+                isAlphabetical: false,
+                isSortedPrice: false,
+                isSortedChange: false,
+                isSortedMarketCap: false
+            })
+        } else {
+            newCoins = coins.sort((a, b) => b.market_cap - a.market_cap)
+            this.setState({
+                coins: newCoins,
+                isAlphabetical: false,
+                isSortedPrice: false,
+                isSortedChange: false,
                 isSortedMarketCap: true
             })
         }
