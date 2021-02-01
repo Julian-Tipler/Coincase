@@ -50,19 +50,19 @@ class SignedInHeader extends React.Component {
                         <Link to='/home'id='logo-small'>coincase</Link>
                     </div>
                     <div className='signed-in-links'>
-                        <Link id='signed-in-header-home' class={this.homeColors()}to='/home'>
+                        <Link id='signed-in-header-home' className={this.homeColors()}to='/home'>
                             <div className='icon-circle'>
                                 <FontAwesomeIcon icon={faHome} />
                             </div>
                             <div>Home</div>
                         </Link>
-                        <Link id='signed-in-header-portfolio' class={this.portfolioColors()} to='/portfolio'>
+                        <Link id='signed-in-header-portfolio' className={this.portfolioColors()} to='/portfolio'>
                             <div className='icon-circle'>
                                 <FontAwesomeIcon icon={faChartPie} />
                             </div>
                             <div>Portfolio</div>
                         </Link>
-                        <Link id='signed-in-header-prices' class={this.pricesColors()} to='/prices'>
+                        <Link id='signed-in-header-prices' className={this.pricesColors()} to='/prices'>
                             <div className='icon-circle'>
                             <FontAwesomeIcon icon={faChartLine} />
                             </div>

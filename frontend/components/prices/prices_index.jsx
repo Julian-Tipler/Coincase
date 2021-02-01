@@ -5,21 +5,31 @@ import PricesIndexItem from './prices_index_item'
 //Powered by CoinGecko API
 class PricesIndex extends React.Component {
     
+    constructor(props) {  
+      super(props)
+      this.state = {
+
+      }
+    }
+
+
     render() {
+        
         if (this.props.coins.length <= 0) {
             return <div>Loading...</div>
         }
+        
         return(
             <div>
                 <table className='coin-table'>
                     <tbody>
                     <tr className='coin-title-row' >
-                        <td id='hash-title'>#</td>
-                        <td id='name-title'>Name</td>
-                        <td >Price</td>
-                        <td >Change</td>
-                        <td >Market Cap</td>
-                        <td >Trade</td>
+                        <td id='hash-title'><button onClick={this.handleClickHash} >#</button></td>
+                        <td id='name-title'><button>Name</button></td>
+                        <td ><button>Price</button></td>
+                        <td ><button>Change</button></td>
+                        <td ><button>Market Cap</button></td>
+                        <td >Trade</td> 
                     </tr>
                     {this.props.coins.map((coin, i) => (
                         <PricesIndexItem
