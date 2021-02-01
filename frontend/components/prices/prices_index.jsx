@@ -11,10 +11,15 @@ class PricesIndex extends React.Component {
       super(props)
       this.state = {
         coins: [],
-        isStandardOrder: true
+        isReversed: false,
+        isAlphabetical: false,
+        isSortedPrice: false,
+        isSortedChange: false,
       }
       this.toggleListReverse = this.toggleListReverse.bind(this)
       this.toggleSortByName = this.toggleSortByName.bind(this)
+      this.toggleSortPrice = this.toggleSortPrice.bind(this)
+      this.toggleSortChange = this.toggleSortChange.bind(this)
     }
 
     componentDidMount () {
@@ -26,24 +31,102 @@ class PricesIndex extends React.Component {
     }
 
     toggleListReverse (e) {
-        const coins = this.props.coins
-        let newCoins = coins.reverse()
-        this.setState({
-            coins: newCoins
-        })
+        const coins = this.props.coins.slice()
+        let newCoins
+        if (this.state.isReversed) {
+            newCoins = coins
+            this.setState({
+                coins: newCoins,
+                isReversed: false,
+                isAlphabetical: false,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
+        } else {
+            newCoins = coins.reverse()
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: false,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
+        }
     }
 
     toggleSortByName (e) {
         const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-        let newPostList = postList
-        if (this.state.isOldestFirst) {
-            newPostList = postList.sort((a, b) => a.date > b.date)
+        const coins = this.props.coins.slice()
+        let newCoins
+        if (this.state.isAlphabetical) {
+            newCoins = coins.sort((a, b) => alphabet.indexOf(b.id.charAt(0)) - alphabet.indexOf(a.id.charAt(0)))
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: false,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
         } else {
-            newPostList = postList.sort((a, b) => a.date < b.date)
+            newCoins = coins.sort((a, b) => alphabet.indexOf(a.id.charAt(0)) - alphabet.indexOf(b.id.charAt(0)))
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: true,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
         }
-        this.setState({
-            postList: newPostList
-        })
+    }
+    
+    toggleSortPrice (e) {
+        const coins = this.props.coins.slice()
+        //work without slice?
+        let newCoins
+        if (this.state.isSortedPrice) {
+            newCoins = coins.sort((a, b) => a.current_price - b.current_price)
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: true,
+                isSortedPrice: false,
+                isSortedChange: true
+            })
+        } else {
+            newCoins = coins.sort((a, b) => b.current_price - a.current_price)
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: true,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
+        }
+    }
+
+    toggleSortChange(e) {
+        const coins = this.props.coins.slice()
+        //work without slice?
+        let newCoins
+        if (this.state.isSortedChange) {
+            newCoins = coins.sort((a, b) => a.price_change_percentage_24h - b.price_change_percentage_24h)
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: true,
+                isSortedPrice: true,
+                isSortedChange: false
+            })
+        } else {
+            newCoins = coins.sort((a, b) => b.price_change_percentage_24h - a.price_change_percentage_24h)
+            this.setState({
+                coins: newCoins,
+                isReversed: true,
+                isAlphabetical: true,
+                isSortedPrice: true,
+                isSortedChange: true
+            })
+        }
     }
 
     render() {
@@ -58,8 +141,8 @@ class PricesIndex extends React.Component {
                     <tr className='coin-title-row' >
                         <td id='hash-title'><button className='index-reorder-button' onClick={this.toggleListReverse} >#<FontAwesomeIcon className='index-arrow-icon'icon={faArrowsAltV} /></button></td>
                         <td id='name-title'><button className='index-reorder-button' onClick={this.toggleSortByName}>Name</button></td>
-                        <td><button className='index-reorder-button'>Price</button></td>
-                        <td><button className='index-reorder-button'>Change</button></td>
+                        <td ><button className='index-reorder-button' onClick={this.toggleSortPrice} >Price</button></td>
+                        <td><button className='index-reorder-button' onClick={this.toggleSortChange} >Change</button></td>
                         <td><button className='index-reorder-button'>Market Cap</button></td>
                         <td>Trade</td> 
                     </tr>
