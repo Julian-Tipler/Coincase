@@ -24,11 +24,32 @@
     margin: 100px;    
 }
 
+.index-reorder-button {
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: gray;
+    font: inherit
+}
+
+.index-reorder-button:hover {
+    cursor:pointer;
+}
+
 #hash-title {
+    margin-right: 10px;
     padding-left: 20px;
     padding-top: 20px;
     padding-bottom: 20px
 }
+
+.index-arrow-icon {
+    height: 10px;
+    color: gray;
+    margin-bottom: 2px;
+    margin-left: 2px;
+}
+
 #name-title {
     padding-left: 80px
 }
@@ -39,6 +60,37 @@
 
 .top-column {
     padding: 20px;
+}
+
+.name-id-abbreviation {
+    display: flex;
+    position: relative;
+    top:2px;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 250px;
+    margin-bottom: 30px;
+    margin-top: 10px
+}
+
+.coin-icon-container {
+    width: 40px;
+    height: 40px;
+    position:relative;
+    top: 10px;
+}
+
+.coin-icon {
+    width: 40px;
+    height: 100%
+}
+
+.coin-index-symbol {
+    color: lightgray
+}
+
+.name-id-abbreviation:hover {
+    cursor: pointer
 }
 
 .trade-button {
@@ -53,32 +105,6 @@
 .trade-button:hover {
     cursor: pointer;
 }
-
-.coin-icon-container {
-    width: 40px;
-    height: 40px;
-    position:relative;
-    top: 10px;
-}
-
-.coin-icon {
-    width: 40px;
-}
-.name-id-abbreviation {
-    display: flex;
-    position: relative;
-    top:2px;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 200px;
-    margin-bottom: 30px;
-    margin-top: 10px
-}
-
-.name-id-abbreviation:hover {
-    cursor: pointer
-}
-
 .prices-title {
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 600;

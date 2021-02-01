@@ -39,12 +39,12 @@ function PricesIndexItem(props) {
             <td onClick={() => goto()} className='name-id-abbreviation'>
                 <div className='coin-icon-container'><img src={props.image} className='coin-icon' /></div>
                 <div>{props.name} </div>  
-                <div>{props.symbol}</div>
+                <div className='coin-index-symbol'>{props.symbol.toUpperCase()}</div>
             </td>
             <td >{currentPriceFormated(props.current_price)}</td>
             <td className={`${color}`}>{priceChange24hFormated(props.price_change_24h)}%</td>
             <td >{marketCapFormated(props.market_cap)}</td>
-            <td ><button className='trade-button'>Trade</button></td>
+            <td ><button onClick={() => goto()} className='trade-button'>Trade</button></td>
         </tr>
     )
     
