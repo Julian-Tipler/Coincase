@@ -44,7 +44,7 @@ function PricesIndexItem(props) {
             <td >{currentPriceFormated(props.current_price)}</td>
             <td className={`${color}`}>{priceChange24hFormated(props.price_change_24h)}%</td>
             <td >{marketCapFormated(props.market_cap)}</td>
-            <td ><button className='trade-button'>Trade</button></td>
+            <td ><button onClick={() => goto()} className='trade-button'>Trade</button></td>
         </tr>
     )
     
