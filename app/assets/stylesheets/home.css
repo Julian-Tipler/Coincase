@@ -7,18 +7,20 @@
     padding-bottom: 150px
 }
 
-.watch-list-title{
-  font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+.home-title{
+    font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 600;
     font-size: 30px;
     padding-bottom: 20px;   
 }
-
-.home-title{
+.watch-list-title{
   font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 600;
-    font-size: 30px;
-    padding-bottom: 20px;   
+    font-weight: 500;
+    font-size: 19px;
+    padding-bottom: 20px; 
+    padding-top: 20px;
+    padding-left: 20px
 }
 
 .coin-title{
@@ -26,42 +28,39 @@
     font-weight: 600;
     font-size: 15px;
     padding-bottom: 20px; 
+    padding-left: 30px;
+    padding-top: 20px
 }
 
 .watch-list-box {
     background-color: white;
     border: 1px solid rgb(241,243,245);
     border-radius: 5px;
-    left: 40px;
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
-    width: 70%;
+    margin: 30px 30px 30px 30px;
+    width: 82%;
 }
 
 .top-six-graphs {
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;   
-    flex-direction: row;
-    
+    flex-direction: row; 
 }
 
 .top-six-graph {
-    display: flex;
+    /* display: flex;
     flex-basis: calc(50%-40px);
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
     border: 1px solid rgb(241,243,245) ;
-
+    width:33.18%
 }
 
-.recent-transactions-box-home {
+#recent-transactions-box-home {
     background-color: white;
     border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
     left: 40px;
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
     width: 50%;
 }
 
@@ -70,7 +69,5 @@
     border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
     left: 40px;
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
     width: 50%;
 }

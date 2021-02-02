@@ -1,13 +1,18 @@
+.login-full-page {
+    background-color: rgb(21,82,240);
+    height: 100vh;
+    border: 1px solid  rgb(21,82,240); 
+}
 
 .login-form-title {
-    font-size: 28px;
-    color:  rgb(16, 66, 233);
+    font-size: 29px;
+    color:  white;
     margin:auto;
     width: 50%;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 55px;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
-    font-weight: 600
+    font-weight: 350
 }
 
 .error-messages {
@@ -33,19 +38,17 @@
     flex-direction: column;
     align-items: center;
     
-    /* flex-wrap: wrap; */
-    
 }
 
 .login-inputs {
     width: 100%;
     font-family: helvetica neue,Helvetica,Arial,sans-serif;
     margin-top: 15px;
-    width: 310px;
-    height: 30px;
+    width: 330px;
+    height: 40px;
     background-color:#006fcc14;
     border-color: honeydew;
-    border-radius: 2px;
+    border-radius: 3px;
     border: 1px solid rgba(255,255,255,1);
     
 }

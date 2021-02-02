@@ -17,11 +17,13 @@ import {
     Link,
 } from 'react-router-dom';
 
+
+
 class App extends React.Component {
 
     render() {
         return(
-            <div className={true ? 'background-white' : 'background-blue'} >
+            <div>
                 <Modal />
                 <header className='nav-bar'>
                     <Switch>

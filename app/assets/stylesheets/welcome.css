@@ -1,3 +1,66 @@
-.welcome-full-page{
-    background-color: #1652f0;
+.welcome-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-background-blue {
+    background-color: rgb(21,82,240);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 75vh;
+    z-index: -1
+}
+
+.welcome-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:60%;
+    color: white;
+}
+
+#buy-and-sell-cryptocurrency {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#get-5 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 50px;
+    display: flex;
+    align-items: baseline;
+}
+
+#coinbase-is-the {
+    font-size: 15px;
+    color: rgb(249, 249, 249);
+    font-weight: 200;
+    margin-top: 20px;
+    text-align:center;
+    line-height: 1.5
+}
+
+#bitcoin-pic {
+    height: 55px
+}
+
+.welcome-table-box {
+    background: white;
+    border: 1px solid rgb(241,243,245) ;
+    border-radius: 1px;
+    margin: 30px 30px 30px 30px;
+    width: 100%;
 }

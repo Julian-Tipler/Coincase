@@ -16,10 +16,10 @@ class Home extends React.Component {
                     <div className='watch-list-title'>Watchlist</div>
                     <WatchListContainer/>
                 </div>
-                <div className='portfolio-index-box portfolio-index-box-home'>
+                <div className='portfolio-index-box' id='portfolio-index-box-home'>
 
                 </div>
-                <div className='recent-transactions-box recent-transactions-box-home'>
+                <div className='recent-transactions-box' id='recent-transactions-box-home'>
                     <div>
                         Recent Transactions
                     </div>
