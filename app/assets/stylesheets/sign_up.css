@@ -68,6 +68,18 @@
     width: 43%;
 }
 
+#terms-and-conditions-checkbox  {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+    border-color: honeydew;
+}
+
+#terms-and-conditions>div{
+    font-size:14px;
+    line-height: 1.5;
+}
+
 .signup-button {
     border-radius: 5px;
     display: flex;
