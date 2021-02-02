@@ -1,35 +1,27 @@
 
 
 .portfolio-balance-title{
-  font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: rgb(112,133,152);
     font-weight: 600;
+}
+
+.portfolio-balance-amount {
     font-size: 30px;
-    padding-bottom: 20px;   
+    font-weight: 600;
 }
 
 .portfolio-chart-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245);
-    border-radius: 5px;
     left: 40px;
 }
 
-.portfolio-index-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245) ;
-    border-radius: 5px;
-    width: 50%;
-}
-
-.recent-transactions-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245) ;
-    border-radius: 5px;
-    width: 50%;
+.portfolio-assets-and-transactions {
+    display: flex;
 }
 
 
-.portfolio-index-box-title {
+
+.portfolio-index-title {
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 600;
     font-size: 20px;
@@ -39,6 +31,11 @@
 .portfolio-index-item {
     display: flex
 }
+
+#recent-transactions-box-portfolio {
+    width: 50%;
+}
+
 
 .portfolio-index-item-name{
     
@@ -52,11 +49,7 @@
 }
 
 .do-more-with-crypto-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245) ;
-    border-radius: 5px;
-    left: 40px;
-    width: 50%;
+    width: 100%;
 } 
 
 .portfolio-do-more-with-crypto-item1 {
