@@ -16,22 +16,18 @@
 
 .portfolio-index-box {
     background-color: white;
-    border: 1px solid rgb(241,243,245);
+    border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
-    left: 40px;
+    width: 50%;
 }
 
 .recent-transactions-box {
     background-color: white;
     border: 1px solid rgb(241,243,245) ;
     border-radius: 5px;
-    left: 40px;
     width: 50%;
 }
 
-.recent-transactions-box-portfolio {
-    
-}
 
 .portfolio-index-box-title {
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;

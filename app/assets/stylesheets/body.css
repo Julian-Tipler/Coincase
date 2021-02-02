@@ -20,5 +20,5 @@
 .home-content>*, .portfolio-content>*, .prices-content>* {
     margin-top: 22px;
     margin-bottom: 22px;
-    box-shadow: 0 7px 14px rgba(0,0,0,0.01), 0 5px 5px rgba(0,0,0,0.01);    margin-top:38px;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.01), 0 5px 5px rgba(0,0,0,0.01);    
 }
