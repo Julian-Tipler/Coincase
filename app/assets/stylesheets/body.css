@@ -5,3 +5,20 @@
     font-size: 18px;
     font-weight: 300;
 }
+
+.home-content, .portfolio-content, .prices-content {
+    height: auto;
+    width: auto;
+    background-color: rgb(246,249,252);
+    margin-left: 237px;
+    padding-top: 10px;
+    padding-bottom: 200px;
+    padding-left: 25px;
+    padding-right: 20px
+}
+
+.home-content>*, .portfolio-content>*, .prices-content>* {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.01), 0 5px 5px rgba(0,0,0,0.01);    margin-top:38px;
+}

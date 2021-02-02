@@ -2,6 +2,9 @@ import React from 'react';
 
 class TransactionsIndex extends React.Component {
     render() {
+        if (Object.values(this.props.transactions).length <=0) {
+            return <div className='transactions-index'>no recent transactions</div>
+        }
         return(
             <div className='transactions-index'>
                 {this.props.transactions.map((transaction,idx) => {
