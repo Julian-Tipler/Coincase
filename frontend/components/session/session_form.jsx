@@ -102,7 +102,7 @@ class SessionForm extends React.Component {
             button = "log in"
             submit = "Create account"
             page = 
-            <div className='sign-up-full-page'>
+            <div className='signup-full-page'>
                 <div className='signup-form-title'>Create your account</div>
                 <div className='sign-up-page'>
                     <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
@@ -112,27 +112,27 @@ class SessionForm extends React.Component {
                                 <input type="text"
                                     value={this.state.firstName}
                                     onChange={this.update('firstName')}
-                                    placeholder='first name'
-                                    className="sign-up-inputs"
+                                    placeholder='First name'
+                                    className="signup-inputs signup-credentials"
                                 />
                                 <input type="text"
                                     value={this.state.lastName}
                                     onChange={this.update('lastName')}
-                                    placeholder='last name'
-                                    className="sign-up-inputs"
+                                    placeholder='Last name'
+                                    className="signup-inputs signup-credentials"
                                 />
                             </div>
                             <input type="text"
                                 value={this.state.email}
                                 onChange={this.update('email')}
-                                placeholder='email'
-                                className='sign-up-inputs'
+                                placeholder='Email'
+                                className='signup-inputs '
                             />
                             <input type="password"
                                 value={this.state.password}
                                 onChange={this.update('password')}
-                                placeholder='password'
-                                className='sign-up-inputs'
+                                placeholder='Choose Password'
+                                className='signup-inputs '
                             />
                             <div id='terms-and-conditions'>
                                 <input id='terms-and-conditions-checkbox'type="checkbox" name="checkbox" value="check" /> 

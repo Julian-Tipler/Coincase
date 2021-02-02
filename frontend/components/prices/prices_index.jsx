@@ -135,7 +135,7 @@ class PricesIndex extends React.Component {
     }
 
     render() {
-        
+        const numItemsShown = this.props.numItemsShown
         if (this.props.coins.length <= 0) {
             return <div>Loading...</div>
         }
@@ -161,7 +161,7 @@ class PricesIndex extends React.Component {
                         </td>
                         <td>Trade</td> 
                     </tr>
-                    {this.state.coins.map((coin, i) => (
+                    {this.state.coins.slice(0,numItemsShown).map((coin, i) => (
                         <PricesIndexItem
                         index={i+1}
                         id={coin.id}

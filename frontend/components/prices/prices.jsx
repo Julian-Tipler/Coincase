@@ -13,7 +13,7 @@ class Prices extends React.Component {
             <div className='prices-content'>
                 <h1 className='prices-title'>Coins Index</h1>
                 <div className='price-index-table-box'>
-                    <PricesIndex coins={this.props.coins} />
+                    <PricesIndex coins={this.props.coins} numItemsShown={100}/>
                 </div>
             </div>
         )
