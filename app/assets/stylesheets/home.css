@@ -31,7 +31,9 @@
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;   
-    flex-direction: row; 
+    flex-direction: row;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(236, 239, 241);
 }
 
 .top-six-graph {
@@ -44,11 +46,6 @@
 }
 
 #recent-transactions-box-home {
-    left: 40px;
-    width: 48%;
-}
-
-.your-portfolio-box {
     left: 40px;
     width: 48%;
 }

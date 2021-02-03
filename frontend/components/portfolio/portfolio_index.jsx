@@ -7,13 +7,11 @@ const PortfolioIndex = props => {
     }
 
     return (
-        <table>
-            <tbody>
+        <div>
             {Object.keys(props.portfolio).map((id, i)=> {
             return <PortfolioIndexItem id={id} quantity={props.portfolio[id]} key={i}/>
             })}
-            </tbody>
-        </table>
+        </div>
     )
 
 }

@@ -76,6 +76,7 @@ class WatchListCoinGraph extends React.Component {
             },
             scales: {
                 xAxes: [{
+                    display:false,
                     ticks: {
                         autoSkip: true,
                         maxTicksLimit: 3,
@@ -84,7 +85,7 @@ class WatchListCoinGraph extends React.Component {
                     },
                     gridLines: {
                         display: false,
-                        drawBorder: true,
+                        drawBorder: false,
                         drawOnChartArea: false
                     }
                 }],
@@ -94,7 +95,7 @@ class WatchListCoinGraph extends React.Component {
                     },
                     gridLines: {
                         display: false,
-                        drawBorder: true,
+                        drawBorder: false,
                         drawOnChartArea: false
                     }
                 }]
