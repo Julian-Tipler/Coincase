@@ -19,7 +19,7 @@ class Home extends React.Component {
                 </div>
                <div className='portfolio-assets-and-transactions'>
                     <div className='portfolio-index-box' id='portfolio-index-box-home'>
-                        <div className='portfolio-index-title'>
+                        <div className='portfolio-index-title title'>
                             Your assets:
                         </div>
                         <div>
@@ -27,7 +27,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                     <div className='recent-transactions-box' id='recent-transactions-box-home'>
-                        <div>
+                        <div className='transactions-title title'>
                             Recent Transactions
                         </div>
                         <div>

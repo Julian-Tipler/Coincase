@@ -50,15 +50,15 @@ class Portfolio extends React.Component {
                 </div>
                 <div className='portfolio-assets-and-transactions'>
                     <div className='portfolio-index-box' id='portfolio-index-box-portfolio'>
-                        <div className='portfolio-index-title'>
+                        <div className='portfolio-index-title title'>
                             Your assets:
                         </div>
                         <div>
                             <PortfolioIndex portfolio={this.props.portfolio}/>
                         </div>
                     </div>
-                    <div className='recent-transactions-box' id='recent-transactions-box-portfolio'>
-                        <div>
+                    <div className='transactions-box box-title' id='recent-transactions-box-portfolio'>
+                        <div className='transactions-title title'>
                             Recent Transactions
                         </div>
                         <div>

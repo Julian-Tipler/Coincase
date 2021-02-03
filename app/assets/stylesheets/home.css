@@ -1,11 +1,14 @@
 
-
 .home-title{
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 600;
     font-size: 30px;
     padding-bottom: 20px;   
+
 }
+.watch-list-box {
+}
+
 .watch-list-title{
   font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
@@ -24,15 +27,11 @@
     padding-top: 20px
 }
 
-.watch-list-box {
-}
-
 .top-six-graphs {
     min-height: 100%;
     display: flex;
     flex-wrap: wrap;   
     flex-direction: row; 
-
 }
 
 .top-six-graph {
@@ -40,7 +39,7 @@
     flex-basis: calc(50%-40px);
     justify-content: center;
     flex-direction: column; */
-    border: 1px solid rgb(241,243,245) ;
+    border: 1px solid rgb(236, 239, 241);
     width:33.18%
 }
 

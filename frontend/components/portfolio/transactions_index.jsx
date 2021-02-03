@@ -9,10 +9,10 @@ class TransactionsIndex extends React.Component {
             <div className='transactions-index'>
                 {this.props.transactions.map((transaction,idx) => {
                     return (
-                        <span key={idx} className='transactions-index-item'>
-                            <div>{transaction.order_type === 'buy'? 'Bought': 'Sold'} {transaction.coin_id}</div>
-                            <div>{transaction.order_type === 'buy'? '+': '-'} {transaction.quantity} {transaction.updated_at}</div>
-                        </span>
+                        <div key={idx} className='transactions-index-item'>
+                            <div className='transactions-index-transaction-type'>{transaction.order_type === 'buy'? 'Bought': 'Sold'} {transaction.coin_id}</div>
+                            <div className='transactions-index-transaction-details'>{transaction.order_type === 'buy'? '+': '-'} {transaction.quantity} {transaction.updated_at}</div>
+                        </div>
                     )
                 })}
             </div>
