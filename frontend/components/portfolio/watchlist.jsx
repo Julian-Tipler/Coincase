@@ -12,12 +12,9 @@ class WatchList extends React.Component {
     componentDidMount(){
         APIUtil.fetchTopCoins()
         .then(coins=> {
-            this.props.fetchTopSixHistoricalData(coins[0].id,0)
-            this.props.fetchTopSixHistoricalData(coins[1].id,1)
-            this.props.fetchTopSixHistoricalData(coins[2].id,2)
-            this.props.fetchTopSixHistoricalData(coins[3].id,3)
-            this.props.fetchTopSixHistoricalData(coins[4].id,4)
-            this.props.fetchTopSixHistoricalData(coins[5].id,5)
+            coins.slice(0,6).forEach((coin,i)=> {
+            this.props.fetchTopSixHistoricalData(coin.id,i)
+            })
         })
     }
 

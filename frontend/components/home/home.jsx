@@ -1,5 +1,6 @@
 import React from 'react';
 import CoinGraph from '../coin_graph/coin_graph'
+import PortfolioIndex from '../portfolio/portfolio_index'
 import WatchListContainer from '../portfolio/watchlist_container'
 import TransactionsIndex from '../portfolio/transactions_index'
 
@@ -16,15 +17,22 @@ class Home extends React.Component {
                     <div className='watch-list-title'>Watchlist</div>
                     <WatchListContainer/>
                 </div>
-                <div className='portfolio-index-box' id='portfolio-index-box-home'>
-
-                </div>
-                <div className='recent-transactions-box' id='recent-transactions-box-home'>
-                    <div>
-                        Recent Transactions
+               <div className='portfolio-assets-and-transactions'>
+                    <div className='portfolio-index-box' id='portfolio-index-box-home'>
+                        <div className='portfolio-index-title title'>
+                            Your assets:
+                        </div>
+                        <div>
+                            <PortfolioIndex portfolio={this.props.portfolio}/>
+                        </div>
                     </div>
-                    <div>
-                        <TransactionsIndex transactions={this.props.transactionsIndex}/>
+                    <div className='recent-transactions-box' id='recent-transactions-box-home'>
+                        <div className='transactions-title title'>
+                            Recent Transactions
+                        </div>
+                        <div>
+                            <TransactionsIndex transactions={this.props.transactionsIndex}/>
+                        </div>
                     </div>
                 </div>
            

@@ -45,21 +45,21 @@ class WatchListCoinGraph extends React.Component {
                 {
                     label: '',
                     fill: false,
-                    lineTension: 0.01,
+                    lineTension: 0.1,
                     backgroundColor: 'rgba(75,192,192,0.4)',
                     borderColor: `${colors[this.props.index]}`,
                     borderCapStyle: 'butt',
                     borderDash: [],
                     borderDashOffset: 0.0,
                     borderJoinStyle: 'miter',
+                    borderWidth: 2,
                     pointBorderColor: `${colors[this.props.index]}`,
                     pointBackgroundColor: `${colors[this.props.index]}`,
-                    pointBorderWidth: 1,
+                    pointRadius: 0,
                     pointHoverRadius: 1,
                     pointHoverBackgroundColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderColor: 'rgba(44, 130, 201, 1)',
                     pointHoverBorderWidth: 1,
-                    pointRadius: 1,
                     pointHitRadius: 10,
                     data: this.yAxis(),
                 },
@@ -76,6 +76,7 @@ class WatchListCoinGraph extends React.Component {
             },
             scales: {
                 xAxes: [{
+                    display:false,
                     ticks: {
                         autoSkip: true,
                         maxTicksLimit: 3,
@@ -83,8 +84,8 @@ class WatchListCoinGraph extends React.Component {
                         minRotation: 0
                     },
                     gridLines: {
-                        display: true,
-                        drawBorder: true,
+                        display: false,
+                        drawBorder: false,
                         drawOnChartArea: false
                     }
                 }],
@@ -93,8 +94,8 @@ class WatchListCoinGraph extends React.Component {
                         display: false
                     },
                     gridLines: {
-                        display: true,
-                        drawBorder: true,
+                        display: false,
+                        drawBorder: false,
                         drawOnChartArea: false
                     }
                 }]

@@ -1,16 +1,8 @@
-.prices-content {
-    height: 100%;
-    width: 100%;
-    background-color: rgb(246,249,252);
-    margin-left: 237px
-}
 
 .price-index-table-box {
-    background: white;
-    border: 1px solid rgb(241,243,245) ;
     border-radius: 1px;
     margin: 30px 30px 30px 30px;
-    width: 70%;
+    width: 95%;
 }
 
 .coin-table {

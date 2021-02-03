@@ -1,94 +1,84 @@
-.portfolio-content{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(246,249,252);
-    margin-left: 237px;
-    padding-top: 20px;
-    padding-bottom: 150px
-}
+
 
 .portfolio-balance-title{
-  font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    color: rgb(112,133,152);
     font-weight: 600;
+}
+
+.portfolio-balance-amount {
     font-size: 30px;
-    padding-bottom: 20px;   
+    font-weight: 600;
 }
 
 .portfolio-chart-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245);
-    border-radius: 5px;
     left: 40px;
-    margin: 30px 30px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 50%;
-
 }
 
-.portfolio-index-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245);
-    border-radius: 5px;
-    left: 40px;
-    margin: 30px 30px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 50%;
+.portfolio-index-title {
+    border-bottom: 1px solid rgb(236, 239, 241);
+    margin: 0px;
+    padding: 20px
 }
 
-.recent-transactions-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245) ;
-    border-radius: 5px;
-    left: 40px;
-    margin: 30px 30px 30px 30px;
-    padding: 20px 20px 20px 20px;
-    width: 50%;
-}
-
-.recent-transactions-box-portfolio {
-    
-}
-
-
-
-.portfolio-index-box-title {
-    font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    padding-bottom: 20px;
+.portfolio-assets-and-transactions {
+    display: flex;
 }
 
 .portfolio-index-item {
-    display: flex
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(236, 239, 241);
+    display: flex;
+    height: 72px;
 }
 
-.portfolio-index-item-name{
-    
+
+#transactions-box-portfolio {
+    width: 50%;
 }
 
-.transactions-index {
+.transactions-title {
+    border-bottom: 1px solid rgb(236, 239, 241);
+    margin: 0px;
+    padding: 20px
 }
 
-.transactions-index-item {
+.transactions-index-item{
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(236, 239, 241);
+    display: flex;
+}
 
+.transactions-arrows-pic {
+    height: 40px;
+    width: 40px;
+    padding-top:10px;
+    margin-right: 20px
+}
+
+.transactions-index-transaction-type{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.transactions-index-transaction-details{
+    font-size: 12px;
 }
 
 .do-more-with-crypto-box {
-    background-color: white;
-    border: 1px solid rgb(241,243,245) ;
-    border-radius: 5px;
-    left: 40px;
-    margin: 20px 20px 20px 20px;
-    padding: 20px 20px 20px 20px;
-    width: 50%;
+    width: 100%;
 } 
 
-.portfolio-do-more-with-crypto-item1 {
+.do-more-with-crypto-item1 {
     
 }
 
-.portfolio-do-more-with-crypto-item2 {
-    
+.do-more-with-crypto-item2 {
 }
 
 .portfolio-div-link {
