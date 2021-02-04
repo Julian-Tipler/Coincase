@@ -35,6 +35,8 @@
   margin-left: 16px
 }
 
+
+
 .signed-in-links {
   display: flex;
   flex-direction: column;
@@ -76,8 +78,10 @@
   display: flex;
   text-decoration: none;
 }
+
 #signed-in-header-portfolio>div {
 }
+
 #signed-in-header-portfolio:hover {
   background: rgb(241,243,245);
   cursor: pointer;
@@ -92,6 +96,8 @@
   background:  rgb(241,243,245);
   cursor: pointer;
 }
+
+
 
 .signed-in-top-bar {
   position: fixed;

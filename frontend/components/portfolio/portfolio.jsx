@@ -49,6 +49,7 @@ class Portfolio extends React.Component {
                     </div> */}  
                 </div>
                 <div className='portfolio-assets-and-transactions'>
+                    
                     <div className='portfolio-index-box' id='portfolio-index-box-portfolio'>
                         <div className='portfolio-index-title title'>
                             Your assets:
@@ -57,6 +58,7 @@ class Portfolio extends React.Component {
                             <PortfolioIndex portfolio={this.props.portfolio}/>
                         </div>
                     </div>
+
                     <div className='transactions-box box-title' id='recent-transactions-box-portfolio'>
                         <div className='transactions-title title'>
                             Recent Transactions
@@ -65,6 +67,7 @@ class Portfolio extends React.Component {
                             <TransactionsIndex transactions={this.props.transactionsIndex}/>
                         </div>
                     </div>
+
                 </div>
                 <div className='do-more-with-crypto-box'>
                     <DoMoreWithCrypto/>
