@@ -1,7 +1,7 @@
 import React from 'react';
 import PortfolioIndex from './portfolio_index'
 import TransactionsIndex from './transactions_index'
-import DoMoreWithCrypto from './do_more_with_crypto'
+import DoMoreWithCrypto from '../extra_boxes/do_more_with_crypto'
 
 class Portfolio extends React.Component {
     constructor(props) {  
@@ -15,6 +15,7 @@ class Portfolio extends React.Component {
     componentDidMount() {
         this.props.fetchPortfolio()
         this.props.fetchTransactions()
+        this.props.fetchUserDetails(this.props.currentUser)
     }
 
     componentDidUpdate(prevProps) {
@@ -36,6 +37,7 @@ class Portfolio extends React.Component {
     }
 
     render() {
+        console.log('portfolio-props',this.props.userBuyingPower)
         return(
             <div className='portfolio-content'>
                 <div className='portfolio-chart-box'>
@@ -54,7 +56,7 @@ class Portfolio extends React.Component {
                             Your assets:
                         </div>
                         <div>
-                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices}/>
+                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices} userBuyingPower={this.props.userBuyingPower.buyingPower}/>
                         </div>
                     </div>
 

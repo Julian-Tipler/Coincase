@@ -61,8 +61,13 @@
     justify-content: space-between;
     align-items: flex-end;
     width: 250px;
-    margin-bottom: 30px;
-    margin-top: 10px
+    padding-bottom: 30px;
+    padding-top: 10px
+}
+
+.name-id-abbreviation:hover {
+    cursor: pointer
+    
 }
 
 .coin-icon-container {
@@ -85,9 +90,6 @@
     color: rgb(21,82,240)
 }
 
-.name-id-abbreviation:hover {
-    cursor: pointer
-}
 
 .trade-button {
     color: white;

@@ -36,6 +36,8 @@
     height: 52px;
 }
 
+
+
 .portfolio-index-item-icon-and-id{
     display: flex;
 }
@@ -51,10 +53,11 @@
 }
 
 .portfolio-index-item-worth {
-
+    padding-top: 8px;
 }
 
 .portfolio-index-item-quantity {
+    padding-top: 8px;
     color: rgb(112,133,152)
 }
 
@@ -70,6 +73,10 @@
     height: 100%;
     text-align: center;
     color: rgb(112,133,152);
+}
+
+.portfolio-index-total-balance>a:hover {
+    color: rgb(11,70,228)
 }
 
 
@@ -123,17 +130,8 @@
     color: rgb(112,133,152);
 }
 
-
-
-.do-more-with-crypto-box {
-    width: 100%;
-} 
-
-.do-more-with-crypto-item1 {
-    
-}
-
-.do-more-with-crypto-item2 {
+.transactions-to-portfolio-item>a:hover {
+    color: rgb(11,70,228)
 }
 
 .portfolio-div-link {

@@ -4,7 +4,6 @@ import {Link} from 'react-router-dom'
 
 const PortfolioIndex = props => {
 
-
     if (Object.values(props.portfolio).length <= 0) {
         return <div></div>
     }
@@ -12,6 +11,8 @@ const PortfolioIndex = props => {
     if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
         return <div></div>
     }
+    
+    console.log('inner-props',props.userBuyingPower)
 
     var worth=0
     Object.keys(props.portfolio).forEach(id=> {
@@ -21,6 +22,14 @@ const PortfolioIndex = props => {
 
     return (
         <div>
+            <div className='portfolio-index-item'>
+                <div className='portfolio-index-item-icon-and-id'>
+                    <div className='portfolio-index-item-icon'/>
+                    <div className='portfolio-index-item-id'>USD{':'}</div>
+                </div>
+                {/* <div className='portfolio-index-item-worth'>${props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity}</div>
+                <div className='portfolio-index-item-quantity'>{props.quantity}</div> */}
+            </div>
             {Object.keys(props.portfolio).map((id, i)=> {
                 return <PortfolioIndexItem id={id} quantity={props.portfolio[id]} userCoinPrices={props.userCoinPrices} key={i}/>
             })}

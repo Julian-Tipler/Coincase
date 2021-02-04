@@ -34,7 +34,7 @@ function PricesIndexItem(props) {
     if (!props.id || !props.price_change_24h) return <tr><td>Loading...</td></tr>
 
     return(   
-        <tr className='coin-table-row'>
+        <tr className='coin-table-row item'>
             <td className='top-column'>{props.index}</td>
             <td onClick={() => goto()} className='name-id-abbreviation'>
                 <div className='coin-icon-container'><img src={props.image} className='coin-icon' /></div>
