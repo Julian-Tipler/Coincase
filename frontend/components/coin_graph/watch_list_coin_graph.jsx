@@ -71,6 +71,7 @@ class WatchListCoinGraph extends React.Component {
 
     graphOptions() {
         const options = {
+            responsive:true,
             legend: {
                 display: false
             },
@@ -106,13 +107,11 @@ class WatchListCoinGraph extends React.Component {
         return options
     }
 
-
     render() {
         return (
-            <div>
+            <div className='top-six-graph-graph'>
                 <div className='coin-title'>{this.props.id}</div>
-                <Line data={this.graphData()} options={this.graphOptions()} />
-                <div></div>
+                <Line  height={100} className='top-six-graph-graph'data={this.graphData()} options={this.graphOptions()} />
             </div>
         )
     }

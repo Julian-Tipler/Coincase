@@ -1,8 +1,9 @@
 import React from 'react';
-import CoinGraph from '../coin_graph/coin_graph'
-import PortfolioIndex from '../portfolio/portfolio_index'
-import WatchListContainer from '../portfolio/watchlist_container'
-import TransactionsIndex from '../portfolio/transactions_index'
+import CoinGraph from '../coin_graph/coin_graph';
+import PortfolioIndex from '../portfolio/portfolio_index';
+import WatchListContainer from '../portfolio/watchlist_container';
+import TransactionsIndex from '../portfolio/transactions_index';
+import {Link} from 'react-router-dom';
 
 class Home extends React.Component {
     componentDidMount() {
@@ -32,6 +33,11 @@ class Home extends React.Component {
                         </div>
                         <div>
                             <TransactionsIndex transactions={this.props.transactionsIndex}/>
+                        </div>
+                        <div className='transactions-to-portfolio-item'>
+                            <Link to='/portfolio'>
+                                View Portfolio {'>'}
+                            </Link>
                         </div>
                     </div>
                 </div>
