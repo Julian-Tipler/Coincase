@@ -1,19 +1,40 @@
 import React from 'react';
 import PortfolioIndexItem from './portfolio_index_item'
+import {Link} from 'react-router-dom'
 
 const PortfolioIndex = props => {
+
+
     if (Object.values(props.portfolio).length <= 0) {
         return <div></div>
     }
 
+    if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
+        return <div></div>
+    }
+
+    var worth=0
+    Object.keys(props.portfolio).forEach(id=> {
+                    worth += props.userCoinPrices[id].market_data.current_price.usd
+                })
+    worth = worth.toFixed(2)
+
     return (
         <div>
             {Object.keys(props.portfolio).map((id, i)=> {
-            return <PortfolioIndexItem id={id} quantity={props.portfolio[id]} key={i}/>
+                return <PortfolioIndexItem id={id} quantity={props.portfolio[id]} userCoinPrices={props.userCoinPrices} key={i}/>
             })}
+            <div className='portfolio-index-total-balance'>                       
+                <Link to='/portfolio'>
+                    Total Balance = {worth}
+                </Link>
+            </div>
         </div>
     )
 
 }
 
 export default PortfolioIndex
+
+
+//price={props.userCoinPrices[id].market_data.current_price}

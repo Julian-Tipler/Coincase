@@ -24,7 +24,7 @@ class Home extends React.Component {
                             Your assets:
                         </div>
                         <div>
-                            <PortfolioIndex portfolio={this.props.portfolio}/>
+                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices}/>
                         </div>
                     </div>
                     <div className='recent-transactions-box' id='recent-transactions-box-home'>

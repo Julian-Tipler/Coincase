@@ -36,7 +36,6 @@ class Portfolio extends React.Component {
     }
 
     render() {
-
         return(
             <div className='portfolio-content'>
                 <div className='portfolio-chart-box'>
@@ -55,7 +54,7 @@ class Portfolio extends React.Component {
                             Your assets:
                         </div>
                         <div>
-                            <PortfolioIndex portfolio={this.props.portfolio}/>
+                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices}/>
                         </div>
                     </div>
 
