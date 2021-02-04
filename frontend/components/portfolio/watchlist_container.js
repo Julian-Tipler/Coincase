@@ -13,7 +13,7 @@ const msp = (state) => {
 const mdp = dispatch => ({
     fetchTopCoins: () => dispatch(fetchTopCoins()),
     fetchCoinHistoricalData: (id) => dispatch(fetchCoinHistoricalData(id)),
-    fetchTopSixHistoricalData: (id, idx) => dispatch(fetchTopSixHistoricalData(id,idx))
+    fetchTopSixHistoricalData: (id, idx, image, current_price) => dispatch(fetchTopSixHistoricalData(id,idx,image, current_price))
 })
 
 export default connect(msp,mdp)(WatchList)

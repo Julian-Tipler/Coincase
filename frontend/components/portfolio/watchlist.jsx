@@ -12,8 +12,8 @@ class WatchList extends React.Component {
     componentDidMount(){
         APIUtil.fetchTopCoins()
         .then(coins=> {
-            coins.slice(0,6).forEach((coin,i)=> {
-            this.props.fetchTopSixHistoricalData(coin.id,i)
+            coins.slice(0,6).forEach((coin,idx)=> {
+            this.props.fetchTopSixHistoricalData(coin.id, idx, coin.image, coin.current_price)
             })
         })
     }
@@ -34,6 +34,8 @@ class WatchList extends React.Component {
                         coin={coin[1]}
                         id={coin[0]}
                         index={i}
+                        image={coin[2]}
+                        current_price={coin[3]}
                         />
                     </div>      
                 ))}
