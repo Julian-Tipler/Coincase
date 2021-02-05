@@ -13,7 +13,7 @@ const PortfolioIndexItem = props => {
                 <img className='portfolio-index-item-icon'src={props.userCoinPrices[props.id].image.thumb}/>
                 <div className='portfolio-index-item-id'>{props.id}:</div>
             </div>
-            <div className='portfolio-index-item-worth'>${props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity}</div>
+            <div className='portfolio-index-item-worth'>${(props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity).toFixed(2)}</div>
             <div className='portfolio-index-item-quantity'>{props.quantity}</div>
         </Link>
     )

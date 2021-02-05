@@ -74,8 +74,8 @@ class SignedInHeader extends React.Component {
                         {this.props.queryString}
                     </span>
                     <span className='right-side-buttons'>
-                        <button className='buy-button'>Buy</button>
-                        <button className='sell-button'>Sell</button>
+                        <Link to='/prices'className='buy-button'>Buy</Link>
+                        <Link to='/prices'className='sell-button'>Sell</Link>
                         <button id='logout-button'onClick={()=> this.props.logout()}>Logout</button>
                     </span>
 

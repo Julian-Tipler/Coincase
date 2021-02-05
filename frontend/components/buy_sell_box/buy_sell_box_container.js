@@ -11,7 +11,8 @@ const msp = (state,ownProps) => {
         id: ownProps.id,
         coinInfo: state.entities.coinInfo,
         errors: state.errors,
-        userBuyingPower: state.entities.users.userDetails.buyingPower
+        userBuyingPower: state.entities.users.userDetails.buyingPower,
+        portfolio: state.entities.users.portfolio,
     })
 }
 
@@ -21,7 +22,6 @@ const mdp = dispatch => ({
     clearErrors: () => dispatch(clearErrors()),
     fetchUserDetails: (id) => dispatch(fetchUserDetails(id)),
     fetchPortfolio: () => dispatch(fetchPortfolio())
-
 })
 
 export default connect(msp,mdp)(BuySellBox)

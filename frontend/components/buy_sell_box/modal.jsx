@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions'
 import { connect } from 'react-redux'
 import SuccessfulTransaction from './successful_transaction'
+import { Link } from 'react-router-dom'
 
 function Modal({modal, coinInfo, closeModal}) {
     if (!modal) {
@@ -17,12 +18,17 @@ function Modal({modal, coinInfo, closeModal}) {
         default:
             return null;
     }
+
+    const closeAction = ()=> {
+        closeModal()
+    }
+
     return (
-        <div className="modal-background" onClick={closeModal}>
+        <Link to='/portfolio'className="modal-background" onClick={closeAction}>
             <div className="modal-child" onClick={e=> e.stopPropagation()}>
                 {component}
             </div>
-        </div>
+        </Link>
     )
 }
 
