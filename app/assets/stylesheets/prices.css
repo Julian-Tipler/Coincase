@@ -21,7 +21,9 @@
     background: none;
     border: none;
     color: gray;
-    font: inherit
+    font: inherit;
+    display:flex;
+    align-items: center;
 }
 
 .index-reorder-button:hover {
@@ -36,9 +38,8 @@
 }
 
 .index-arrow-icon {
-    height: 10px;
-    color: gray;
-    margin-bottom: 2px;
+    height: 20px;
+    color: red;
     margin-left: 2px;
 }
 

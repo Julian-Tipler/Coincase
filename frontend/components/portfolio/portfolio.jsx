@@ -60,7 +60,7 @@ class Portfolio extends React.Component {
                         </div>
                     </div>
 
-                    <div className='transactions-box box-title' id='recent-transactions-box-portfolio'>
+                    <div className='transactions-box box-title' id='transactions-box-portfolio'>
                         <div className='transactions-title title'>
                             Recent Transactions
                         </div>

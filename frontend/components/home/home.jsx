@@ -4,6 +4,7 @@ import PortfolioIndex from '../portfolio/portfolio_index';
 import WatchListContainer from '../portfolio/watchlist_container';
 import TransactionsIndex from '../portfolio/transactions_index';
 import DoMoreWithCrypto from'../extra_boxes/do_more_with_crypto';
+import Footer from '../footer/footer'
 import {Link} from 'react-router-dom';
 
 class Home extends React.Component {
@@ -48,8 +49,6 @@ class Home extends React.Component {
 
                     </div>
                 </div>
-           
-                
             </div>
         )
     }

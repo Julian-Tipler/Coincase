@@ -13,7 +13,7 @@ const PortfolioIndex = props => {
     }
 
     if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
-        return <div>whoops</div>
+        return <div>Assets Loading...</div>
     }
     
     console.log('inner-props',props.userBuyingPower)
@@ -26,14 +26,14 @@ const PortfolioIndex = props => {
 
     return (
         <div>
-            <div className='portfolio-index-item'>
+            <Link to='/portfolio'className='portfolio-index-item item'>
                 <div className='portfolio-index-item-icon-and-id'>
                     <div className='portfolio-index-item-icon'/>
-                    <div className='portfolio-index-item-id'>USD{':'}</div>
+                    <div className='item'to='/portfolio'className='portfolio-index-item-id'>USD{':'}</div>
                 </div>
                 {/* <div className='portfolio-index-item-worth'>${props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity}</div>
                 <div className='portfolio-index-item-quantity'>{props.quantity}</div> */}
-            </div>
+            </Link>
             {Object.keys(props.portfolio).map((id, i)=> {
                 return <PortfolioIndexItem id={id} quantity={props.portfolio[id]} userCoinPrices={props.userCoinPrices} key={i}/>
             })}

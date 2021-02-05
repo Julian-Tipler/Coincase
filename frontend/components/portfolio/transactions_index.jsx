@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 
 class TransactionsIndex extends React.Component {
+    constructor(props) {  
+        super(props)
+    }
+
     render() {
         if (Object.values(this.props.transactions).length <=0) {
             return(
@@ -23,11 +27,7 @@ class TransactionsIndex extends React.Component {
                         </div>
                     )
                 })}
-                <div className='transactions-to-portfolio-item'>
-                    <Link to='/portfolio'>
-                        View Portfolio {'>'}
-                    </Link>
-                </div>
+
             </div>
         )
     }
