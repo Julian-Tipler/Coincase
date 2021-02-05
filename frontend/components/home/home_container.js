@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Home from './home'
-import { fetchPortfolio } from '../../actions/user_actions'
+import { fetchPortfolio, resetPortfolio } from '../../actions/user_actions'
 import { fetchTransactions } from '../../actions/transaction_actions'
 
 const msp = (state) => ({
@@ -11,7 +11,8 @@ const msp = (state) => ({
 
 const mdp = dispatch => ({
     fetchPortfolio: ()=> dispatch(fetchPortfolio()),
-    fetchTransactions: ()=> dispatch(fetchTransactions())
+    fetchTransactions: ()=> dispatch(fetchTransactions()),
+    resetPortfolio: ()=> dispatch(resetPortfolio())
 })
 
 export default connect(msp,mdp)(Home)

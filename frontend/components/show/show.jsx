@@ -14,16 +14,18 @@ class Show extends React.Component {
         const {id} = this.props
         return(
             <div className='show-content'>
-                <div className='show-title'>{id}</div>
-                <div className='coin-graph-box'>
-                    <CoinGraphContainer
-                    id={id}/>
-                    
-                </div>
-                <div className='buy-sell-box'>
-                    <BuySellBoxContainer 
-                    id={id}
-                    />
+                    <div className='show-title'>{id}</div>
+                <div className='show-coin-graph-and-buy-sell'>
+                    <div className='coin-graph-box'>
+                        <CoinGraphContainer
+                        id={id}/>
+                        
+                    </div>
+                    <div className='buy-sell-box'>
+                        <BuySellBoxContainer 
+                        id={id}
+                        />
+                    </div>
                 </div>
             </div>
         )

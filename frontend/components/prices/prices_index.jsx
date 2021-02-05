@@ -162,7 +162,7 @@ class PricesIndex extends React.Component {
                         <td>Trade</td> 
                     </tr>
                     {this.state.coins.slice(0,numItemsShown).map((coin, i) => (
-                        <PricesIndexItem
+                        <PricesIndexItem 
                         index={i+1}
                         id={coin.id}
                         image={coin.image}

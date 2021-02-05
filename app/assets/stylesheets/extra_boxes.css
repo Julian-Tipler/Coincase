@@ -1,0 +1,42 @@
+.do-more-with-crypto-box {
+    width: 100%;
+} 
+
+.do-more-with-crypto-item1 {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(236, 239, 241);
+    height: 52px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.do-more-with-crypto-item2 {
+    padding-left: 30px;
+    border-bottom: 1px solid rgb(236, 239, 241);
+    height: 52px;
+}
+
+.do-more-with-crypto-item2>a{
+    display: flex;
+    align-items: center;
+}
+
+.calendar-icon { 
+    color: rgb(22,82,240);
+}
+
+.do-more-with-crypto-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px
+}
+
+.crypto-extra-small-text {
+    padding-top: 10px;
+    font-size: 15px;
+    color: rgb(112,133,152);
+}

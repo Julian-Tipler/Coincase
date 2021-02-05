@@ -85,13 +85,13 @@ class BuySellBox extends React.Component {
     render() {
         return(
             <div>
-                <div className = 'buy-sell-box-header'>       
+                <div className = 'buy-sell-header'>       
                     <button onClick={()=> this.onClickTabItem('buy')}>Buy</button>
                     <button onClick={()=> this.onClickTabItem('sell')}>Sell</button>
                     {/* <button onClick={()=> this.onClickTabItem('convert')}>Convert</button> */}
                 </div>
 
-                <div className ='buy-sell-box-body'>
+                <div className ='buy-sell-body'>
                     {this.whichTab()}
                 </div>
                 <div>Total cost of transaction: {(this.state.price*this.state.quantity).toFixed(2)}</div>
