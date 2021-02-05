@@ -19,7 +19,7 @@ class TransactionsIndex extends React.Component {
                 {this.props.transactions.map((transaction,idx) => {
                     return (
                         <div key={idx} className='transactions-index-item'>
-                            <img className='transactions-arrows-pic' src='./assets/transaction-arrows.png'/>
+                            <img src={window.transactionarrows} className='transactions-arrows-pic' />
                             <div>
                                 <div className='transactions-index-transaction-type'>{transaction.order_type === 'buy'? 'Bought': 'Sold'} {transaction.coin_id}</div>
                                 <div className='transactions-index-transaction-details'>{transaction.order_type === 'buy'? '+': '-'} {transaction.quantity} {transaction.updated_at}</div>
