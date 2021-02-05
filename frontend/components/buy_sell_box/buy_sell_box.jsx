@@ -77,7 +77,7 @@ class BuySellBox extends React.Component {
                         <div className='bank-selector'></div>
                         <button type='submit'>Sell {`${this.props.id}`}</button>
                     </form>
-                </div>        )
+                </div> )
             } 
     }
 

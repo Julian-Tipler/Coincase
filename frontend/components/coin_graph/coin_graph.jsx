@@ -113,7 +113,7 @@ class CoinGraph extends React.Component{
                         display: false
                     },
                     gridLines: {
-                        display: true,
+                        display: false,
                         drawBorder: true,
                         drawOnChartArea: false
                     }

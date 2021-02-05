@@ -9,13 +9,9 @@ import HomeContainer from './home/home_container'
 import PortfolioContainer from './portfolio/portfolio_container'
 import PricesContainer from './prices/prices_container'
 import ShowContainer from './show/show_container'
+import Footer from './footer/footer'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import {
-    Route,
-    Redirect,
-    Switch,
-    Link,
-} from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 
 
 
@@ -44,7 +40,10 @@ class App extends React.Component {
                         <ProtectedRoute exact path="/show/:id" component={ShowContainer} />
                         <Redirect to='/' />
                     </Switch>
-                </div>
+                </div>   
+                    <Switch>
+                        <ProtectedRoute exact path={["/home", "/portfolio", "/prices"]} component={Footer} />                    
+                    </Switch>
             </div>
         )
     }

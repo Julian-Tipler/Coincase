@@ -1,0 +1,20 @@
+.footer {
+    bottom: 0px;
+    height: 8vh;
+    background-color: rgb(246,249,252); 
+    border-top: 2px solid rgb(174, 37, 37);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 238px;
+    border-top: 1px solid rgb(232, 232, 234);
+}
+
+footer .github-links {
+    color: rgb(21,82,240);
+    display: flex;
+}
+
+.footer-home {
+    color: rgb(21,82,240);
+}
