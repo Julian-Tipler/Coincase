@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from './modal'
 
 class BuySellBox extends React.Component {
     constructor(props) {  
@@ -17,6 +16,7 @@ class BuySellBox extends React.Component {
     componentDidMount() {
         this.props.fetchCoinInfo(this.props.id)
         this.props.fetchUserDetails(this.props.currentUser)
+        this.props.fetchPortfolio()
         // this.props.clearErrors()
     }
 

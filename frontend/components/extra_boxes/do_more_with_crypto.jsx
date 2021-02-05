@@ -21,7 +21,7 @@ class DoMoreWithCrypto extends React.Component {
                 </a>
 
                 <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/">
-                    <FontAwesomeIcon className='calendar-icon fa-lg'icon={faAddressCard}/>
+                    <FontAwesomeIcon className='credit-card-icon fa-lg'icon={faAddressCard}/>
                     <div className='do-more-with-crypto-text'>
                         <div>Invest over time</div>
                         <div className='crypto-extra-small-text'>Buy crypto every day, week, or month</div>

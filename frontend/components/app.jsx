@@ -20,7 +20,7 @@ class App extends React.Component {
     render() {
         return(
             <div>
-                <Modal />
+                <Modal/>
                 <header className='nav-bar'>
                     <Switch>
                         <Route exact path="/" component={HeaderContainer} />
