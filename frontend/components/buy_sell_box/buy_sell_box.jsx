@@ -11,6 +11,7 @@ class BuySellBox extends React.Component {
         order_type: 'buy'
     }
       this.handleSubmit = this.handleSubmit.bind(this)
+      this.coinOwned = this.coinOwned.bind(this)
     }
 
     componentDidMount() {
@@ -81,6 +82,16 @@ class BuySellBox extends React.Component {
             } 
     }
 
+    coinOwned() {
+        if (!Object.keys(this.props.portfolio).includes(this.props.id)) {  
+            return <div> You own 0 {this.props.id}</div>           
+        }     
+        return(
+            <div>   
+                You own {this.props.portfolio[this.props.id]} {this.props.id}
+            </div>
+        )
+    }
 
     render() {
         return(
@@ -95,6 +106,7 @@ class BuySellBox extends React.Component {
                     {this.whichTab()}
                 </div>
                 <div>Total cost of transaction: {(this.state.price*this.state.quantity).toFixed(2)}</div>
+                {this.coinOwned()}
                 <div>{`${this.props.id}`} price:</div>
                 <div>${this.state.price}</div>
                 <div>Your balance usd:</div>
