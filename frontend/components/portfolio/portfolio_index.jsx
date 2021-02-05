@@ -5,11 +5,11 @@ import {Link} from 'react-router-dom'
 const PortfolioIndex = props => {
 
     if (Object.values(props.portfolio).length <= 0) {
-        return <div></div>
+        return <div>error</div>
     }
 
     if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
-        return <div></div>
+        return <div>whoops</div>
     }
     
     console.log('inner-props',props.userBuyingPower)
