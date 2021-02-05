@@ -28,3 +28,29 @@
     border-radius: 5px;
     height: 100%
 }
+
+.buy-sell-header {
+    display: flex;
+    justify-content: center;
+}
+
+.buy-sell-header button {
+    width: 100%;
+    border:none;
+    background-color: white;
+}
+
+.buy-sell-header .active-tab {
+    
+}
+
+.buy-sell-body {
+    padding: 20px
+}
+
+.transaction-success-box {
+
+}
+.transaction-success-box>* {
+    color: black
+}
