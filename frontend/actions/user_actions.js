@@ -7,6 +7,7 @@ import userDetails from '../reducers/user_details_reducer';
 export const RECEIVE_PORTFOLIO = 'RECEIVE_PORTFOLIO'
 export const RECEIVE_USER_COIN_PRICE = 'RECEIVE_USER_COIN_PRICE'
 export const RECEIVE_USER_DETAILS = 'RECEIVE_USER_DETAILS'
+export const RESET_PORTFOLIO = 'RESET_PORTFOLIO'
 
 const receivePortfolio = portfolio => ({
     type: RECEIVE_PORTFOLIO,
@@ -47,3 +48,7 @@ export const fetchUserDetails = (id) => dispatch => {
         .then(userDetails => dispatch(receiveUserDetails(userDetails)))
     )
 }
+
+export const resetPortfolio = () => ({
+    type: RESET_PORTFOLIO
+})

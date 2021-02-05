@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 class TransactionsIndex extends React.Component {
     render() {
         if (Object.values(this.props.transactions).length <=0) {
-            return <div className='transactions-index'>no recent transactions</div>
+            return(
+                <div  className='portfolio-index-total-balance'>   
+                    <Link to='/prices'>Purchase your first coin here!</Link>
+                </div>
+            )        
         }
         return(
             <div className='transactions-index'>
@@ -18,6 +23,11 @@ class TransactionsIndex extends React.Component {
                         </div>
                     )
                 })}
+                <div className='transactions-to-portfolio-item'>
+                    <Link to='/portfolio'>
+                        View Portfolio {'>'}
+                    </Link>
+                </div>
             </div>
         )
     }

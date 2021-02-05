@@ -110,10 +110,10 @@ class WatchListCoinGraph extends React.Component {
     render() {
         return (
             <div className='top-six-graph-graph'>
-                <div className='watchlist-title-icon-container'>
+                <Link to={`/show/${this.props.id}`} className='watchlist-title-icon-container item'>
                     <div className='watchlist-coin-icon'><img src={this.props.image}/></div>
                     <div className='watchlist-coin-title'>{this.props.id}</div>
-                </div>
+                </Link>
                 <div className='watchlist-current-price'>${this.props.current_price.toFixed(2)}</div>
                 <Line  height={100} className='top-six-graph-graph'data={this.graphData()} options={this.graphOptions()} />
             </div>

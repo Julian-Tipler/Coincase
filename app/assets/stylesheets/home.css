@@ -63,14 +63,14 @@
     font-weight: 600;
 }
 
-#recent-transactions-box-home {
-    left: 40px;
-    width: 48%;
-    height: 100%;
-}
-
 #portfolio-index-box-home {
     width: 50%;
     margin-right: 2%;
     height: 100%
+}
+
+#recent-transactions-box-home {
+    left: 40px;
+    width: 48%;
+    height: 100%;
 }

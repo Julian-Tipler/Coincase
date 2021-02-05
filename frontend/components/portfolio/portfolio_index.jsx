@@ -4,8 +4,12 @@ import {Link} from 'react-router-dom'
 
 const PortfolioIndex = props => {
 
-    if (Object.values(props.portfolio).length <= 0) {
-        return <div>error</div>
+    if (Object.values(props.portfolio).length <= 0) {                  
+        return(
+            <div  className='portfolio-index-total-balance'>   
+                <Link to='/prices'>Purchase your first coin here!</Link>
+            </div>
+        )
     }
 
     if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
@@ -16,7 +20,7 @@ const PortfolioIndex = props => {
 
     var worth=0
     Object.keys(props.portfolio).forEach(id=> {
-                    worth += props.userCoinPrices[id].market_data.current_price.usd
+                    worth += props.userCoinPrices[id].market_data.current_price.usd*props.portfolio[id]
                 })
     worth = worth.toFixed(2)
 

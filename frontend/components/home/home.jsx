@@ -11,6 +11,11 @@ class Home extends React.Component {
         this.props.fetchPortfolio()
         this.props.fetchTransactions()
     }
+
+    componentWillUnmount() {
+        this.props.resetPortfolio()
+    }
+
     render() {
         return(
             <div className='home-content'>
@@ -40,11 +45,7 @@ class Home extends React.Component {
                         <div>
                             <TransactionsIndex transactions={this.props.transactionsIndex}/>
                         </div>
-                        <div className='transactions-to-portfolio-item'>
-                            <Link to='/portfolio'>
-                                View Portfolio {'>'}
-                            </Link>
-                        </div>
+
                     </div>
                 </div>
            
