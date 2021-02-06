@@ -72,8 +72,15 @@
 
 .buy-sell-input {
     border: none;
-    font-size: 50px;
+    font-size: 55px;
     width:100%;
+    text-align: center;
+    outline: none;
+    color: rgb(190, 190, 190)
+}
+
+::placeholder {
+    color: rgb(190, 190, 190)
 }
 
 .transaction-success-box {
@@ -81,4 +88,8 @@
 }
 .transaction-success-box>* {
     color: black
+}
+
+.error-message {
+    color: red
 }

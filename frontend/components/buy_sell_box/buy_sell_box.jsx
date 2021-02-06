@@ -36,12 +36,14 @@ class BuySellBox extends React.Component {
     }
 
     update(field) {
-        return e => this.setState({ 
-            form:{
-                ...this.state.form,
-                [field]: e.currentTarget.value 
+        return e => {
+                this.setState({ 
+                    form:{
+                        ...this.state.form,
+                        [field]: e.currentTarget.value 
+                    }
+                });
             }
-        });
     }
     
     handleSubmit(e) {
@@ -65,13 +67,13 @@ class BuySellBox extends React.Component {
             case 'buy': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text" 
+                        <input type="number" 
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
                     </div>
+                    {/* {this.props.coinInfo === {}? null : <img src={this.props.coinInfo.image.thumb}/>} */}
                     <div>{`${this.props.id}`}</div>
-                    <div>You can buy up to $25,000</div>
                     <div>One time purchase</div>
                     <div className='coin-selector'></div>
                     <div className='bank-selector'></div>
@@ -82,20 +84,22 @@ class BuySellBox extends React.Component {
             case 'sell': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
                     <div>
-                        <input type="text" 
+                        <input type="number" 
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
-                        <div>{`${this.props.id}`}</div>
                     </div>
-                    <div>You can sell up to $25,000</div>
+                    {/* {this.props.coinInfo === {}? null : <img src={this.props.coinInfo.image.thumb}/>} */}
+                    <div>{`${this.props.id}`}</div>
                     <div>One time sell</div>
                     <div className='coin-selector'></div>
                     <div className='bank-selector'></div>
                     <button type='submit'>Sell {`${this.props.id}`}</button>
                 </form>
                 )
-            } 
+            
+    
+        }
     }
 
     coinOwned() {
@@ -127,7 +131,7 @@ class BuySellBox extends React.Component {
                     <div>Your balance usd:</div>
                     <div>{`${this.props.userBuyingPower}`}</div>
                     <div>
-                        {this.props.errors.transactions.map((error, i) => <div key={`error ${i}`}>error: {error}</div>)}
+                        {this.props.errors.transactions.map((error, i) => <div className='error-message'key={`error ${i}`}>error: {error}</div>)}
                     </div>
                 </div>
             </div>
