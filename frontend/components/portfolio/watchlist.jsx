@@ -28,17 +28,32 @@ class WatchList extends React.Component {
         }
         return(
             <div className='top-six-graphs'>
-                {Object.values(this.props.topSixCoinsHistoricalData).map((coin, i) => (
-                    <div className='top-six-graph' key={i}>
-                        <WatchListCoinGraph 
-                        coin={coin[1]}
-                        id={coin[0]}
-                        index={i}
-                        image={coin[2]}
-                        current_price={coin[3]}
-                        />
-                    </div>      
-                ))}
+                <div className='top-half-graphs'>
+                    {Object.values(this.props.topSixCoinsHistoricalData).slice(0,3).map((coin, i) => (
+                        <div className='top-six-graph' key={i}>
+                            <WatchListCoinGraph 
+                            coin={coin[1]}
+                            id={coin[0]}
+                            index={i}
+                            image={coin[2]}
+                            current_price={coin[3]}
+                            />
+                        </div>      
+                    ))}
+                </div>
+                <div className='top-half-graphs'>
+                    {Object.values(this.props.topSixCoinsHistoricalData).slice(3,6).map((coin, i) => (
+                        <div className='top-six-graph' key={i}>
+                            <WatchListCoinGraph 
+                            coin={coin[1]}
+                            id={coin[0]}
+                            index={i+3}
+                            image={coin[2]}
+                            current_price={coin[3]}
+                            />
+                        </div>      
+                    ))}
+                </div>
             </div>
         )
     }

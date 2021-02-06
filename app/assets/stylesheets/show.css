@@ -36,16 +36,51 @@
 
 .buy-sell-header button {
     width: 100%;
-    border:none;
-    background-color: white;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 400
 }
 
-.buy-sell-header .active-tab {
-    
+.tab-unselected {
+    background-color: rgb(250,251,252);
+    border:none;
+    border-bottom: 1px solid rgb(241,243,245) ;
+}
+
+.tab-selected {
+    border:none;
+    background-color: white;
+    color: rgb(21,82,240);
+}
+
+#buy-sell-buy-button {
+    border-right: 1px solid rgb(241,243,245) ;
 }
 
 .buy-sell-body {
-    padding: 20px
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buy-sell-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buy-sell-input {
+    border: none;
+    font-size: 55px;
+    width:100%;
+    text-align: center;
+    outline: none;
+    color: rgb(190, 190, 190)
+}
+
+::placeholder {
+    color: rgb(190, 190, 190)
 }
 
 .transaction-success-box {
@@ -53,4 +88,8 @@
 }
 .transaction-success-box>* {
     color: black
+}
+
+.error-message {
+    color: red
 }

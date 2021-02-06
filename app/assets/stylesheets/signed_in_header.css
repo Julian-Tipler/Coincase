@@ -147,14 +147,21 @@
     color: white;
     background-color: rgb(22,82,240);
     border: 1px solid gray;
-    border-radius: 5px
+    border-radius: 5px;
+      display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sell-button {
     color: rgb(11,70,228)  ;
     background-color: white;
     border: 1px solid rgb(22,82,240);
-    border-radius: 5px
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #logout-button {
