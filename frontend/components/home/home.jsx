@@ -22,7 +22,7 @@ class Home extends React.Component {
             <div className='home-content'>
                 {/* <div className='portfolio-graph'>Portfolio Graph</div> */}
                 <div className='watch-list-box'>
-                    <div className='watch-list-title'>Watchlist</div>
+                    <div className='watchlist-title'>Watchlist</div>
                     <WatchListContainer/>
                 </div>
 

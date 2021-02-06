@@ -7,7 +7,7 @@
 
 }
 
-.watch-list-title{
+.watchlist-title{
   font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     font-size: 19px;
@@ -26,11 +26,16 @@
 }
 
 .top-six-graphs {
-    display: flex;
-    flex-wrap: wrap;   
-    flex-direction: row;
     margin-bottom: 20px;
     border-bottom: 1px solid rgb(236, 239, 241);
+}
+
+.top-half-graphs {
+    display: flex;
+}
+
+.bottom-half-graphs {
+    display: flex;
 }
 
 
@@ -39,8 +44,9 @@
     flex-basis: calc(50%-40px);
     justify-content: center;
     flex-direction: column; */
+    width: 33.3%;
     border: 1px solid rgb(236, 239, 241);
-    width:33.18%;    
+    
 }
 
 .watchlist-title-icon-container{
