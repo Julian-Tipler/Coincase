@@ -63,38 +63,49 @@ class BuySellBox extends React.Component {
     }
 
     whichTab() {
+
+        if (Object.values(this.props.coinInfo).length <=0) {
+            return <div></div>
+        }
+
         switch (this.state.form.order_type) {
             case 'buy': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='quantity-symbol'>
                         <input type="number" 
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
+                        <div className='show-symbol'>{this.props.coinInfo.symbol.toUpperCase()}</div>
                     </div>
                     {/* {this.props.coinInfo === {}? null : <img src={this.props.coinInfo.image.thumb}/>} */}
-                    <div>{`${this.props.id}`}</div>
-                    <div>One time purchase</div>
+                    <div>{`${this.props.id}`} price:</div>
+                    <div>${this.state.form.price}</div>
+                    <div className='total-cost-of-transaction' >Total cost of transaction: </div>
+                    <div>{(this.state.form.price*this.state.form.quantity).toFixed(2)}</div>
                     <div className='coin-selector'></div>
                     <div className='bank-selector'></div>
-                    <button type='submit'>Buy {`${this.props.id}`}</button>
+                    <button className='buy-sell-submit-button' type='submit'>Buy {`${this.props.id}`}</button>
                     
                 </form>
             )
             case 'sell': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
-                    <div>
+                    <div className='quantity-symbol'>
                         <input type="number" 
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
+                        <div className='show-symbol'>{this.props.coinInfo.symbol.toUpperCase()}</div>
                     </div>
                     {/* {this.props.coinInfo === {}? null : <img src={this.props.coinInfo.image.thumb}/>} */}
-                    <div>{`${this.props.id}`}</div>
-                    <div>One time sell</div>
+                    <div>{`${this.props.id}`} price:</div>
+                    <div>${this.state.form.price}</div>
+                    <div className='total-cost-of-transaction'>Total cost of transaction: </div>
+                    <div>{(this.state.form.price*this.state.form.quantity).toFixed(2)}</div>
                     <div className='coin-selector'></div>
                     <div className='bank-selector'></div>
-                    <button type='submit'>Sell {`${this.props.id}`}</button>
+                    <button className='buy-sell-submit-button' type='submit'>Sell {`${this.props.id}`}</button>
                 </form>
                 )
             
@@ -107,10 +118,10 @@ class BuySellBox extends React.Component {
             return <div> You own 0 {this.props.id}</div>           
         }     
         return(
-            <div>   
-                You own {this.props.portfolio[this.props.id]} {this.props.id}
-            </div>
+            <div className='you-own-show'>You own {this.props.portfolio[this.props.id]} {this.props.id}</div>
         )
+
+
     }
 
     render() {
@@ -124,12 +135,9 @@ class BuySellBox extends React.Component {
 
                 <div className ='buy-sell-body'>
                     {this.whichTab()}
-                    <div>Total cost of transaction: {(this.state.form.price*this.state.form.quantity).toFixed(2)}</div>
                     {this.coinOwned()}
-                    <div>{`${this.props.id}`} price:</div>
-                    <div>${this.state.form.price}</div>
-                    <div>Your balance usd:</div>
-                    <div>{`${this.props.userBuyingPower}`}</div>
+                    <div className='buying-power-show'>Your balance usd:</div>
+                    <div>${`${this.props.userBuyingPower}`}</div>
                     <div>
                         {this.props.errors.transactions.map((error, i) => <div className='error-message'key={`error ${i}`}>error: {error}</div>)}
                     </div>
