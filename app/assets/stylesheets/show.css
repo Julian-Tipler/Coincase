@@ -1,4 +1,9 @@
 
+#show-content {
+    padding-bottom: 400px;
+
+}
+
 .show-title {
     font-family:Graphik, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     font-weight: 600;
@@ -70,13 +75,42 @@
     align-items: center;
 }
 
+.quantity-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .buy-sell-input {
     border: none;
     font-size: 55px;
-    width:100%;
+    width:80%;
     text-align: center;
     outline: none;
-    color: rgb(190, 190, 190)
+    color: rgb(190, 190, 190);
+    padding-left: 20px;
+}
+
+.show-symbol {
+    font-size: 14px;
+    position: absolute;
+    right: 40px;
+    color: rgb(190, 190, 190);
+}
+
+.total-cost-of-transaction {
+    margin-top: 20px;
+    
+}
+
+.you-own-show {
+    margin-top: 20px;
+}
+
+.buying-power-show {
+    font-size: 14px;
+    color: rgb(190, 190, 190);
+    margin-top: 20px;
 }
 
 ::placeholder {
@@ -92,4 +126,30 @@
 
 .error-message {
     color: red
+}
+
+.icon-title-show-page {
+    display: flex;
+}
+
+.one-time-text {
+    font-size: 10px;
+}
+
+.buy-sell-submit-button {
+    font-size: 16px;
+    color: white;
+    background-color: rgb(22,82,240);
+    border: 1px solid rgb(22,82,240);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.buy-sell-submit-button:hover {
+    cursor: pointer;
 }

@@ -42,7 +42,7 @@ class App extends React.Component {
                     </Switch>
                 </div>   
                     <Switch>
-                        <ProtectedRoute exact path={["/home", "/portfolio", "/prices"]} component={Footer} />                    
+                        <ProtectedRoute exact path={["/home", "/portfolio", "/prices", "/show/:id"]} component={Footer} />                    
                     </Switch>
             </div>
         )
