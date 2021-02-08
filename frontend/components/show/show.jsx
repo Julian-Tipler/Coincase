@@ -7,14 +7,19 @@ class Show extends React.Component {
       super(props)
     }
     
-//componentdidmount to get the image
+    componentDidMount() {
+        this.props.fetchCoinInfo(this.props.id)
+    }
 
     render() {
-        
         const {id} = this.props
+        const {coinInfo} = this.props
         return(
-            <div className='show-content'>
+            <div className='show-content' id='show-content'>
+                <div className='icon-title-show-page'>
+                    {Object.values(coinInfo).length <= 0 ? <div></div> : <img src={`${coinInfo.image.small}`}/>}
                     <div className='show-title'>{id}</div>
+                </div>
                 <div className='show-coin-graph-and-buy-sell'>
                     <div className='coin-graph-box'>
                         <CoinGraphContainer

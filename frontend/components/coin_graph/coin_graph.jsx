@@ -22,10 +22,6 @@ class CoinGraph extends React.Component{
 
     componentDidMount() {
         this.props.fetchCoinHistoricalData(this.props.id)
-        console.log(document.getElementsByClassName('linechart'))
-        // const svgLocation = document.getElementsByClassName("linechart")[0].getBoundingClientRect();
-        // const adjustment = (svgLocation.width - svgWidth) / 2; //takes padding into consideration
-        // const relativeLoc = e.clientX - svgLocation.left - adjustment;
     }
 
     componentDidUpdate(prevProps) {
