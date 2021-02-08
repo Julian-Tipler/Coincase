@@ -48,6 +48,9 @@ class SessionForm extends React.Component {
             password: 'password',
             firstName: '',
             lastName: ''
+        },()=> {
+            const user = Object.assign({}, this.state);
+            this.props.action(user);
         })
     }
 

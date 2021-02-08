@@ -16,8 +16,6 @@ const PortfolioIndex = props => {
         return <div>Assets Loading...</div>
     }
     
-    console.log('inner-props',props.userBuyingPower)
-
     var worth=0
     Object.keys(props.portfolio).forEach(id=> {
                     worth += props.userCoinPrices[id].market_data.current_price.usd*props.portfolio[id]

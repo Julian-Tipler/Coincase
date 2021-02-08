@@ -48,6 +48,7 @@
 
 .portfolio-index-item-icon-and-id{
     display: flex;
+    width: 200px
 }
 
 .portfolio-index-item-icon {
@@ -62,6 +63,8 @@
 
 .portfolio-index-item-worth {
     padding-top: 8px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .portfolio-index-item-quantity {
