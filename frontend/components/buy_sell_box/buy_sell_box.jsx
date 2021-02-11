@@ -72,7 +72,7 @@ class BuySellBox extends React.Component {
             case 'buy': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
                     <div className='quantity-symbol'>
-                        <input type="number" 
+                        <input type="number" step='0.01'
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
@@ -92,7 +92,7 @@ class BuySellBox extends React.Component {
             case 'sell': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
                     <div className='quantity-symbol'>
-                        <input type="number" 
+                        <input type="number" step='0.01' 
                         placeholder='0'
                         onChange={this.update('quantity')}
                         className='buy-sell-input'/>
