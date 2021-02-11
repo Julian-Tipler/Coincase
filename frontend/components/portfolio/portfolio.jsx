@@ -30,7 +30,7 @@ class Portfolio extends React.Component {
         var worth=0
         if (Object.keys(this.props.userCoinPrices).length === Object.keys(this.props.portfolio).length) {
             Object.keys(this.props.portfolio).forEach(id=> {
-                worth += this.props.userCoinPrices[id].market_data.current_price.usd
+                worth += this.props.userCoinPrices[id].market_data.current_price.usd*this.props.portfolio[id]
             })
         }
             return worth.toFixed(2)
