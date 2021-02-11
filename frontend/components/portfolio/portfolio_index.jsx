@@ -3,7 +3,6 @@ import PortfolioIndexItem from './portfolio_index_item'
 import {Link} from 'react-router-dom'
 
 const PortfolioIndex = props => {
-
     if (Object.values(props.portfolio).length <= 0) {                  
         return(
             <div  className='portfolio-index-total-balance'>   
@@ -21,14 +20,14 @@ const PortfolioIndex = props => {
                     worth += props.userCoinPrices[id].market_data.current_price.usd*props.portfolio[id]
                 })
     worth = worth.toFixed(2)
-
     return (
         <div>
             <Link to='/portfolio'className='portfolio-index-item item'>
                 <div className='portfolio-index-item-icon-and-id'>
-                    <div className='portfolio-index-item-icon'/>
+                    <div className='portfolio-index-item-icon dollar-sign'>$</div>
                     <div className='item'to='/portfolio'className='portfolio-index-item-id'>USD{':'}</div>
                 </div>
+                <div className='portfolio-index-item-worth usd'>${props.userBuyingPower}</div>
                 {/* <div className='portfolio-index-item-worth'>${props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity}</div>
                 <div className='portfolio-index-item-quantity'>{props.quantity}</div> */}
             </Link>

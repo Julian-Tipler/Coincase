@@ -11,6 +11,7 @@ class Home extends React.Component {
     componentDidMount() {
         this.props.fetchPortfolio()
         this.props.fetchTransactions()
+        this.props.fetchUserDetails(this.props.currentUser)
     }
 
     componentWillUnmount() {
@@ -36,7 +37,7 @@ class Home extends React.Component {
                             Your assets:
                         </div>
                         <div>
-                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices}/>
+                            <PortfolioIndex portfolio={this.props.portfolio} userCoinPrices={this.props.userCoinPrices} userBuyingPower={this.props.userBuyingPower}/>
                         </div>
                     </div>
                     <div className='recent-transactions-box' id='recent-transactions-box-home'>

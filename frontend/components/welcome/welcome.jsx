@@ -10,7 +10,6 @@ class Welcome extends React.Component {
         if (Object.values(this.props.coins).length <=0) {
             return <div>loading...</div>
         }
-        console.log('render')
         return(
             <div className='welcome-page'>
                 <div >

@@ -14,7 +14,6 @@ class Api::TransactionsController < ApplicationController
                 end
             end
         else
-            puts(transaction_params)
             if @transaction.quantity > user.portfolio[transaction_params[:coin_id]]
                 render json: ['You do not have sufficient coins to make this sale'], status: 422
             else
@@ -30,7 +29,6 @@ class Api::TransactionsController < ApplicationController
     
     def index
         @transactions = Transaction.where(user_id:current_user).order("created_at DESC").limit(10)
-        puts(@transactions)
         if @transactions
             render 'api/transactions/index'
         else

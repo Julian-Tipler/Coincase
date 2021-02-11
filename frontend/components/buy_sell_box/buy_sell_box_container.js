@@ -21,7 +21,8 @@ const mdp = dispatch => ({
     fetchCoinInfo: (id) => dispatch(fetchCoinInfo(id)),
     clearErrors: () => dispatch(clearErrors()),
     fetchUserDetails: (id) => dispatch(fetchUserDetails(id)),
-    fetchPortfolio: () => dispatch(fetchPortfolio())
+    fetchPortfolio: () => dispatch(fetchPortfolio()),
+    clearErrors: () => dispatch(clearErrors())
 })
 
 export default connect(msp,mdp)(BuySellBox)
