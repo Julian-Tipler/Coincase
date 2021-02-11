@@ -53,13 +53,14 @@ class User < ApplicationRecord
     hash = Hash[coins.collect{|coin|[coin,0]}]
     transactions.each do |transaction|
       if transaction.order_type == 'buy'
-        puts('buy')
         hash[transaction.coin_id] += transaction.quantity
       else
-        puts('sell')
         hash[transaction.coin_id] -= transaction.quantity
       end
     end
+    puts(hash)
+    hash.reject!{|k,v| v==0}
+    puts(hash)
     hash
   end
 

@@ -16,7 +16,7 @@
 }
 
 .error-messages {
-    position: absolute;
+    color: red;
 }
 
 .login-page {

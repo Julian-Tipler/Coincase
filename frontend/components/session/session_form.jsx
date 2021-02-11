@@ -66,7 +66,6 @@ class SessionForm extends React.Component {
             <div className='login-full-page'>
                 <div className='login-form-title'>Sign in to Coinbase</div>
                 <div className='login-page'>
-                    <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
                         <div className="login-form">
                             <input type="text"
@@ -88,6 +87,7 @@ class SessionForm extends React.Component {
                                 onClick={this.handleDemo}>
                                 DEMO
                             </button>
+                    <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                             <button className='login-button' type="submit" >{submit}</button>
                         </div>
                     </form>
@@ -108,7 +108,6 @@ class SessionForm extends React.Component {
             <div className='signup-full-page'>
                 <div className='signup-form-title'>Create your account</div>
                 <div className='sign-up-page'>
-                    <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                     <form onSubmit={this.handleSubmit}>
                         <div className="sign-up-form">
                             <div className='first-last-names'>
@@ -141,6 +140,7 @@ class SessionForm extends React.Component {
                                 <input id='terms-and-conditions-checkbox'type="checkbox" name="checkbox" value="check" /> 
                                 <div>I certify that I am 18 years of age or older, and agree to the User Agreement and Privacy Policy.</div>
                             </div>
+                            <div className='error-messages'>{this.props.errors.session.map((error, i) => <div key={`error ${i}`}>{error}</div>)}</div>
                             <button className='signup-button' type="submit" >{submit}</button>
                         </div>
                     </form>

@@ -12,7 +12,7 @@ class DoMoreWithCrypto extends React.Component {
                     <div>Do More with Crypto</div>
                 </div>
 
-                <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/">
+                <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon className='calendar-icon fa-lg'icon={faCalendarAlt}/>
                     <div className='do-more-with-crypto-text'>
                         <div>Coinbase Card</div>
@@ -20,7 +20,7 @@ class DoMoreWithCrypto extends React.Component {
                     </div>
                 </a>
 
-                <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/">
+                <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon className='credit-card-icon fa-lg'icon={faAddressCard}/>
                     <div className='do-more-with-crypto-text'>
                         <div>Invest over time</div>
