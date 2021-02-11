@@ -9,9 +9,9 @@ class Header extends React.Component {
             <div className='header'>
                 <Link to='/' className='logo'>coincase</Link>
                 <div className='right-side-items'>
-                    <div>Products</div>
-                    <div>Help</div>
-                    <div>Prices</div>
+                    <a className='header-links'href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">Products</a>
+                    <a className='header-links'href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">Help</a>
+                    <a className='header-links'href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">Prices</a>
                     <Link className='sign' to='/login'>Sign In</Link>
                     <Link className='sign' to='/signup'>Sign Up</Link>
                 </div>
