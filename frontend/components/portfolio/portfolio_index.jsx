@@ -11,7 +11,10 @@ const PortfolioIndex = props => {
         )
     }
 
-    if (Object.keys(props.userCoinPrices).length !== Object.keys(props.portfolio).length) {
+    console.log('userCoinPrices',Object.keys(props.userCoinPrices).length)
+    console.log('portfolio',Object.keys(props.portfolio).length)
+
+    if (Object.keys(props.userCoinPrices).length < Object.keys(props.portfolio).length) {
         return <div>Assets Loading...</div>
     }
     
@@ -29,6 +32,7 @@ const PortfolioIndex = props => {
                     <div className='item'to='/portfolio'className='portfolio-index-item-id'>USD{':'}</div>
                 </div>
                 <div className='portfolio-index-item-worth usd'>${props.userBuyingPower}</div>
+                <div></div>
                 {/* <div className='portfolio-index-item-worth'>${props.userCoinPrices[props.id].market_data.current_price.usd*props.quantity}</div>
                 <div className='portfolio-index-item-quantity'>{props.quantity}</div> */}
             </Link>

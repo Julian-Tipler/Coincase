@@ -29,7 +29,9 @@ export const fetchPortfolio = () => dispatch => (
     userAPIUtil.fetchPortfolio()
         .then(portfolio => {
             dispatch(receivePortfolio(portfolio))
+            console.log(portfolio)
             Object.keys(portfolio).forEach(id => {
+                console.log(id)
                 dispatch(fetchUserCoinPrice(id))
             })
         })
