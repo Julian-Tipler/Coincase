@@ -32,27 +32,3 @@ A coin's show page features a prominent graph of the coin's daily performance. T
 ### Transactions
 Transactions are the key feature of coincase. The rails powered backend compiles the users's transaction history to calculate their total portfolio worth, buying power (bank balance), and individual assets. As coincase is a simulation, each user is 'gifted' $25,000
 
-```rb
-  def buying_power 
-    usd_owned = 25000
-    transactions.each do |transaction|
-      transaction_amount = transaction.price * transaction.quantity
-      transaction.order_type == 'buy' ? usd_owned -= transaction_amount : usd_owned += transaction_amount
-    end
-    usd_owned.round(2)
-  end
-
-  def portfolio
-    coins = transactions.distinct.pluck(:coin_id)
-    hash = Hash[coins.collect{|coin|[coin,0]}]
-    transactions.each do |transaction|
-      if transaction.order_type == 'buy'
-        hash[transaction.coin_id] += transaction.quantity
-      else
-        hash[transaction.coin_id] -= transaction.quantity
-      end
-    end
-    hash
-  end
-,,,
- -->
