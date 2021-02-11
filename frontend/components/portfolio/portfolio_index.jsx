@@ -40,7 +40,7 @@ const PortfolioIndex = props => {
             })}
             <div className='portfolio-index-total-balance'>                       
                 <Link to='/portfolio'>
-                    Total Balance = ${parseFloat(worth) + parseFloat(props.userBuyingPower)}
+                    Total Balance = ${(parseFloat(worth) + parseFloat(props.userBuyingPower)).toFixed(2)}
                 </Link>
             </div>
         </div>
