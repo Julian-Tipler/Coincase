@@ -1,5 +1,3 @@
-<!-- # Coincase
-
 Coincase is a clone of the cryptocurrency trading site Coinbase. Coincase allows users to track, buy and sell cryptocurrencies
 ***LINK***
 
