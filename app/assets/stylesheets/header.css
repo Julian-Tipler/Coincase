@@ -25,9 +25,8 @@
     color: white;
 }
 
-.right-side-items div{
-    padding-right: 20px;
-    width: 30%;
+.right-side-items a{
+    margin-right: 20px;
     font-size: 13px
 }
 
@@ -42,9 +41,11 @@
 }
 
 .sign {
-    font-size: 13px;
-    text-decoration: none;
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px
+  padding-right: 0px;
+  font-size: 13px;
+  width: 60px;
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }

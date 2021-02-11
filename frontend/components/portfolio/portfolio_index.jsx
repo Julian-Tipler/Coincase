@@ -11,8 +11,7 @@ const PortfolioIndex = props => {
         )
     }
 
-    console.log('userCoinPrices',Object.keys(props.userCoinPrices).length)
-    console.log('portfolio',Object.keys(props.portfolio).length)
+
 
     if (Object.keys(props.userCoinPrices).length < Object.keys(props.portfolio).length) {
         return <div>Assets Loading...</div>
@@ -41,7 +40,7 @@ const PortfolioIndex = props => {
             })}
             <div className='portfolio-index-total-balance'>                       
                 <Link to='/portfolio'>
-                    Total Balance = {worth}
+                    Total Balance = ${parseFloat(worth) + parseFloat(props.userBuyingPower)}
                 </Link>
             </div>
         </div>
