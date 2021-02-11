@@ -17,9 +17,10 @@ const PortfolioIndex = props => {
     
     var worth=0
     Object.keys(props.portfolio).forEach(id=> {
-                    worth += props.userCoinPrices[id].market_data.current_price.usd*props.portfolio[id]
+                    worth += (props.userCoinPrices[id].market_data.current_price.usd*props.portfolio[id])
                 })
     worth = worth.toFixed(2)
+
     return (
         <div>
             <Link to='/portfolio'className='portfolio-index-item item'>
