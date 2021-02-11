@@ -43,7 +43,7 @@
   justify-content: space-between;
   margin-top: 50px;
   text-decoration: none;
-  height: 200px
+  height: 350px
 }
 
 .link-blue {
@@ -89,10 +89,32 @@
 
 #signed-in-header-prices {
   display: flex;
-  text-decoration: none}
+  text-decoration: none
+}
+
 #signed-in-header-prices>div {
 }
 #signed-in-header-prices:hover {
+  background:  rgb(241,243,245);
+  cursor: pointer;
+}
+
+#signed-in-header-github {
+  display: flex;
+  text-decoration: none
+}
+
+#signed-in-header-github:hover {
+  background:  rgb(241,243,245);
+  cursor: pointer;
+}
+
+#signed-in-header-linkedIn {
+  display: flex;
+  text-decoration: none
+}
+
+#signed-in-header-linkedIn:hover {
   background:  rgb(241,243,245);
   cursor: pointer;
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faChartPie, faChartLine } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faChartPie, faChartLine, } from '@fortawesome/free-solid-svg-icons'
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 class SignedInHeader extends React.Component {
     constructor(props) {
@@ -62,10 +63,22 @@ class SignedInHeader extends React.Component {
                         </Link>
                         <Link id='signed-in-header-prices' className={this.pricesColors()} to='/prices'>
                             <div className='icon-circle'>
-                            <FontAwesomeIcon icon={faChartLine} />
+                                <FontAwesomeIcon icon={faChartLine} />
                             </div>
                             <div>Prices</div>
                         </Link>
+                        <a id='signed-in-header-github' href="https://github.com/Julian-Tipler"  target="_blank" rel="noreferrer">
+                            <div className='icon-circle'>
+                                <FontAwesomeIcon target="_blank" rel="noreferrer" className='fa-lg'icon={faGithub}></FontAwesomeIcon>
+                            </div>
+                            <p>GitHub Profile</p> 
+                        </a>  
+                        <a id='signed-in-header-linkedIn' href="https://www.linkedin.com/in/julian-t-87a2a0a4/"  target="_blank" rel="noreferrer">
+                            <div className='icon-circle'>
+                                <FontAwesomeIcon target="_blank" className='fa-lg'icon={faLinkedin}></FontAwesomeIcon>
+                            </div>
+                            <p>LinkedIn Profile</p> 
+                        </a>
                     </div>
                 </div>
 
