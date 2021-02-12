@@ -56,30 +56,3 @@ class Home extends React.Component {
 }
 
 export default Home
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// {/* <div>
-//                         <div className='watch-list-boxes'>
-//                             <div className='watch-list-top-row'></div>
-//                             {/* <div><CoinGraph /> graph1</div>
-//                             <div><CoinGraph /> graphs2</div>
-//                             <div><CoinGraph /> graph3</div> */}
-// <div className='watch-list-bottom-row'></div>
-// {/* <div><CoinGraph /> graph4</div>
-//                             <div><CoinGraph />graph5</div>
-//                             <div><CoinGraph />graph6</div> */}
-//                         </div >
-//                     </div > * /}

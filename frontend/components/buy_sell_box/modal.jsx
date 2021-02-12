@@ -14,7 +14,7 @@ function Modal({modal, coinInfo, closeModal}) {
             component = <SuccessfulTransaction/>
             break;
         case 'unsuccessfulTransaction':
-            return null //make component for unsuccessful
+            return null 
         default:
             return null;
     }

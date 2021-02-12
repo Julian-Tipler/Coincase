@@ -59,7 +59,6 @@ class PricesIndex extends React.Component {
     
     toggleSortPrice (e) {
         const coins = this.props.coins.slice()
-        //work without slice?
         let newCoins
         if (this.state.isSortedPrice) {
             newCoins = coins.sort((a, b) => a.current_price - b.current_price)
@@ -181,21 +180,3 @@ class PricesIndex extends React.Component {
 }
 
 export default PricesIndex
-
-
-
-
-
-
-
-
-{/* {props.coins.map((coin,i) => (
-    <PricesIndexItem 
-    index={i}
-    image={coin.image}
-    name={coin.name}
-    current_price={coin.current_price}
-    price_change_24h={coin.price_change_24h}
-    market_cap={coin.market_cap}
-    key={coin.id}/>
-))} */}

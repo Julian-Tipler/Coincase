@@ -54,5 +54,3 @@ export const fetchTopSixHistoricalData = (id, idx, image, current_price) => disp
         .then((coin) => dispatch(receiveTopSixHistoricalData(coin, id, idx, image, current_price)))
     )
 }
-
-//removeCoinInfo needed. Unless it replaces each time?

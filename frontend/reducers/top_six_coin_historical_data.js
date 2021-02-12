@@ -4,10 +4,6 @@ const topSixCoinsHistoricalDataReducer = (oldState = {0:null,1:null,2:null,3:nul
     Object.freeze(oldState);
     let newState = Object.assign({},oldState)
     switch (action.type) {
-        // case RECEIVE_COIN_HISTORICAL_DATA:
-        //     const newState = oldState.slice()
-        //     newState.push(action.coin)
-        //     return newState
         case RECEIVE_TOP_SIX_HISTORICAL_DATA:
             newState[action.idx] = [action.id, action.coin, action.image, action.current_price];
             return newState;

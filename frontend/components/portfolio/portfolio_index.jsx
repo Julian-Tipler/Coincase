@@ -51,4 +51,3 @@ const PortfolioIndex = props => {
 export default PortfolioIndex
 
 
-//price={props.userCoinPrices[id].market_data.current_price}
