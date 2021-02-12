@@ -14,7 +14,8 @@ class Api::TransactionsController < ApplicationController
                 end
             end
         else
-            if @transaction.quantity > user.portfolio[transaction_params[:coin_id]]
+            puts('portfolio',user.portfolio)
+            if !user.portfolio[transaction_params[:coin_id]] || @transaction.quantity > user.portfolio[transaction_params[:coin_id]]
                 render json: ['You do not have sufficient coins to make this sale'], status: 422
             else
                 if @transaction.save

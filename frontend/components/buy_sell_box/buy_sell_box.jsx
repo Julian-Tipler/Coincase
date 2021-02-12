@@ -139,7 +139,7 @@ class BuySellBox extends React.Component {
                     <div className='buying-power-show'>Your balance usd:</div>
                     <div>${`${this.props.userBuyingPower}`}</div>
                     <div>
-                        {this.props.errors.transactions.map((error, i) => <div className='error-message'key={`error ${i}`}>error: {error}</div>)}
+                        {this.props.errors.transactions.map((error, i) => <div className='error-message'key={`error ${i}`}>{error}</div>)}
                     </div>
                 </div>
             </div>
