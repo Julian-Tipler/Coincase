@@ -20,6 +20,8 @@ Upon login, users are greeted with charts depicting the performance of the top 6
 ### Portfolio
 The user is shown the worth of their entire portfolio, as well as the quantity of individual assets owned. Most items on Coincase are clickable, including the user's current assets, linking to that coin's show page. They are also shown their ten most recent transactions.
 
+<img src="https://media.giphy.com/media/ZTEBkK2l5meRrrUnEf/giphy.gif" width="800">
+
 ### Prices
 In the prices tab, users are able to once again view the top 100 coins and select one to trade, navigating them to the coin's show page. The user can sort the table alphabetically, by price, by price change, or by market capitilization (default).
 
