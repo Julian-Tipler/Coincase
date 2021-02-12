@@ -12,6 +12,8 @@ Users can sign
 * CoinGecko API: https://www.coingecko.com/api/documentations/v3
 * React-chartjs-2: https://github.com/reactchartjs/react-chartjs-2
 
+<img src="https://media.giphy.com/media/rfEGD0tuYwjCmFqZLX/giphy.gif" width="800">
+
 ### Homepage
 Upon login, users are greeted with charts depicting the performance of the top 6 cryptocurrencies.
 
