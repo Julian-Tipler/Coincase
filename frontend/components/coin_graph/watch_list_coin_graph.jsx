@@ -11,7 +11,7 @@ import {
 } from 'react-router-dom';
 
 const colors = ['rgb(247,153,40,1)','rgb(98,126,234,1)','rgb(177,179,180)','rgb(0,0,0,1)','rgb(141,195,81)','rgb(255,20,147)']
-//
+
 class WatchListCoinGraph extends React.Component {
     constructor(props) {
         super(props)

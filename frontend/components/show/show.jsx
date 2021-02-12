@@ -34,7 +34,6 @@ class Show extends React.Component {
                 </div>
             </div>
         )
-        //should I pass coinInfo through props or through map state to props ORRR have a fetch happen inside of the graph component
     }
 }
 

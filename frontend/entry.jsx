@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var store = null
     if (window.currentUser){
         const preloadedState = {
-            entities: {
-                users: { [window.currentUser.id]: window.currentUser}
-            },
             session: {id: window.currentUser.id}
         }
         store = configureStore(preloadedState);
@@ -22,11 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         store = configureStore()
     }
 
-    //testing
     window.getState = store.getState
     window.geckoApiActions = geckoApiActions
     window.userActions = userApiActions
     window.store = store
-    //testing
+    
     ReactDOM.render(<Root store={store}/>, root);
 });
