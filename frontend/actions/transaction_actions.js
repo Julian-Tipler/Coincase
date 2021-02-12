@@ -35,7 +35,8 @@ export const createTransaction = transaction => dispatch => (
         dispatch(fetchPortfolio())
         dispatch(openModal('successfulTransaction'))
     }, 
-    err => (dispatch(receiveTransactionErrors(err.responseJSON))))
+    err => (dispatch(receiveTransactionErrors(err.responseJSON)))
+    )
 );
 
 export const fetchTransactions = () => dispatch => (
