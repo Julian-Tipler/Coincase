@@ -15,8 +15,7 @@ Users can sign
 ### Homepage
 Upon login, users are greeted with charts depicting the performance of the top 6 cryptocurrencies.
 
-![homePage](https://media.giphy.com/media/BReM60ipFoDf6U3Gan/giphy.gif)
-<img src="https://media.giphy.com/media/BReM60ipFoDf6U3Gan/giphy.gif" width="1000">
+<img src="https://media.giphy.com/media/BReM60ipFoDf6U3Gan/giphy.gif" width="800">
 
 ### Portfolio
 The user is shown the worth of their entire portfolio, as well as the quantity of individual assets owned. Most items on Coincase are clickable, including the user's current assets, linking to that coin's show page. They are also shown their ten most recent transactions.
