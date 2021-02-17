@@ -7,6 +7,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+     <meta property="og:title" content="Coincase" />
+     <meta property='og:image' content="<%= image_url('favicon.png') %>"/>
+     <meta property="og:description"
+       content="Coincase is a clone of the cryptocurrency trading site Coinbase. Coincase allows users to track, buy and sell cryptocurrencies."
+     />
+     <meta property="og:url"
+       content="https://coincase-juliantipler.herokuapp.com/#/"
+     />
     <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
     <script type="text/javascript">window.bitcoin='<%=image_url('bitcoin.png')%>'</script>
     <script type="text/javascript">window.transactionarrows='<%=image_url('transactionarrows.png')%>'</script>
