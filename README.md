@@ -32,5 +32,5 @@ In the prices tab, users are able to once again view the top 100 coins and selec
 A coin's show page features a prominent graph of the coin's daily performance. The user can trace over the graph with their mouse revealing the exact price at a given moment in time. The buy/sell box allows them to type in the quantity of that coin they wish to purchase. The total cost of the transaction is updated in realtime. The user's bank balance is shown as well.
 
 ### Transactions
-Transactions are the key feature of Coincase. The rails powered backend compiles the users's transaction history to calculate their total portfolio worth, bank balance in usd, and current assets. As Coincase is a simulation, each user is 'gifted' $25,000 to start with (which used to be just enough to buy one bitcoin. Not anymore!).
+Transactions are the key feature of Coincase. The rails powered backend compiles the users's transaction history to calculate their total portfolio worth, bank balance in usd, and current assets. As Coincase is a simulation, each user is 'gifted' $25,000 to start with (which used to be just enough to buy one bitcoin. Not anymore!). 
 
