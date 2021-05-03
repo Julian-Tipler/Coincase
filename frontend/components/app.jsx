@@ -12,7 +12,7 @@ import ShowContainer from './show/show_container'
 import Footer from './footer/footer'
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Redirect, Switch, Link } from 'react-router-dom';
-
+ 
 
 
 class App extends React.Component {
