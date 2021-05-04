@@ -33,10 +33,6 @@
 }
 
 .top-six-graph {
-    /* display: flex;
-    flex-basis: calc(50%-40px);
-    justify-content: center;
-    flex-direction: column; */
     border: 1px solid rgb(236, 239, 241);
     
 }
