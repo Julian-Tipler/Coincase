@@ -43,6 +43,10 @@
     margin-left: 2px;
 }
 
+.toggled {
+    color: blue
+}
+
 #name-title {
     padding-left: 80px
 }
