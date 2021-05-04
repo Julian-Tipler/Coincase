@@ -57,7 +57,7 @@ class BuySellBox extends React.Component {
             activeTab: order_type,
             form:{
                 ...this.state.form,
-                order_type:order_type
+                order_type:order_typeasdfasdfsdasdfasdfasdfasdfsad
             }
         })
     }
