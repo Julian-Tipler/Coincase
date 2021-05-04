@@ -57,7 +57,7 @@ class BuySellBox extends React.Component {
             activeTab: order_type,
             form:{
                 ...this.state.form,
-                order_type:order_typeasdfasdfsdasdfasdfasdfasdfsad
+                order_type:order_type
             }
         })
     }
@@ -67,7 +67,6 @@ class BuySellBox extends React.Component {
         if (Object.values(this.props.coinInfo).length <=0) {
             return <div></div>
         }
-
         switch (this.state.form.order_type) {
             case 'buy': return (
                 <form className='buy-sell-form' onSubmit={this.handleSubmit}>
