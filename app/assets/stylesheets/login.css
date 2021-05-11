@@ -68,6 +68,17 @@
     border-radius: 5px  
 }
 
+.login-button-animation {
+  animation: color-change 2s infinite;
+  font-weight: 600;
+}
+
+@keyframes color-change {
+  0% { color: rgb(245, 156, 156); }
+  50% { color: rgb(101, 101, 238); }
+  100% { color: rgb(245, 156, 156); }
+}
+
 .switch-form {
     font-size: 13px;
     color: white;

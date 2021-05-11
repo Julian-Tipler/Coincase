@@ -83,7 +83,7 @@ class SessionForm extends React.Component {
                         </div>
                         <div className='login-buttons'>
                             <button type="button"
-                                className="login-button"
+                                className="login-button login-button-animation"
                                 onClick={this.handleDemo}>
                                 DEMO
                             </button>
