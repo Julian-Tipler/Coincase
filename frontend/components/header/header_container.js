@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import Header from './header'
 
-const msp = (state) => ({
-
+const msp = (state,ownProps) => ({
+    url:ownProps.match.path
 })
 
 const mdp = dispatch => ({
