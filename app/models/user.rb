@@ -58,9 +58,7 @@ class User < ApplicationRecord
         hash[transaction.coin_id] -= transaction.quantity
       end
     end
-    puts(hash)
     hash.reject!{|k,v| v==0}
-    puts(hash)
     hash
   end
 
