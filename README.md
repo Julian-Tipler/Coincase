@@ -2,10 +2,6 @@
 
 <a href='https://coincase-juliantipler.herokuapp.com/#/'>Coincase</a> is a clone of the cryptocurrency trading site Coinbase. Coincase allows users to track, buy and sell cryptocurrencies.
 
-## Features
-
-Users can sign 
-
 ## Technologies
 
 * Backend: Rails/ActiveRecord/PostgreSQL
