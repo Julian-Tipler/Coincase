@@ -121,7 +121,6 @@ export default class PricesIndex extends React.Component {
     if (this.props.coins.length <= 0) {
       return <div>Loading...</div>;
     }
-    console.log(this.state)
     return (
       <div>
         <table className="coin-table">

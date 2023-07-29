@@ -5,7 +5,6 @@ import {
 
 class Header extends React.Component {
     render() {
-        console.log(this.props.url)
         return(
             <div className='header'>
                 <Link to='/' className='logo'>coincase</Link>
