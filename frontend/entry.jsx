@@ -7,9 +7,7 @@ import * as userApiActions from './actions/user_actions'
 import Root from './components/root'
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log("here")
     const root = document.getElementById("root");
-    console.log("root", root)
     var store = null
     if (window.currentUser){
         const preloadedState = {
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.geckoApiActions = geckoApiActions
     window.userActions = userApiActions
     window.store = store
-    console.log(window.getState, window.geckoApiActions, window.userActions, window.store)
     
     ReactDOM.render(<Root store={store}/>, root);
 });
