@@ -22,7 +22,7 @@ class Welcome extends React.Component {
                             <img id='bitcoin-pic' src={window.bitcoin}/>
                             <div >Get $5 in free Bitcoin</div>
                         </div>
-                        <div id='coinbase-is-the'>Coinbase is the easiest place to buy, sell, and manage your cryptocurrency portfolio. Jump start your crypto portfolio with $5 in free Bitcoin after you sign up. Terms apply.</div>
+                        <div id='coinbase-is-the'>Coincase is the easiest place to buy, sell, and manage your cryptocurrency portfolio. Jump start your crypto portfolio with $5 in free Bitcoin after you sign up. Terms apply.</div>
                     </div>
                     <div className='welcome-table-box'>
                         <PricesIndex coins={this.props.coins} numItemsShown={4}/>

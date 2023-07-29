@@ -15,7 +15,7 @@ class DoMoreWithCrypto extends React.Component {
                 <a className='do-more-with-crypto-item2 item' href="https://www.linkedin.com/in/julian-t-87a2a0a4/" target="_blank" rel="noreferrer">
                     <FontAwesomeIcon className='calendar-icon fa-lg'icon={faCalendarAlt}/>
                     <div className='do-more-with-crypto-text'>
-                        <div>Coinbase Card</div>
+                        <div>Coincase Card</div>
                         <div className='crypto-extra-small-text'>Spend crypto, get rewards</div>
                     </div>
                 </a>

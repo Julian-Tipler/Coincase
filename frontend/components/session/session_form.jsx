@@ -64,7 +64,7 @@ class SessionForm extends React.Component {
             submit = "SIGN IN"
             page = 
             <div className='login-full-page'>
-                <div className='login-form-title'>Sign in to Coinbase</div>
+                <div className='login-form-title'>Sign in to Coincase</div>
                 <div className='login-page'>
                     <form onSubmit={this.handleSubmit}>
                         <div className="login-form">
