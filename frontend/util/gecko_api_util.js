@@ -11,10 +11,8 @@ export const fetchCoinInfo = (id) => (
 )
 
 export const fetchCoinHistoricalData = (id) => {
-    return(
-    $.ajax({
-        url: `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=1&interval=minutely`
-    })
-    )
+    return $.ajax({
+      url: `https://api.coingecko.com/api/v3/coins/${id}/market_chart?vs_currency=usd&days=90&interval=daily`,
+    });
 }
 
