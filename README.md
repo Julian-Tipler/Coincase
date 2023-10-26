@@ -29,3 +29,6 @@ A coin's show page features a prominent graph of the coin's daily performance. T
 
 ### Transactions
 Transactions are the key feature of Coincase. The rails powered backend compiles the users's transaction history to calculate their total portfolio worth, bank balance in usd, and current assets. As Coincase is a simulation, each user is 'gifted' $25,000 to start with (which used to be just enough to buy one bitcoin. Not anymore!).
+
+### Deployment
+Deploy main branch through Heroku UI. Use buildpack Heroku-20 with Node.js, Ruby (in that order)
