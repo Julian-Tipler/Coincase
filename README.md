@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [Technologies](#technologies)
+- [Features](#Features)
 
 ## Technologies
 
@@ -14,6 +15,8 @@
 * React-chartjs-2: https://github.com/reactchartjs/react-chartjs-2
 
 <img src="https://media.giphy.com/media/rfEGD0tuYwjCmFqZLX/giphy.gif" width="800">
+
+## Features
 
 ### Homepage
 Upon login, users are greeted with charts depicting the performance of the top 6 cryptocurrencies.
