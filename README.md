@@ -8,11 +8,12 @@
 - [Features](#Features)
 
 ## Technologies
-
-* Backend: Rails/ActiveRecord/PostgreSQL
-* Frontend: React/Redux
+* ![Rails](https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white)
+* ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
+* ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+* ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
+* ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
 * CoinGecko API: https://www.coingecko.com/api/documentations/v3
-* React-chartjs-2: https://github.com/reactchartjs/react-chartjs-2
 
 <img src="https://media.giphy.com/media/rfEGD0tuYwjCmFqZLX/giphy.gif" width="800">
 
