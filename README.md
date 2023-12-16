@@ -1,6 +1,10 @@
 <h1 align="center">Coincase</h1>
-
+<p align="center">
 <a href='https://www.coincase-juliantipler.com/#/'>Coincase</a> is a clone of the cryptocurrency trading site Coinbase. Coincase allows users to track, buy and sell cryptocurrencies.
+</p>
+<p align="center">
+<img align="center" src="https://media.giphy.com/media/rfEGD0tuYwjCmFqZLX/giphy.gif" width="800">
+</p>
 
 ## Table of Contents
 
@@ -15,7 +19,6 @@
 * ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white)
 * CoinGecko API: https://www.coingecko.com/api/documentations/v3
 
-<img src="https://media.giphy.com/media/rfEGD0tuYwjCmFqZLX/giphy.gif" width="800">
 
 ## Features
 
