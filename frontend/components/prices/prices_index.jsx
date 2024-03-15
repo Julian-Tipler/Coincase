@@ -193,7 +193,9 @@ export default class PricesIndex extends React.Component {
                   Market Cap
                   <FontAwesomeIcon
                     className={`index-arrow-icon ${
-                      this.state.toggled === "sort-market-cap" ? "toggled" : undefined
+                      this.state.toggled === "sort-market-cap"
+                        ? "toggled"
+                        : undefined
                     }`}
                     icon={faArrowsAltV}
                   />
