@@ -36,6 +36,9 @@ export const fetchTopCoins = () => (dispatch) => (
         .then((coins) => dispatch(receiveTopCoins(coins)))
 )
 
+export const fetchTopFourCoins = () => (dispatch) =>
+  APIUtil.fetchTopFourCoins().then((coins) => dispatch(receiveTopCoins(coins)));
+
 export const fetchCoinInfo = (id) => (dispatch) => (
     APIUtil.fetchCoinInfo(id)
         .then((coin) => dispatch(receiveCoinInfo(coin)))
